@@ -9,6 +9,6 @@ There are four notebooks in this folder:
 
 * **MOBO_DKL_RL_dev_experimental_data**: this notebook is modified from the real one used in our MOBO-DKL experiment to visualize all the experimental results presented in the paper. Instead of making real-time decisions and acquire information from real instrument, this notebook loads the intermediate experimental data saved in our real MOBO-DKL experiments. 
 
-* **MOBO_DKL_Experiment_Results_Visualization**: this notebook is designed to generate all the plots and movies in the figure.
+* **Figure_plots**: this notebook is designed to generate all the plots and movies in the figure.
 
 * **Jupiter_MOBO_DKL_Domain_botorch_v6**: this notebooks is the one that we used in real MOBO-DKL experiments. It's meant for visualization and exhibition instead of for running in Colab. Our intention for posting this notebook is that the readers can modify the **exp.measure()** and **exp.reward_mobo()** functions to deploy MOBO-DKL on their own instrument for active learning experiments. 
