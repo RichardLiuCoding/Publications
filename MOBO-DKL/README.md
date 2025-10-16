@@ -5,7 +5,7 @@ To simplify the installation and environment setup process, We have provided all
 
 There are three notebooks in this folder:
 
-* **MOBO_DKL_RL_dev_v5**: this notebooks follows the same format and functionality of the one used in our real MOBO-DKL experiment. We simulated the effect of three different types of atomic impurities on the superconducting differential conductance spectra. We have selected three measured properties as rewards: superconducting gap size, gap symmetry, and in-gap states. The MOBO-DKL algorithm is applied to learn the Pareto front between these three rewards and train a model to predict the distribution of these properties based on topography map without access to the full spectroscopy map.
+* **MOBO_DKL_RL_dev_v5**: this notebooks follows the same format and functionality of the one used in our real MOBO-DKL experiment. We simulated the effect of three different types of atomic impurities on the superconducting differential conductance spectra. We have selected three measured properties as rewards: superconducting gap size, gap symmetry, and in-gap states. The MOBO-DKL algorithm is applied to learn the Pareto front between these three rewards and train a model to predict the distribution of these properties based on topography map without access to the full spectroscopy map. It takes ~40 min to run on CPU, and ~10 min on T4 GPU in Colab.
 
 * **MONO_DKL_Experiment_Results_Visualization**: this notebook is modified from the real one used in our MOBO-DKL experiment to visualize all the experimental results presented in the paper. Instead of making real-time decisions and acquire information from real instrument, this notebook loads the intermediate experimental data saved in our real MOBO-DKL experiments. 
 
