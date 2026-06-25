@@ -29,8 +29,8 @@ The loop runs autonomously on an Asylum Research scanning probe microscope throu
 ## Installation
 
 ```bash
-git clone https://github.com/<user>/<repo>.git
-cd <repo>
+git clone https://github.com/RichardLiuCoding/Publications/tree/main/GA-DKL.git
+cd GA-DKL
 pip install -r requirements.txt
 ```
 
@@ -63,7 +63,7 @@ If you use this code, please cite the paper:
   author  = {Liu, Yu and Udovenko, Stanislav and Lin, Ching-Che and Kim, Jaegyu
              and Martin, Lane W. and Trolier-McKinstry, Susan and Kalinin, Sergei V.},
   year    = {2026},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+  journal = {arXiv preprint arXiv:2606.13859}
 }
 ```
 
