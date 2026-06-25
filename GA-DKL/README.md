@@ -4,7 +4,7 @@ Code accompanying the manuscript:
 
 > **Closed-loop discovery of out-of-distribution processing protocols by evolutionary search and uncertainty-aware learning**
 > Yu Liu, Stanislav Udovenko, Ching-Che Lin, Jaegyu Kim, Lane W. Martin, Susan Trolier-McKinstry, and Sergei V. Kalinin
-> *(preprint: arXiv:XXXX.XXXXX)*
+> *(preprint: arXiv:2606.13859)*
 
 ## Overview
 
