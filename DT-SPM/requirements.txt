@@ -1,0 +1,17 @@
+# DT-SPM — Python dependencies (Python >= 3.10)
+# On Google Colab every package below ships preinstalled; the notebooks also
+# auto-install anything missing from their SETUP cell, so this file is only
+# needed for local (non-Colab) environments.
+numpy>=1.24
+scipy>=1.10
+pandas>=1.5
+matplotlib>=3.7
+scikit-learn>=1.2
+torch>=2.0
+numba>=0.57
+joblib>=1.2
+gdown>=4.7
+# local notebook execution
+jupyter
+# optional: headless/parameterised execution of the notebooks
+papermill>=2.4
