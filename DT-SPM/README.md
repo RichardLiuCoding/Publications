@@ -68,4 +68,4 @@ outputs of each notebook.
 ## Citing
 
 If you use this code or data, please cite the manuscript (citation to be added on
-acceptance) and the archived dataset ([Zenodo DOI placeholder]).
+acceptance).
