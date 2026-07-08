@@ -1,7 +1,6 @@
 # DT-SPM — descriptor-aligned digital twins for scanning probe microscopy
 
-This package accompanies the manuscript *"[TITLE — descriptor-aligned digital twin
-framework for SPM]"* (submitted to *Digital Discovery*). It contains everything needed to
+This package accompanies the manuscript *"From Closed-Loop Optimization to Open Decision Making: Coupled Digital Twins for Predictive and Autonomous Microscopy"* (submitted to *Digital Discovery*). It contains everything needed to
 (i) **reproduce every number and figure in the paper** and (ii) **run the full digital
 twin end-to-end**, on Google Colab or locally.
 
