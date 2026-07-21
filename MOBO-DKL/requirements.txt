@@ -1,0 +1,12 @@
+# Tested numerical environment for the Colab replay notebook.
+# PyTorch is range-bounded to preserve the CUDA build provided by Google Colab.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+matplotlib==3.10.7
+scikit-learn==1.7.2
+scikit-image==0.25.2
+torch>=2.6,<3.0
+gpytorch==1.14.3
+botorch==0.16.1
+linear-operator>=0.6,<0.7
