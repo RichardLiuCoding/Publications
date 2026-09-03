@@ -1,0 +1,32 @@
+==========================================================================
+TEMPLATE RUN  EXP=shear  2026-08-28 11:15
+==========================================================================
+  EXP choices: control | select | shear | shear75 | cross
+  area (+0.0,+8.0), 5 um frame, target sigma 667 V.s/um^2
+  panels 1.4 um at [(1.5, 2.5), (3.5, 2.5)]
+  this WILL write to the sample
+  data folder 260827: 172 files, newest 28 Aug 11:14 (0.0 h ago)
+
+  live deflection -0.710 V  (withdrawn band -0.75..-0.20; if engaged this is the setpoint being held)
+
+--- LDART before ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 8.0) um
+  -> PZTO_LDART_0164.ibw
+    PZTO_LDART_0164.ibw (tune 661.0 kHz)
+  contact_check PZTO_LDART_0164.ibw
+    drive 667.5 kHz   tracked 661.1 +-4.0 kHz   offset 6.4 kHz
+    |A| 66.8 pm   xi 78 nm (4 px)   consistency 0.93   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0164.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.601   modulation 0.202 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.30, 0.51, 0.19)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    triad [16, 76, 136], modulation 0.202, 19.53 nm/px
+    Lambda ['231', '301', '280'] -> median 280 nm  (sp = 140 nm)
+    incumbent director 76 deg (mean control populations [0.36  0.396 0.244])
+
+--- panels ---

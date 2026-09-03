@@ -1,0 +1,40 @@
+==========================================================================
+HI-RES  poled square, raster 60 deg  2026-08-29 15:19
+==========================================================================
+  MEASUREMENT ONLY. 1.25 um at 512 px -> 2.44 nm/px, 2.0 Hz
+  tip speed 5.0 um/s
+  data folder 260829: 46 files, newest 29 Aug 15:18 (0.0 h ago)
+  scanner range, 1 um frame at (-8.0,-8.0), limit 50 um:
+    x: |off|+size   9.2   edge at -8.6 / -7.4   ok
+    y: |off|+size   9.2   edge at -8.6 / -7.4   ok
+  stage offset (-8.00,-8.00)
+
+--- LDART ---
+LDART ready
+scan 1.25 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0023.ibw
+    PZTO_LDART_0023.ibw  tracked 100%
+  contact_check PZTO_LDART_0023.ibw
+    drive 648.7 kHz   tracked 643.3 +-1.3 kHz   offset 5.5 kHz
+    |A| 90.7 pm   xi nan nm (nan px)   consistency 0.95   r12 +0.95   defl SP 0.50 V
+    -> OK. Proceed.
+    2.44 nm/px, |S| 100.2 pm, r12 +0.95
+    super    78.8 deg    336.8 nm  aniso  16.24  p 0.0050
+    mid      22.5 deg     77.0 nm  aniso   4.37  p 0.0050  OFF BOTH (32 px/period)
+    ULTRA   179.5 deg     42.5 nm  aniso   5.29  p 0.0050  fast-axis (17 px/period)
+
+--- VDART ---
+VDART ready
+scan 1.25 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_VDART_0023.ibw
+    PZTO_VDART_0023.ibw  tracked 100%
+  contact_check PZTO_VDART_0023.ibw
+    drive 351.3 kHz   tracked 346.8 +-0.9 kHz   offset 4.5 kHz
+    |A| 209.1 pm   xi 73 nm (30 px)   consistency 0.99   r12 +0.46   defl SP 0.50 V
+    -> OK. Proceed.
+    2.44 nm/px, |S| 37.3 pm, r12 +0.46
+    super    78.8 deg    334.5 nm  aniso   2.48  p 0.0547
+    mid      13.0 deg     81.7 nm  aniso   2.82  p 0.0050  fast-axis (33 px/period)
+    ULTRA     0.5 deg     42.9 nm  aniso   4.36  p 0.0050  fast-axis (18 px/period)
+
+  frames: PZTO_LDART_0023.ibw, PZTO_VDART_0023.ibw

@@ -1,0 +1,39 @@
+==========================================================================
+ZOOM PATHWAY  2026-08-29 02:41
+==========================================================================
+  area (+0.0,-24.0), panel centre (1.50,2.50) in the frame
+  2.0 um at 256 px -> 7.81 nm/px  (38 px per Lambda at 300 nm)
+  measurement only: no bias, no litho, no state written
+  data folder 260827: 254 files, newest 29 Aug 02:38 (0.0 h ago)
+
+  stage offset for the zoom: (-1.00,-24.00)
+  scanner range, 2 um frame at (-1.0,-24.0), limit 50 um:
+    x: |off|+size   3.0   edge at -2.0 / +0.0   ok
+    y: |off|+size  26.0   edge at -25.0 / -23.0   ok
+LDART ready
+scan 2.0 um, 256 px, 5.0 Hz, angle 0.0 deg, offset (-1.0, -24.0) um
+  -> PZTO_LDART_0246.ibw
+  -> PZTO_LDART_0246.ibw (tune 663.0 kHz)
+  contact_check PZTO_LDART_0246.ibw
+    drive 671.3 kHz   tracked 663.2 +-0.5 kHz   offset 8.0 kHz
+    |A| 87.2 pm   xi 70 nm (9 px)   consistency 0.96   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  actual 7.81 nm/px
+  rigid triad fit on PZTO_LDART_0246.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.744   modulation 0.487 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.72, 0.19, 0.09)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+  triad [16, 76, 136], modulation 0.487
+  Lambda ['325', '245', '261'] nm -> 33 px per period
+
+  4 tiles of 134 px (1.05 um, 4.0 Lambda each)
+  tile dominants by triad member: 16 deg 100% 76 deg 0% 136 deg 0%
+  mean single-member weight per tile 0.699 +- 0.068
+  -> UNIFORM: one orientation across the field. No island
+     structure at this scale, so if nucleation happened the
+     islands have already merged.
+
+  frame kept: PZTO_LDART_0246.ibw

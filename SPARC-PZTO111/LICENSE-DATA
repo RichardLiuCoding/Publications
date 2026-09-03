@@ -1,0 +1,31 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Yu Liu, Boris Slautin, Ching-Che Lin, Jaegyu Kim,
+Lane W. Martin, Sergei V. Kalinin
+
+This licence covers the non-software content of this repository:
+
+  memory/               FINDINGS.md and PITFALLS.md
+  data/                 derived results, per-iteration numbers, cached arrays,
+                        and the frame checksum manifests
+  write_files/          the files sent to the instrument
+  docs/                 the campaign log, handoff notes, reproduction notes
+  campaign2/consoles/   recorded console output and logs
+  notebooks/            the stored cell outputs (code in those cells is MIT)
+  interaction_record/   the coded interaction record and session renderings
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+Attribute as:
+
+  Y. Liu, B. Slautin, C.-C. Lin, J. Kim, L. W. Martin and S. V. Kalinin,
+  Human-agent discovery of reconfigurable in-plane ferroelectric superdomain
+  control, Digital Discovery (2026). Data and records CC BY 4.0.
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+Software in this repository is licensed separately under the MIT License; see
+LICENSE.

@@ -1,0 +1,27 @@
+==========================================================================
+TEMPLATE RUN  EXP=control  2026-08-28 10:43
+==========================================================================
+  EXP choices: control | select | shear | shear75 | cross
+  area (+8.0,+0.0), 5 um frame, target sigma 667 V.s/um^2
+  panels 1.4 um at [(1.5, 2.5), (3.5, 2.5)]
+  DRY RUN: build and gate only, nothing written
+  data folder 260827: 167 files, newest 28 Aug 10:39 (0.1 h ago)
+
+  live deflection +0.500 V  (withdrawn band -0.75..-0.20; if engaged this is the setpoint being held)
+
+--- LDART before ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_LDART_0159.ibw
+    PZTO_LDART_0159.ibw (tune 661.0 kHz)
+  contact_check PZTO_LDART_0159.ibw
+    drive 669.6 kHz   tracked 661.5 +-0.6 kHz   offset 8.1 kHz
+    |A| 73.4 pm   xi 98 nm (5 px)   consistency 0.93   r12 +0.93   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0159.ibw
+    phi0 = 14.0 deg  ->  members 14/74/134 deg
+    triad power 0.606   modulation 0.212 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.29, 0.47, 0.24)
+    deviation from the film triad 2/62/122: 12.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['14', '74', '134'] -> ['14', '74', '134']  (offsets ['12', '12', '12'] deg)

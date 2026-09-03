@@ -1,0 +1,97 @@
+==========================================================================
+BLOCK 2  +V then -V over one square, then look  2026-08-29 14:21
+==========================================================================
+  data folder 260829: 36 files, newest 29 Aug 14:19 (0.0 h ago)
+  scanner range, 2 um frame at (-8.0,-8.0), limit 50 um:
+    x: |off|+size  10.5   edge at -9.2 / -6.8   ok
+    y: |off|+size  10.5   edge at -9.2 / -6.8   ok
+
+--- LDART before ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0018.ibw
+    PZTO_LDART_0018.ibw tracked 100%
+  contact_check PZTO_LDART_0018.ibw
+    drive 648.3 kHz   tracked 638.5 +-1.8 kHz   offset 9.8 kHz
+    |A| 56.8 pm   xi 83 nm (17 px)   consistency 0.91   r12 +0.90   defl SP 0.50 V
+    -> OK. Proceed.
+
+--- VDART before ---
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_VDART_0018.ibw
+    PZTO_VDART_0018.ibw tracked 100%
+  contact_check PZTO_VDART_0018.ibw
+    drive 350.1 kHz   tracked 345.2 +-1.7 kHz   offset 4.9 kHz
+    |A| 54.3 pm   xi 73 nm (15 px)   consistency 0.95   r12 +0.73   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0018.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.640   modulation 0.280 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.27, 0.54, 0.19)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+
+  triad [16, 76, 136], modulation 0.280
+
+POLING SQUARE  1.4 um, raster pitch 30 nm, 0.50 um/s, lines along 60.0 deg
+  triad member nearest the raster direction: 76 deg
+  94 raster lines (47 per polarity), design sigma 667 per polarity
+  built: 7050 pts, |charge| 2670 V.s over 1.96 um^2 -> sigma 681 per polarity
+  net DC +0.000e+00 V  (S4 needs |mean| <= 0.01)
+  7050 pts -> 4.70 min at 0.50 um/s (S7 cap 26)
+  x 0.31-2.21, y 0.29-2.20 um
+
+BEFORE
+  L before       PZTO_LDART_0018.ibw    |S|  57.5 pm  r12 +0.90
+     super : dir   63.8  period  204.2 nm  aniso   2.59  p 0.0993
+     fine  : dir   10.5  period   76.9 nm  aniso   2.72  p 0.0066  fast-axis
+  V before       PZTO_VDART_0018.ibw    |S|  26.9 pm  r12 +0.73
+     super : dir   18.8  period  201.8 nm  aniso   1.59  p 0.6490
+     fine  : dir  176.5  period   78.6 nm  aniso   2.10  p 0.0199  fast-axis
+  S24: 340.6 of 350 used, 9.4 left; this needs 4.70
+
+--- poling: +V pass then -V pass over the same square ---
+LDART ready
+Wrote 7050 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260829_1421_B2pole.txt'  (path length 136.3 um, 94 strokes)
+260829_1421_B2pole.txt   saved 14:31:35
+  7050 pts   X[0.311,2.206] Y[0.294,2.196] um
+  |V| = [10.]   mean(V) = +0.0000 V   5.3 % at 0 V
+  path 141 um  ->  4.7 min at 0.5 um/s
+  running… ETA 4.7 min
+  done 14:36:35
+  litho stopped (required before the next run)
+  done.
+
+--- LDART after ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0019.ibw
+    PZTO_LDART_0019.ibw tracked 99%
+
+--- VDART after ---
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_VDART_0019.ibw
+    PZTO_VDART_0019.ibw tracked 100%
+
+AFTER
+  L after        PZTO_LDART_0019.ibw    |S|  36.3 pm  r12 +0.85
+     super : dir   78.8  period  315.8 nm  aniso   4.55  p 0.0199
+     fine  : dir    2.5  period   78.0 nm  aniso   2.30  p 0.0066  fast-axis
+  V after        PZTO_VDART_0019.ibw    |S|  28.1 pm  r12 +0.81
+     super : dir   48.8  period  220.9 nm  aniso   2.04  p 0.4172
+     fine  : dir    2.5  period   79.4 nm  aniso   2.40  p 0.0397  fast-axis
+
+==========================================================================
+READING
+==========================================================================
+  VDART super-band anisotropy 0.00 -> 0.00  (p 0.649 -> 0.417)
+  VDART |S| interior 26.9 -> 28.1 pm
+  -> the out-of-plane channel has NO dominant direction after
+     poling: the OP state is homogeneous, as intended.
+  -> LDART fine band still explained by the fast axis or by a
+     lamellar harmonic. No clean nano-domain signal.
+
+  before PZTO_LDART_0018.ibw / PZTO_VDART_0018.ibw   after PZTO_LDART_0019.ibw / PZTO_VDART_0019.ibw

@@ -1,0 +1,37 @@
+==========================================================================
+ZOOM PATHWAY  2026-08-29 02:48
+==========================================================================
+  area (+0.0,+0.0), panel centre (1.50,2.50) in the frame
+  2.0 um at 256 px -> 7.81 nm/px  (38 px per Lambda at 300 nm)
+  measurement only: no bias, no litho, no state written
+  data folder 260827: 257 files, newest 29 Aug 02:47 (0.0 h ago)
+
+  stage offset for the zoom: (-1.00,+0.00)
+  scanner range, 2 um frame at (-1.0,+0.0), limit 50 um:
+    x: |off|+size   3.0   edge at -2.0 / +0.0   ok
+    y: |off|+size   2.0   edge at -1.0 / +1.0   ok
+LDART ready
+scan 2.0 um, 256 px, 5.0 Hz, angle 0.0 deg, offset (-1.0, 0.0) um
+  -> PZTO_LDART_0249.ibw
+  -> PZTO_LDART_0249.ibw (tune 664.0 kHz)
+  contact_check PZTO_LDART_0249.ibw
+    drive 671.7 kHz   tracked 663.6 +-0.4 kHz   offset 8.1 kHz
+    |A| 82.8 pm   xi 70 nm (9 px)   consistency 0.95   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  actual 7.81 nm/px
+  rigid triad fit on PZTO_LDART_0249.ibw
+    phi0 = 6.5 deg  ->  members 6/66/126 deg
+    triad power 0.734   modulation 0.468 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.60, 0.26, 0.14)
+    deviation from the film triad 2/62/122: 4.5 deg
+  triad aligned to reference: ['6', '66', '126'] -> ['6', '66', '126']  (offsets ['4', '4', '4'] deg)
+  triad [6, 66, 126], modulation 0.468
+  Lambda ['280', '280', '231'] nm -> 36 px per period
+
+  4 tiles of 143 px (1.12 um, 4.0 Lambda each)
+  tile dominants by triad member: 6 deg 75% 66 deg 0% 126 deg 25%
+  mean single-member weight per tile 0.547 +- 0.077
+  -> MIXED, majority 75%: coexisting orientations at the
+     1.12 um tile scale. That is the island signature.
+
+  frame kept: PZTO_LDART_0249.ibw

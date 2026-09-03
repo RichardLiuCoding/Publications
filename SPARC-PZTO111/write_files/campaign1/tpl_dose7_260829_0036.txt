@@ -1,0 +1,100 @@
+==========================================================================
+TEMPLATE RUN  EXP=dose7  2026-08-29 00:36
+==========================================================================
+  EXP choices: control | select | shear | shear75 | cross | dose1..3
+  area (-16.0,+0.0), 5 um frame, target sigma 667 V.s/um^2
+  panels 1.4 um at [(1.5, 2.5), (3.5, 2.5)]
+  this WILL write to the sample
+  data folder 260827: 224 files, newest 29 Aug 00:36 (0.0 h ago)
+
+  live deflection -0.693 V  (withdrawn band -0.75..-0.20; if engaged this is the setpoint being held)
+
+--- LDART before ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-16.0, 0.0) um
+  -> PZTO_LDART_0216.ibw
+    PZTO_LDART_0216.ibw (tune 660.0 kHz)
+  contact_check PZTO_LDART_0216.ibw
+    drive 668.8 kHz   tracked 660.3 +-0.7 kHz   offset 8.4 kHz
+    |A| 88.6 pm   xi 78 nm (4 px)   consistency 0.94   r12 +0.97   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0216.ibw
+    phi0 = 9.0 deg  ->  members 9/69/129 deg
+    triad power 0.603   modulation 0.206 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.26, 0.54, 0.20)
+    deviation from the film triad 2/62/122: 7.0 deg
+  triad aligned to reference: ['9', '69', '129'] -> ['9', '69', '129']  (offsets ['7', '7', '7'] deg)
+    triad [9, 69, 129], modulation 0.206, 19.53 nm/px
+    Lambda ['388', '261', '482'] -> median 388 nm  (sp = 194 nm)
+    incumbent director 69 deg (mean control populations [0.294 0.514 0.192])
+
+--- panels ---
+  P1 parallel lines along 9 at sigma 20
+     46 sites, 2 pulses/site, dwell 0.08 s, sigma 19, 0.8 V.s per site
+  P2 parallel lines along 9 at sigma 30
+     46 sites, 3 pulses/site, dwell 0.12 s, sigma 28, 1.2 V.s per site
+
+--- built path ---
+  1512 pts -> 1.0 min of writing at 0.50 um/s (cap 26)
+  stroke length 23.3 um (0.8 min); the rest is travel between sites
+  |V|max 10.0, mean +0.00e+00, 85% at 0 V
+  x 0.80-4.20, y 1.80-3.18 um
+  S24 budget: 297.0 of 330 used, 33.0 left; this write needs 1.0
+
+--- writing ---
+LDART ready
+Wrote 1512 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260829_0036_TPL_dose7.txt'  (path length 23.3 um, 92 strokes)
+260829_0036_TPL_dose7.txt   saved 00:39:34
+  1512 pts   X[0.803,4.197] Y[1.803,3.176] um
+  |V| = [10.]   mean(V) = +0.0000 V   84.8 % at 0 V
+  path 30 um  ->  1.0 min at 0.5 um/s
+  running… ETA 1.0 min
+  done 00:40:53
+  litho stopped (required before the next run)
+
+--- LDART after ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-16.0, 0.0) um
+  -> PZTO_LDART_0217.ibw
+    PZTO_LDART_0217.ibw (tune 660.0 kHz)
+  contact_check PZTO_LDART_0217.ibw
+    drive 666.9 kHz   tracked 660.3 +-0.9 kHz   offset 6.6 kHz
+    |A| 86.5 pm   xi 78 nm (4 px)   consistency 0.94   r12 +0.97   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0217.ibw
+    phi0 = 9.0 deg  ->  members 9/69/129 deg
+    triad power 0.603   modulation 0.206 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.27, 0.51, 0.22)
+    deviation from the film triad 2/62/122: 7.0 deg
+  triad aligned to reference: ['9', '69', '129'] -> ['9', '69', '129']  (offsets ['7', '7', '7'] deg)
+
+==========================================================================
+RESULT  EXP=dose7   sigma 667
+==========================================================================
+  triad before [9, 69, 129] (mod 0.206) | after [9, 69, 129] (mod 0.206)
+
+  window  w before               w after                 dom b->a   lat |A|
+  P1      [0.228 0.595 0.177]    [0.263 0.423 0.314]       0->125   84.8-> 79.5
+  P2      [0.376 0.24  0.384]    [0.37  0.259 0.371]      55-> 65   84.9-> 75.0
+  ctrl1   [0.322 0.435 0.243]    [0.31  0.451 0.239]      70-> 70   87.2-> 84.8
+  ctrl2   [0.384 0.512 0.104]    [0.381 0.522 0.096]      80-> 80   92.4-> 89.4
+  ctrl3   [0.193 0.571 0.236]    [0.191 0.57  0.24 ]      90-> 90   96.2-> 96.5
+  ctrl4   [0.278 0.538 0.184]    [0.285 0.54  0.174]      90-> 90   90.8-> 91.8
+
+  control mean change [-0.003  0.007 -0.004] | null 0.010
+  P1 excess [ 0.037 -0.179  0.142]  max 0.179 = 18.6x null  -> CLEARS
+  P2 excess [-0.003  0.012 -0.009]  max 0.012 = 1.2x null  -> within null
+
+  --- what this says about SELECTION ---
+  NOTE: both panels carry the SAME template wavevector Q
+  (9 deg). They differ in the real-space arrangement only,
+  so selection predicts the SAME destination for both. Landing
+  apart would be the surprising outcome here.
+  Only one panel cleared, so the comparison between
+  templates cannot be made. Report it as one-sided.
+    P1 (parallel) -> 125 deg; its own template favours 9
+    P2 (parallel) -> 65 deg; its own template favours 9
+  -> appended 2 rows to results_templates.csv
+
+  write minutes 1.01  (charged to S24; this driver
+  does not touch campaign_state.json)

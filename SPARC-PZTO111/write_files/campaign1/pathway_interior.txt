@@ -1,0 +1,106 @@
+==============================================================================
+PATHWAY, RE-ANALYSED INSIDE THE PANEL
+==============================================================================
+  interior 1.0 um (inside every panel); surround beyond 1.5 um
+  estimator: structure tensor, 150 nm smoothing (no 4-Lambda need)
+  rigid triad fit on PZTO_LDART_0247.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.633   modulation 0.265 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.49, 0.38, 0.13)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+
+=== sigma 52   PZTO_LDART_0247.ibw  (260829_0028 P1, area (0,+16)) ===
+   7.81 nm/px, modulation 0.265, triad [16, 76, 136]
+   INTERIOR (1.0 um)      members 50% 50% 0% | dominant 16 deg holds 50 %, largest patch 0.269 um^2 = 91 % of it, 2 patches
+   SURROUND (> 1.5 um)    members 35% 56% 9% | dominant 76 deg holds 56 %, largest patch 0.322 um^2 = 51 % of it, 3 patches
+   -> interior and surround are on DIFFERENT member
+   -> interior has NO clear majority
+  rigid triad fit on PZTO_LDART_0248.ibw
+    phi0 = 21.5 deg  ->  members 22/82/142 deg
+    triad power 0.700   modulation 0.401 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.64, 0.21, 0.15)
+    deviation from the film triad 2/62/122: 19.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['22', '82', '142'] -> ['22', '82', '142']  (offsets ['20', '20', '20'] deg)
+
+=== sigma 67   PZTO_LDART_0248.ibw  (260829_0020 P1, area (+16,0)) ===
+   7.81 nm/px, modulation 0.401, triad [22, 82, 142]
+   INTERIOR (1.0 um)      members 99% 0% 1% | dominant 22 deg holds 99 %, largest patch 0.413 um^2 = 73 % of it, 2 patches
+   SURROUND (> 1.5 um)    members 22% 78% 0% | dominant 82 deg holds 78 %, largest patch 0.456 um^2 = 52 % of it, 2 patches
+   -> interior and surround are on DIFFERENT member
+   -> interior is SINGLE-ORIENTATION (99 %)
+  rigid triad fit on PZTO_LDART_0251.ibw
+    phi0 = 19.0 deg  ->  members 19/79/139 deg
+    triad power 0.683   modulation 0.365 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.64, 0.20, 0.16)
+    deviation from the film triad 2/62/122: 17.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['19', '79', '139'] -> ['19', '79', '139']  (offsets ['17', '17', '17'] deg)
+
+=== sigma 111  PZTO_LDART_0251.ibw  (260829_0228 P1, area (+24,-24)) ===
+   7.81 nm/px, modulation 0.365, triad [19, 79, 139]
+   INTERIOR (1.0 um)      members 97% 3% 0% | dominant 19 deg holds 97 %, largest patch 0.604 um^2 = 100 % of it, 1 patches
+   SURROUND (> 1.5 um)    members 46% 52% 2% | dominant 79 deg holds 52 %, largest patch 0.316 um^2 = 53 % of it, 3 patches
+   -> interior and surround are on DIFFERENT member
+   -> interior is SINGLE-ORIENTATION (97 %)
+  rigid triad fit on PZTO_LDART_0246.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.744   modulation 0.487 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.72, 0.19, 0.09)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+
+=== sigma 117  PZTO_LDART_0246.ibw  (260829_0220 P1, area (0,-24)) ===
+   7.81 nm/px, modulation 0.487, triad [16, 76, 136]
+   INTERIOR (1.0 um)      members 100% 0% 0% | dominant 16 deg holds 100 %, largest patch 0.976 um^2 = 100 % of it, 1 patches
+   SURROUND (> 1.5 um)    members 34% 55% 11% | dominant 76 deg holds 55 %, largest patch 0.268 um^2 = 59 % of it, 4 patches
+   -> interior and surround are on DIFFERENT member
+   -> interior is SINGLE-ORIENTATION (100 %)
+  rigid triad fit on PZTO_LDART_0250.ibw
+    phi0 = 14.0 deg  ->  members 14/74/134 deg
+    triad power 0.613   modulation 0.227 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.31, 0.19, 0.51)
+    deviation from the film triad 2/62/122: 12.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['14', '74', '134'] -> ['14', '74', '134']  (offsets ['12', '12', '12'] deg)
+
+=== sigma 120  PZTO_LDART_0250.ibw  (260829_0220 P2, area (0,-24)) ===
+   7.81 nm/px, modulation 0.227, triad [14, 74, 134]
+   INTERIOR (1.0 um)      members 14% 7% 78% | dominant 134 deg holds 78 %, largest patch 0.389 um^2 = 100 % of it, 1 patches
+   SURROUND (> 1.5 um)    members 15% 78% 7% | dominant 74 deg holds 78 %, largest patch 0.344 um^2 = 38 % of it, 4 patches
+   -> interior and surround are on DIFFERENT member
+   -> interior is MAJORITY but not uniform (78 %): coexistence inside the panel
+  rigid triad fit on PZTO_LDART_0249.ibw
+    phi0 = 6.5 deg  ->  members 6/66/126 deg
+    triad power 0.734   modulation 0.468 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.60, 0.26, 0.14)
+    deviation from the film triad 2/62/122: 4.5 deg
+  triad aligned to reference: ['6', '66', '126'] -> ['6', '66', '126']  (offsets ['4', '4', '4'] deg)
+
+=== sigma 306  PZTO_LDART_0249.ibw  (260828_2158 P1, area (0,0)) ===
+   7.81 nm/px, modulation 0.468, triad [6, 66, 126]
+   INTERIOR (1.0 um)      members 97% 3% 0% | dominant 6 deg holds 97 %, largest patch 0.641 um^2 = 92 % of it, 2 patches
+   SURROUND (> 1.5 um)    members 4% 90% 6% | dominant 66 deg holds 90 %, largest patch 0.538 um^2 = 58 % of it, 4 patches
+   -> interior and surround are on DIFFERENT member
+   -> interior is SINGLE-ORIENTATION (97 %)
+
+==============================================================================
+DOSE ORDERING OF THE INTERIOR
+==============================================================================
+  sigma  frame                  interior   verdict
+  52     PZTO_LDART_0247.ibw    50 %       no majority
+  67     PZTO_LDART_0248.ibw    99 %       single-orientation
+  111    PZTO_LDART_0251.ibw    97 %       single-orientation
+  117    PZTO_LDART_0246.ibw    100 %      single-orientation
+  120    PZTO_LDART_0250.ibw    78 %       coexistence
+  306    PZTO_LDART_0249.ibw    97 %       single-orientation
+
+  correlation of interior uniformity with log(dose): r = 0.528 on n = 6
+  (a nucleation-and-growth pathway predicts r > 0 and a rise towards 1;
+   no correlation means the panels are all past completion, or that
+   dose is not the variable that sets uniformity.)
+
+  figure written to C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\figures_pathway

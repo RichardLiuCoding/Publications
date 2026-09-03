@@ -1,0 +1,407 @@
+{
+ "census": {
+  "days": 3,
+  "span": "20 Aug 13:54 to 22 Aug 09:57",
+  "wallclock_h": 44.1,
+  "turns_md": 2054,
+  "assistant_turns": 1221,
+  "user_side": 833,
+  "operator_prompts": 117,
+  "operator_words": 10923,
+  "operator_median_w": 18,
+  "operator_max_w": 4148,
+  "tool_calls": 718,
+  "tools": {
+   "Bash": 535,
+   "Write": 165,
+   "Edit": 7,
+   "Monitor": 6,
+   "other": 5
+  },
+  "text_blocks": 458,
+  "text_words": 55207,
+  "frames": 155,
+  "frames_ldart": 142,
+  "frames_vdart": 13,
+  "driver_runs": 9,
+  "loop_instr_min": 434.0,
+  "write_min": 164.6,
+  "halts": 8,
+  "notebook_logs": 6,
+  "autonomy_start": "21 Aug 17:16",
+  "areas": 6
+ },
+ "phase1": {
+  "days": 11,
+  "turns_md": 723,
+  "assistant_turns": 615,
+  "operator_prompts": 68,
+  "operator_words": 3635,
+  "operator_median_w": 31,
+  "tool_calls": 434,
+  "frames": 70,
+  "active_instr_min": 813,
+  "areas": 8,
+  "wallclock_h": 34.3,
+  "agent_writes": 0
+ },
+ "halts": [
+  [
+   "halt 1",
+   "IT1",
+   "tooling",
+   "check_files missing: the loader never exec'd the helper cell"
+  ],
+  [
+   "halt 2",
+   "IT1",
+   "geometry",
+   "slot halo leaves the frame"
+  ],
+  [
+   "halt 3",
+   "IT2",
+   "area gate",
+   "none of the three nearest legal areas passed the quality gate"
+  ],
+  [
+   "halt 4",
+   "IT2",
+   "area gate",
+   "baseline floor 0.511, flip 57 per cent: writing here would produce another unreadable iteration"
+  ],
+  [
+   "halt 5",
+   "IT3",
+   "static audit",
+   "dangling names in the driver"
+  ],
+  [
+   "halt 6",
+   "IT4",
+   "physics guard",
+   "only 1 panel fits, and a uniform panel cannot be written without its opposite sign partner"
+  ],
+  [
+   "halt 7",
+   "IT6",
+   "footprint S9",
+   "overlaps IT6_UTK, its own canvas"
+  ],
+  [
+   "halt 8",
+   "IT10b",
+   "footprint S9",
+   "declared reuse of IT6 area still refused"
+  ],
+  [
+   "halt 9",
+   "IT7",
+   "area gate",
+   "baseline floor 0.151, flip 31 per cent"
+  ]
+ ],
+ "sigma_ladder": {
+  "threshold": 0.096,
+  "null_max_abs": 0.109,
+  "tiles": 27,
+  "rungs": [
+   [
+    "S07",
+    212,
+    0.7,
+    0.128,
+    0.464,
+    0.333,
+    3.5
+   ],
+   [
+    "S10",
+    301,
+    1.0,
+    0.102,
+    0.48,
+    0.376,
+    3.9
+   ],
+   [
+    "S15",
+    460,
+    1.52,
+    0.203,
+    0.452,
+    0.247,
+    2.6
+   ]
+  ],
+  "start_sd": 0.052,
+  "final_sd": 0.014,
+  "fixed_point": 0.47,
+  "law_pred": [
+   0.367,
+   0.448,
+   0.548
+  ]
+ },
+ "period_series": {
+  "IT2": [
+   [
+    "1.0L",
+    0.499,
+    0.234,
+    1.2
+   ],
+   [
+    "2.0L",
+    0.75,
+    0.429,
+    2.2
+   ]
+  ],
+  "IT3": [
+   [
+    "1.0L",
+    0.646,
+    0.401,
+    3.1
+   ],
+   [
+    "4.0L",
+    0.619,
+    0.324,
+    2.5
+   ],
+   [
+    "8.0L",
+    0.457,
+    0.161,
+    1.2
+   ]
+  ]
+ },
+ "uniform_test": {
+  "A_balanced": [
+   0.518,
+   0.183,
+   0.9
+  ],
+  "UP": [
+   0.221,
+   0.014,
+   0.1
+  ],
+  "UM": [
+   0.109,
+   -0.036,
+   -0.2
+  ],
+  "diff": 0.05,
+  "threshold": 0.199
+ },
+ "raster": {
+  "dir": 62.0,
+  "before": [
+   0.242,
+   0.415,
+   0.343
+  ],
+  "after": [
+   0.179,
+   0.601,
+   0.22
+  ],
+  "windows": 80,
+  "box": [
+   10.6,
+   4.0
+  ],
+  "sigma": 129.0,
+  "min": 23.5,
+  "lead": 0.381
+ },
+ "utk": {
+  "sites": 1386,
+  "per_letter": {
+   "U": 548,
+   "T": 435,
+   "K": 403
+  },
+  "sigma": 367,
+  "sigma_ratio": 1.22,
+  "vs_per_site": 7.2,
+  "cmd": 2.0,
+  "background": 62.0,
+  "balance": [
+   693,
+   693
+  ],
+  "on_stroke": [
+   0.081,
+   0.483
+  ],
+  "between": [
+   0.076,
+   0.157
+  ],
+  "contrast": 0.321,
+  "null": 0.029,
+  "x_null": 11.1,
+  "on_target_stroke": 0.63,
+  "on_target_between": 0.05,
+  "letters": {
+   "U": [
+    0.093,
+    0.394,
+    0.301,
+    2.2
+   ],
+   "T": [
+    0.051,
+    0.469,
+    0.418,
+    15.3
+   ],
+   "K": [
+    0.043,
+    0.559,
+    0.516,
+    15.5
+   ]
+  },
+  "canvas_held": [
+   0.601,
+   0.598
+  ],
+  "retention_min": 34,
+  "coverage_before": 0.39,
+  "coverage_after": 0.97,
+  "stroke_um": 1.2,
+  "word_um": 9.6,
+  "vdart": [
+   53.7,
+   46.3
+  ]
+ },
+ "it9": {
+  "HOLD": [
+   64,
+   4,
+   64,
+   0.696,
+   0.391,
+   7.7
+  ],
+  "RW_s1": [
+   4,
+   64,
+   124,
+   0.369,
+   0.187,
+   3.4
+  ],
+  "RW_s2": [
+   64,
+   0.757,
+   0.195,
+   3.8
+  ],
+  "HOLD_ret": [
+   0.609,
+   0.3,
+   5.9
+  ],
+  "sigma_ratio": 1.29
+ },
+ "revisions": [
+  [
+   "amplitude instead of direction",
+   "operator",
+   "five sections recomputed"
+  ],
+  [
+   "between frame instead of within frame",
+   "agent",
+   "two iterations wrongly called unreadable"
+  ],
+  [
+   "threshold was not the null of the statistic",
+   "agent",
+   "three times too wide, four iterations rescored"
+  ],
+  [
+   "control tiles ran through a written panel",
+   "offline replay",
+   "3 of 14 tiles on IT3"
+  ],
+  [
+   "gating on proxies for readability",
+   "agent",
+   "three good areas rejected"
+  ],
+  [
+   "two numbers computed different ways called physics",
+   "agent",
+   "C44 withdrawn the day it was written"
+  ]
+ ],
+ "misattributions": [
+  [
+   "VDART minority fell 46 to 19.5 per cent over four areas",
+   "progressive out of plane poling of the sample",
+   "the withdrawn deflection had drifted, restored it read 38.4 per cent"
+  ],
+  [
+   "control tiles flipping 31 per cent, floor 0.35",
+   "this region is too weakly textured to measure",
+   "frame sequencing: the stage does not return after an excursion"
+  ],
+  [
+   "period 280 / 388 / 261 nm across the three members",
+   "the three variants have different periods",
+   "the estimator is unreliable per member and does not converge"
+  ],
+  [
+   "read_meter swinging 0.84 to 0.60 V",
+   "the contact force is drifting",
+   "the channel reports tip state, not the setpoint, which never moved"
+  ]
+ ],
+ "tooling": {
+  "launches": 8,
+  "launch_faults": 6,
+  "overnight_faults": 7,
+  "overnight_in_tooling": 7,
+  "overnight_in_physics": 0,
+  "preflight_calls_before": 0,
+  "keys_read": 8,
+  "keys_built": 27,
+  "verdict_branches": 12
+ },
+ "guards": {
+  "total": 29,
+  "fired_cheap": [
+   "scanner range 54 um proposed",
+   "charge balance",
+   "a uniform panel without its partner"
+  ],
+  "never_ran": "preflight, which encodes all of them"
+ },
+ "theory": {
+  "before": "T3: selection needs a commensurate template, q = Q, and a drive above sigma_c",
+  "after": "the drive must alternate in sign, but the period is irrelevant over at least 8x, and there is no threshold in charge",
+  "killed": [
+   "commensuration as the selection rule",
+   "sigma_c as a threshold",
+   "the raster depletes the parallel family"
+  ],
+  "new_candidate": "the strain and depolarisation field of a single sign boundary",
+  "symmetry": "a uniform out of plane field is invariant under the 120 degree rotation relating the three variants, so it cannot select between them"
+ },
+ "conclusions": {
+  "phase1_total": 28,
+  "phase2_total": 54,
+  "withdrawn": 5,
+  "overturned_own": 3,
+  "overturned_note": "two were graded conclusions in its own findings file, C40 on a charge threshold and C26 on the sign of the raster, and the third was condition 1 of its own theory T3"
+ }
+}

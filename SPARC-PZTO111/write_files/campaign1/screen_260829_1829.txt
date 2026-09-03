@@ -1,0 +1,212 @@
+==================================================================================
+AREA SCREEN  2026-08-29 18:29   (measurement only)
+==================================================================================
+  12 offsets, 2.5 um at 256 px = 9.77 nm/px
+  gates: roughness <= 1.0 nm, p2p <= 5.0 nm, modulation >= 0.15,
+         streak <= 0.10, Lambda 150-320 nm
+  data folder 260829: 62 files, newest 29 Aug 18:28 (0.0 h ago)
+
+--- 1/12  (+6.0,+0.0) ---
+  scanner range, 2 um frame at (+6.0,+0.0), limit 50 um:
+    x: |off|+size   8.5   edge at +4.8 / +7.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (6.0, 0.0) um
+  -> PZTO_LDART_0033.ibw
+  rigid triad fit on PZTO_LDART_0033.ibw
+    phi0 = 31.5 deg  ->  members 32/92/152 deg
+    triad power 0.592   modulation 0.184 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.38, 0.38, 0.24)
+    deviation from the film triad 2/62/122: 29.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+    failed:
+
+--- 2/12  (-6.0,+0.0) ---
+  scanner range, 2 um frame at (-6.0,+0.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, 0.0) um
+  -> PZTO_LDART_0034.ibw
+  rigid triad fit on PZTO_LDART_0034.ibw
+    phi0 = 24.0 deg  ->  members 24/84/144 deg
+    triad power 0.591   modulation 0.182 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.34, 0.42, 0.24)
+    deviation from the film triad 2/62/122: 22.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['24', '84', '144'] -> ['24', '84', '144']  (offsets ['22', '22', '22'] deg)
+    rough  0.62 nm  p2p  2.58 nm | mod 0.182  streak 0.084 | Lambda 245 nm  dom 84  r12 +0.96  -> USABLE
+
+--- 3/12  (+0.0,+6.0) ---
+  scanner range, 2 um frame at (+0.0,+6.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   8.5   edge at +4.8 / +7.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 6.0) um
+  -> PZTO_LDART_0035.ibw
+  rigid triad fit on PZTO_LDART_0035.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.571   modulation 0.141 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.25, 0.58, 0.17)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    rough  0.39 nm  p2p  1.79 nm | mod 0.141  streak 0.047 | Lambda 335 nm  dom 76  r12 +0.96  -> no (mod 0.141, Lambda 335)
+
+--- 4/12  (+0.0,-6.0) ---
+  scanner range, 2 um frame at (+0.0,-6.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   8.5   edge at -7.2 / -4.8   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (0.0, -6.0) um
+  -> PZTO_LDART_0036.ibw
+  rigid triad fit on PZTO_LDART_0036.ibw
+    phi0 = 19.0 deg  ->  members 19/79/139 deg
+    triad power 0.639   modulation 0.278 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.30, 0.47, 0.23)
+    deviation from the film triad 2/62/122: 17.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['19', '79', '139'] -> ['19', '79', '139']  (offsets ['17', '17', '17'] deg)
+    rough  0.52 nm  p2p  2.06 nm | mod 0.278  streak 0.072 | Lambda 295 nm  dom 79  r12 +0.95  -> USABLE
+
+--- 5/12  (+6.0,+6.0) ---
+  scanner range, 2 um frame at (+6.0,+6.0), limit 50 um:
+    x: |off|+size   8.5   edge at +4.8 / +7.2   ok
+    y: |off|+size   8.5   edge at +4.8 / +7.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (6.0, 6.0) um
+  -> PZTO_LDART_0037.ibw
+  rigid triad fit on PZTO_LDART_0037.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.662   modulation 0.324 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.33, 0.50, 0.18)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    rough  0.46 nm  p2p  1.92 nm | mod 0.324  streak 0.024 | Lambda 348 nm  dom 76  r12 +0.94  -> no (Lambda 348)
+
+--- 6/12  (-6.0,-6.0) ---
+  scanner range, 2 um frame at (-6.0,-6.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size   8.5   edge at -7.2 / -4.8   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -6.0) um
+  -> PZTO_LDART_0038.ibw
+  rigid triad fit on PZTO_LDART_0038.ibw
+    phi0 = 24.0 deg  ->  members 24/84/144 deg
+    triad power 0.622   modulation 0.245 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.32, 0.49, 0.18)
+    deviation from the film triad 2/62/122: 22.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['24', '84', '144'] -> ['24', '84', '144']  (offsets ['22', '22', '22'] deg)
+    rough  0.38 nm  p2p  1.77 nm | mod 0.245  streak 0.026 | Lambda 253 nm  dom 84  r12 +0.95  -> USABLE
+
+--- 7/12  (+6.0,-6.0) ---
+  scanner range, 2 um frame at (+6.0,-6.0), limit 50 um:
+    x: |off|+size   8.5   edge at +4.8 / +7.2   ok
+    y: |off|+size   8.5   edge at -7.2 / -4.8   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (6.0, -6.0) um
+  -> PZTO_LDART_0039.ibw
+  rigid triad fit on PZTO_LDART_0039.ibw
+    phi0 = 31.5 deg  ->  members 32/92/152 deg
+    triad power 0.600   modulation 0.201 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.48, 0.34, 0.18)
+    deviation from the film triad 2/62/122: 29.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+    failed:
+
+--- 8/12  (-6.0,+6.0) ---
+  scanner range, 2 um frame at (-6.0,+6.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size   8.5   edge at +4.8 / +7.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, 6.0) um
+  -> PZTO_LDART_0040.ibw
+  rigid triad fit on PZTO_LDART_0040.ibw
+    phi0 = 9.0 deg  ->  members 9/69/129 deg
+    triad power 0.605   modulation 0.210 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.28, 0.48, 0.24)
+    deviation from the film triad 2/62/122: 7.0 deg
+  triad aligned to reference: ['9', '69', '129'] -> ['9', '69', '129']  (offsets ['7', '7', '7'] deg)
+    rough  1.81 nm  p2p  8.25 nm | mod 0.210  streak 0.018 | Lambda 288 nm  dom 69  r12 +0.94  -> no (rough 1.81, p2p 8.2)
+
+--- 9/12  (+12.0,+0.0) ---
+  scanner range, 2 um frame at (+12.0,+0.0), limit 50 um:
+    x: |off|+size  14.5   edge at +10.8 / +13.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (12.0, 0.0) um
+  -> PZTO_LDART_0041.ibw
+  rigid triad fit on PZTO_LDART_0041.ibw
+    phi0 = 4.0 deg  ->  members 4/64/124 deg
+    triad power 0.604   modulation 0.208 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.25, 0.52, 0.23)
+    deviation from the film triad 2/62/122: 2.0 deg
+  triad aligned to reference: ['4', '64', '124'] -> ['4', '64', '124']  (offsets ['2', '2', '2'] deg)
+    rough  0.65 nm  p2p  2.80 nm | mod 0.208  streak 0.018 | Lambda 215 nm  dom 64  r12 +0.94  -> USABLE
+
+--- 10/12  (+0.0,+12.0) ---
+  scanner range, 2 um frame at (+0.0,+12.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size  14.5   edge at +10.8 / +13.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 12.0) um
+  -> PZTO_LDART_0042.ibw
+  rigid triad fit on PZTO_LDART_0042.ibw
+    phi0 = 24.0 deg  ->  members 24/84/144 deg
+    triad power 0.660   modulation 0.320 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.26, 0.55, 0.19)
+    deviation from the film triad 2/62/122: 22.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['24', '84', '144'] -> ['24', '84', '144']  (offsets ['22', '22', '22'] deg)
+    rough  0.70 nm  p2p  4.88 nm | mod 0.320  streak 0.045 | Lambda 338 nm  dom 84  r12 +0.94  -> no (Lambda 338)
+
+--- 11/12  (+12.0,+12.0) ---
+  scanner range, 2 um frame at (+12.0,+12.0), limit 50 um:
+    x: |off|+size  14.5   edge at +10.8 / +13.2   ok
+    y: |off|+size  14.5   edge at +10.8 / +13.2   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (12.0, 12.0) um
+  -> PZTO_LDART_0043.ibw
+  rigid triad fit on PZTO_LDART_0043.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.591   modulation 0.181 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.24, 0.59, 0.17)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    rough  0.38 nm  p2p  1.76 nm | mod 0.181  streak 0.015 | Lambda 279 nm  dom 76  r12 +0.93  -> USABLE
+
+--- 12/12  (-12.0,-12.0) ---
+  scanner range, 2 um frame at (-12.0,-12.0), limit 50 um:
+    x: |off|+size  14.5   edge at -13.2 / -10.8   ok
+    y: |off|+size  14.5   edge at -13.2 / -10.8   ok
+LDART ready
+scan 2.5 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-12.0, -12.0) um
+  -> PZTO_LDART_0044.ibw
+  rigid triad fit on PZTO_LDART_0044.ibw
+    phi0 = 14.0 deg  ->  members 14/74/134 deg
+    triad power 0.575   modulation 0.150 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.44, 0.23, 0.33)
+    deviation from the film triad 2/62/122: 12.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['14', '74', '134'] -> ['14', '74', '134']  (offsets ['12', '12', '12'] deg)
+    rough 35.62 nm  p2p 174.84 nm | mod 0.150  streak 0.049 | Lambda 248 nm  dom 14  r12 +0.94  -> no (rough 35.62, p2p 174.8)
+
+==================================================================================
+offset            rough      p2p     mod   streak   Lambda    dom  use
+(+12.0,+12.0)     0.38     1.76   0.181    0.015      279     76  YES
+( -6.0, -6.0)     0.38     1.77   0.245    0.026      253     84  YES
+( +0.0, -6.0)     0.52     2.06   0.278    0.072      295     79  YES
+( -6.0, +0.0)     0.62     2.58   0.182    0.084      245     84  YES
+(+12.0, +0.0)     0.65     2.80   0.208    0.018      215     64  YES
+( +0.0, +6.0)     0.39     1.79   0.141    0.047      335     76  -
+( +6.0, +6.0)     0.46     1.92   0.324    0.024      348     76  -
+( +0.0,+12.0)     0.70     4.88   0.320    0.045      338     84  -
+( -6.0, +6.0)     1.81     8.25   0.210    0.018      288     69  -
+(-12.0,-12.0)    35.62   174.84   0.150    0.049      248     14  -
+
+  5 of 10 areas usable
+  usable offsets: -6,0 0,-6 -6,-6 12,0 12,12
+  flattest: (+12.0,+12.0) roughness 0.38 nm, triad [16, 76, 136], Lambda 279 nm

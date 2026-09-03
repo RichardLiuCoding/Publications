@@ -1,0 +1,14 @@
+==========================================================================
+TEMPLATE RUN  EXP=control  2026-08-28 10:41
+==========================================================================
+  EXP choices: control | select | shear | shear75 | cross
+  area (+8.0,+0.0), 5 um frame, target sigma 667 V.s/um^2
+  panels 1.4 um at [(1.5, 2.5), (3.5, 2.5)]
+  DRY RUN: build and gate only, nothing written
+  data folder 260827: 167 files, newest 28 Aug 10:39 (0.0 h ago)
+
+  live deflection -0.720 V  (withdrawn band -0.75..-0.20; if engaged this is the setpoint being held)
+
+--- LDART before ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um

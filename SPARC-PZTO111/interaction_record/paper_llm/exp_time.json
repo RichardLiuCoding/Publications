@@ -1,0 +1,50 @@
+[
+ {
+  "name": "Step 0 + 0R geometry",
+  "frames": 8,
+  "active_min": 111.66666666666667,
+  "gaps": 0
+ },
+ {
+  "name": "0R / PROBE / 1 / GATE / POL / 2 / 3 / CHG",
+  "frames": 21,
+  "active_min": 250.8333333333333,
+  "gaps": 1
+ },
+ {
+  "name": "R1 revisit + WGATE",
+  "frames": 7,
+  "active_min": 30.083333333333336,
+  "gaps": 1
+ },
+ {
+  "name": "R4  pulse lattice, 576 sites",
+  "frames": 13,
+  "active_min": 208.1,
+  "gaps": 0
+ },
+ {
+  "name": "R5  on/off-triad",
+  "frames": 3,
+  "active_min": 22.53333333333333,
+  "gaps": 0
+ },
+ {
+  "name": "R6  rewrite A then B",
+  "frames": 5,
+  "active_min": 41.78333333333334,
+  "gaps": 0
+ },
+ {
+  "name": "R7  pole / lattice / trajectory",
+  "frames": 6,
+  "active_min": 72.01666666666668,
+  "gaps": 0
+ },
+ {
+  "name": "R8  nine conditions",
+  "frames": 5,
+  "active_min": 75.98333333333335,
+  "gaps": 0
+ }
+]

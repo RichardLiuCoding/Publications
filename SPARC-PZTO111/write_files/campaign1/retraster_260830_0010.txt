@@ -1,0 +1,73 @@
+====================================================================================
+RASTER RETENTION  2026-08-30 00:10   (measurement only)
+====================================================================================
+  data folder 260829: 125 files, newest 30 Aug 00:08 (0.0 h ago)
+
+--- (-6.0,-6.0)  raster 0 deg written 20:14 ---
+  scanner range, 2 um frame at (-6.0,-6.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size   8.5   edge at -7.2 / -4.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -6.0) um
+  -> PZTO_LDART_0076.ibw
+    PZTO_LDART_0076.ibw  director 18.8 -> 18.8 deg (drift 0.0), anisotropy 22.74 -> 36.10, p 0.0033
+
+--- (-6.0,+0.0)  raster 60 deg written 21:53 ---
+  scanner range, 2 um frame at (-6.0,+0.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, 0.0) um
+  -> PZTO_LDART_0077.ibw
+    PZTO_LDART_0077.ibw  director 78.8 -> 78.8 deg (drift 0.0), anisotropy 5.70 -> 4.57, p 0.0033
+
+--- (+0.0,-6.0)  raster 120 deg written 20:40 ---
+  scanner range, 2 um frame at (+0.0,-6.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   8.5   edge at -7.2 / -4.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, -6.0) um
+  -> PZTO_LDART_0078.ibw
+    PZTO_LDART_0078.ibw  director 138.8 -> 138.8 deg (drift 0.1), anisotropy 9.61 -> 12.38, p 0.0033
+
+--- (+0.0,+18.0)  raster 41 deg written 22:54 ---
+  scanner range, 2 um frame at (+0.0,+18.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size  20.5   edge at +16.8 / +19.2   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 18.0) um
+  -> PZTO_LDART_0079.ibw
+    PZTO_LDART_0079.ibw  director 18.8 -> 18.8 deg (drift 0.0), anisotropy 18.60 -> 24.94, p 0.0033
+
+--- (+12.0,+12.0)  raster 46 deg written 19:47 ---
+  scanner range, 2 um frame at (+12.0,+12.0), limit 50 um:
+    x: |off|+size  14.5   edge at +10.8 / +13.2   ok
+    y: |off|+size  14.5   edge at +10.8 / +13.2   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (12.0, 12.0) um
+  -> PZTO_LDART_0080.ibw
+    PZTO_LDART_0080.ibw  director 18.8 -> 18.8 deg (drift 0.0), anisotropy 10.85 -> 15.35, p 0.0033
+
+--- (+18.0,-18.0)  raster 41 deg written 23:21 ---
+  scanner range, 2 um frame at (+18.0,-18.0), limit 50 um:
+    x: |off|+size  20.5   edge at +16.8 / +19.2   ok
+    y: |off|+size  20.5   edge at -19.2 / -16.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (18.0, -18.0) um
+  -> PZTO_LDART_0081.ibw
+    PZTO_LDART_0081.ibw  director 18.8 -> 18.8 deg (drift 0.0), anisotropy 16.86 -> 50.53, p 0.0033
+
+====================================================================================
+area          raster     then      now   drift aniso then aniso now    p now
+( -6.0, -6.0)      0     18.8     18.8     0.0     22.74     36.10   0.0033
+( -6.0, +0.0)     60     78.8     78.8     0.0      5.70      4.57   0.0033
+( +0.0, -6.0)    120    138.8    138.8     0.1      9.61     12.38   0.0033
+( +0.0,+18.0)     41     18.8     18.8     0.0     18.60     24.94   0.0033
+(+12.0,+12.0)     46     18.8     18.8     0.0     10.85     15.35   0.0033
+(+18.0,-18.0)     41     18.8     18.8     0.0     16.86     50.53   0.0033
+
+  director drift: median 0.0 deg, max 0.1 deg
+  anisotropy retained: median 138 %, range 80-300 %
+  still significant at p < 0.01: 6 of 6
+  -> THE WRITTEN DIRECTION HOLDS. The raster writes a state that
+     survives hours, not a transient.

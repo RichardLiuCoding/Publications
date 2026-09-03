@@ -1,0 +1,79 @@
+==============================================================================
+BLOCK 3  DC raster  angle0  2026-08-29 19:46
+==============================================================================
+  data folder 260829: 81 files, newest 29 Aug 19:46 (0.0 h ago)
+  scanner range, 2 um frame at (-6.0,-6.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size   8.5   edge at -7.2 / -4.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -6.0) um
+  -> PZTO_LDART_0049.ibw
+  before LDART -> PZTO_LDART_0049.ibw (100% tracked)
+  contact_check PZTO_LDART_0049.ibw
+    drive 648.7 kHz   tracked 638.8 +-2.5 kHz   offset 10.0 kHz
+    |A| 76.2 pm   xi 73 nm (15 px)   consistency 0.95   r12 +0.93   defl SP 0.50 V
+    -> OK. Proceed.
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -6.0) um
+  -> PZTO_VDART_0032.ibw
+  before VDART -> PZTO_VDART_0032.ibw (100% tracked)
+  contact_check PZTO_VDART_0032.ibw
+    drive 353.4 kHz   tracked 345.8 +-1.5 kHz   offset 7.6 kHz
+    |A| 62.6 pm   xi 73 nm (15 px)   consistency 0.96   r12 +0.80   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0049.ibw
+    phi0 = 24.0 deg  ->  members 24/84/144 deg
+    triad power 0.614   modulation 0.228 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.31, 0.52, 0.18)
+    deviation from the film triad 2/62/122: 22.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['24', '84', '144'] -> ['24', '84', '144']  (offsets ['22', '22', '22'] deg)
+
+  triad [24, 84, 144], dominant 84 deg, modulation 0.228
+  topography: roughness 0.40 nm, 1-99% range 1.86 nm
+  interior: 1.20 um window holds 4.23 Lambda at 283 nm (need >= 4.0) -> OK
+  raster along 0.0 deg; nearest triad member 24 deg
+  PREDICTION (M26): the director goes to 24 deg
+
+DC SQUARE  1.6 um, pitch 30 nm, 0.50 um/s, along 0.0 deg
+  +V pass then -V pass; sign held for a whole 1.6 um line
+  built 9147 pts, |charge| 3499 V.s over 2.56 um^2 -> sigma 683 (design 667 per pass)
+  net DC +0.000e+00 V  |V|max 10.0
+  6.10 min at 0.50 um/s (S7 cap 26)
+  x 0.45-2.05  y 0.45-2.04 um
+
+BEFORE
+  L before     PZTO_LDART_0049.ibw    |S|  78.3  r12 +0.93
+     super:   56.2 deg   178.7 nm  aniso  2.19  p 0.1940  | member  84 (27.8 off) | raster 56.2 off
+  S24: 355.6 of 450 used, 94.4 left; this needs 6.10
+
+--- writing ---
+LDART ready
+Wrote 9147 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260829_1946_B3dc.txt'  (path length 177.6 um, 108 strokes)
+260829_1946_B3dc.txt   saved 19:57:07
+  9147 pts   X[0.450,2.050] Y[0.450,2.040] um
+  |V| = [10.]   mean(V) = +0.0000 V   4.4 % at 0 V
+  path 183 um  ->  6.1 min at 0.5 um/s
+  running… ETA 6.1 min
+  done 20:03:32
+  litho stopped (required before the next run)
+  done.
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -6.0) um
+  -> PZTO_LDART_0050.ibw
+  after LDART -> PZTO_LDART_0050.ibw (100% tracked)
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -6.0) um
+  -> PZTO_VDART_0033.ibw
+  after VDART -> PZTO_VDART_0033.ibw (100% tracked)
+
+AFTER
+  L after      PZTO_LDART_0050.ibw    |S|  41.2  r12 +0.94
+     super:   18.8 deg   264.9 nm  aniso 22.74  p 0.0050  | member  24 ( 5.2 off) | raster 18.8 off
+
+==============================================================================
+  director 56.2 -> 18.8 deg (moved 37.5)
+  raster 0.0 deg, nearest member 24 deg, |after - that member| = 5.2 deg
+  -> ALIGNED to the member nearest the raster. Rule holds.
+
+  before PZTO_LDART_0049.ibw / PZTO_VDART_0032.ibw   after PZTO_LDART_0050.ibw / PZTO_VDART_0033.ibw

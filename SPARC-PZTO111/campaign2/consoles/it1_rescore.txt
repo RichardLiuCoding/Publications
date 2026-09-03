@@ -1,0 +1,72 @@
+==============================================================================
+IT1 RE-SCORE at the restored withdrawn deflection  2026-08-21 15:24
+==============================================================================
+  IMAGING ONLY - this script never writes.
+  data folder 260820: 80 files, newest 21 Aug 14:59 (0.4 h ago)
+
+--- three fresh frames at the restored setpoint ---
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+LDART ready
+  -> PZTO_LDART_0072.ibw
+  -> PZTO_LDART_0073.ibw
+  -> PZTO_LDART_0074.ibw
+  PZTO_LDART_0072.ibw, PZTO_LDART_0073.ibw, PZTO_LDART_0074.ibw
+  contact_check PZTO_LDART_0074.ibw
+    drive 662.5 kHz   tracked 644.7 +-2.7 kHz   offset 17.8 kHz
+    |A| 26.9 pm   xi 94 nm (2 px)   consistency 0.83   r12 +0.92   defl SP 0.60 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+
+--- hygiene: the two setpoint regimes side by side ---
+  frame                 regime         |S|     r12  tracked   streak
+  PZTO_LDART_0061.ibw   -0.8 base     49.1   +0.95     100%    0.009
+  PZTO_LDART_0062.ibw   -0.8 base     30.0   +0.93     100%    0.015
+  PZTO_LDART_0063.ibw   -0.8 base     31.0   +0.93      88%    0.016
+  PZTO_LDART_0071.ibw   -0.6 drift    41.7   +0.95     100%    0.009
+  PZTO_LDART_0072.ibw   -0.8 fresh    40.6   +0.94     100%    0.013
+  PZTO_LDART_0073.ibw   -0.8 fresh    18.9   +0.89     100%    0.018
+  PZTO_LDART_0074.ibw   -0.8 fresh    24.8   +0.92      96%    0.013
+
+  16 control tiles on untouched film
+
+=== how big is the setpoint artefact? (untouched film only) ===
+  comparison                            floor   flip %      mean       sd
+  fresh vs fresh   (-0.8 vs -0.8)       0.181       6%     0.018    0.077
+  fresh vs fresh   (-0.8 vs -0.8)       0.139      12%    -0.027    0.066
+  base  vs fresh   (-0.8 vs -0.8)       0.228      19%    -0.026    0.100
+  base  vs drifted (-0.8 vs -0.6)       0.162      12%    -0.057    0.094
+  drift vs fresh   (-0.6 vs -0.8)       0.117       6%     0.031    0.061
+  If "base vs drifted" is much worse than "base vs fresh", the
+  31 % flip rate was the setpoint change, not the material.
+
+=== THE PANELS, scored -0.8 against -0.8 ===
+  floor 0.228 from base vs fresh on untouched film, flip 19%, 16 tiles
+         sigma  dom b  dom a   lead b   lead a  d(lead)   xfl  w(cmd)  verdict
+  A        450     66      6   -0.118   +0.183   +0.301   1.3   0.542  on target, within floor
+  B        450     66      6   -0.150   +0.092   +0.242   1.1   0.432  on target, within floor
+  C        450     66      6   -0.146   +0.436   +0.582   2.5   0.648  on target, within floor
+  D        204     66      6   -0.360   +0.001   +0.360   1.6   0.400  on target, within floor
+
+  populations
+                   w(6)             w(66)            w(126)
+  A     0.311->0.542       0.429->0.359       0.260->0.099    
+  B     0.275->0.432       0.425->0.340       0.300->0.227    
+  C     0.290->0.648       0.436->0.212       0.275->0.140    
+  D     0.228->0.400       0.588->0.200       0.185->0.400    
+
+--- VDART at the restored setpoint: did the gate reopen? ---
+scan 12.0 um, 128 px, 0.8333333333333334 Hz, angle 0.0 deg
+VDART ready
+  -> PZTO_VDART_0008.ibw
+VDART PZTO_VDART_0008.ibw: up 38.4 / 61.6 %   |<e^i.phi>| 0.518   |A| 28.5 pm   coh 0.78
+   minority in patches >=25 px: 69 %   (588 clusters)
+   -> two classes, balanced -> GATE OPEN
+  before IT1 the trend was 46.0 -> 36.4 -> 33.0 %% minority; the
+  after-IT1 VDART at -0.6 read 19.5 %%, outside the 21-36 %% range.
+  If this one is back inside, the skew was the setpoint too.
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg
+
+==========================================================================
+RE-SCORE VERDICT
+==========================================================================
+  0 of 4 panels above 3x the floor; 4 of 4 end dominant at the commanded 6 deg

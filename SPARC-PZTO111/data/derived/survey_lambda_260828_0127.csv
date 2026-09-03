@@ -1,0 +1,3 @@
+xoff_um,yoff_um,tag,lam_med_nm,lam_members_nm,modulation,streak,dominant_deg,triad_deg,buildable
+0.0,0.0,PZTO_LDART_0086.ibw,300.8,245|301|354,0.1930,0.0208,74.0,14|74|134,1
+-9.0,0.0,PZTO_LDART_0087.ibw,245.4,280|245|245,0.2585,0.0087,71.5,12|72|132,1

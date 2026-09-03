@@ -1,0 +1,23 @@
+==============================================================================
+IT11/RW1-Z  pathway map: which neighbour can you reach?  2026-08-28 07:35
+==============================================================================
+
+--- static audit (before any instrument command) ---
+  toolkit: 7 cells, 58 functions called, 0 undefined
+  driver: 0 dangling global name(s)
+  -> audit clean
+  data folder 260827: 161 files, newest 28 Aug 07:33 (0.0 h ago)
+
+--- deflection ---
+    live deflection +0.500 V, last frame setpoint 0.500 V
+    -> these agree, so the tip is ENGAGED and the reading is the
+       setpoint being held, not the free level. Contact force
+       cannot be computed without withdrawing. Judge the readout
+       from |A| on the first contact_check: 40-110 pm is healthy,
+       ~21 pm is the collapse that cost three launches (M8).
+
+--- preflight, pass 1: pre-registration and the loop stops ---
+  preflight: 7 check group(s), 1 failure(s), 2 deferred
+    FAIL      S25 2 consecutive unreadable iterations - halt and ask
+    DEFERRED  S2/S9 geometry (offset not chosen yet) - re-run preflight once it is known
+    DEFERRED  S8 charge per site (dwell solved at run time) - re-run preflight once it is known

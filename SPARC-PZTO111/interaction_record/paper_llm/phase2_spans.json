@@ -1,0 +1,56 @@
+[
+ {
+  "it": "IT1",
+  "start": "21 Aug 14:13",
+  "end": "21 Aug 14:49",
+  "span_min": 36.9
+ },
+ {
+  "it": "IT2",
+  "start": "21 Aug 16:52",
+  "end": "21 Aug 17:48",
+  "span_min": 56.3
+ },
+ {
+  "it": "IT3",
+  "start": "21 Aug 18:47",
+  "end": "21 Aug 19:48",
+  "span_min": 61.4
+ },
+ {
+  "it": "IT4",
+  "start": "21 Aug 21:21",
+  "end": "21 Aug 21:46",
+  "span_min": 25.7
+ },
+ {
+  "it": "IT5",
+  "start": "21 Aug 23:50",
+  "end": "22 Aug 00:48",
+  "span_min": 58.1
+ },
+ {
+  "it": "IT6",
+  "start": "22 Aug 01:09",
+  "end": "22 Aug 02:13",
+  "span_min": 64.8
+ },
+ {
+  "it": "IT10B",
+  "start": "22 Aug 02:45",
+  "end": "22 Aug 03:23",
+  "span_min": 38.9
+ },
+ {
+  "it": "IT7",
+  "start": "22 Aug 04:06",
+  "end": "22 Aug 04:06",
+  "span_min": 0.0
+ },
+ {
+  "it": "IT9",
+  "start": "22 Aug 04:44",
+  "end": "22 Aug 05:38",
+  "span_min": 54.8
+ }
+]

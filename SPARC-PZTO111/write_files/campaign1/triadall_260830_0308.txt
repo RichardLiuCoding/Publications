@@ -1,0 +1,49 @@
+============================================================================================
+SINGLE TRIAD, ALL RASTER WRITES  2026-08-30 03:07
+============================================================================================
+  (+12,+12) 46             cmd  46.0  landing   16.39  (binned  18.8, aniso  15.35, p 0.0050)
+  (-6,-6) 0                cmd   0.0  landing   19.63  (binned  18.8, aniso  36.10, p 0.0050)
+  (0,-6) 120               cmd 120.0  landing  140.88  (binned 138.8, aniso  12.38, p 0.0050)
+  (0,+18) 41               cmd  41.0  landing   20.01  (binned  18.8, aniso  24.94, p 0.0050)
+  (+18,-18) 41             cmd  41.0  landing   17.90  (binned  18.8, aniso  50.53, p 0.0050)
+  (-6,0) rw1b 60           cmd  60.0  landing   75.07  (binned  78.8, aniso   4.57, p 0.0050)
+  (+12,+18) 41 s343        cmd  41.0  landing   15.17  (binned  26.2, aniso   5.67, p 0.0050)
+  (+6,+12) 41 s178         cmd  41.0  landing   19.30  (binned  18.8, aniso  18.63, p 0.0050)
+  (-6,-12) 41 s172 fast    cmd  41.0  landing   17.17  (binned  18.8, aniso  35.96, p 0.0050)
+  (-12,-6) rw2a 0          cmd   0.0  landing   20.87  (binned  18.8, aniso   5.89, p 0.0100)
+  (-12,-6) rw2b 120        cmd 120.0  landing  139.11  (binned 138.8, aniso   4.30, p 0.0149)
+
+--------------------------------------------------------------------------------------------
+  11 landings, modulo 60 deg:
+    15.07, 15.17, 16.39, 17.17, 17.90, 19.11, 19.30, 19.63, 20.01, 20.87, 20.88
+    circular range 5.81 deg about a common 18.32 deg
+    P(11 uniform draws inside a 5.81 deg arc) = 8.01e-10
+
+  does the pre-write fit predict the landing?
+    r = +0.186, permutation p = 0.590
+    r.m.s. of landings about a single common value : 2.02 deg
+    r.m.s. of landings about their own fits        : 4.22 deg
+
+  members of the fitted triad: 18.32, 78.32, 138.32
+  run                       command   landing   went to  nearest hit
+  (+12,+12) 46                 46.0     16.39     18.32    18.32   yes  (margin 4.6 deg)
+  (-6,-6) 0                     0.0     19.63     18.32    18.32   yes  (margin 23.4 deg)
+  (0,-6) 120                  120.0    140.88    138.32   138.32   yes  (margin 23.4 deg)
+  (0,+18) 41                   41.0     20.01     18.32    18.32   yes  (margin 14.6 deg)
+  (+18,-18) 41                 41.0     17.90     18.32    18.32   yes  (margin 14.6 deg)
+  (-6,0) rw1b 60               60.0     75.07     78.32    78.32   yes  (margin 23.4 deg)
+  (+12,+18) 41 s343            41.0     15.17     18.32    18.32   yes  (margin 14.6 deg)
+  (+6,+12) 41 s178             41.0     19.30     18.32    18.32   yes  (margin 14.6 deg)
+  (-6,-12) 41 s172 fast        41.0     17.17     18.32    18.32   yes  (margin 14.6 deg)
+  (-12,-6) rw2a 0               0.0     20.87     18.32    18.32   yes  (margin 23.4 deg)
+  (-12,-6) rw2b 120           120.0    139.11    138.32   138.32   yes  (margin 23.4 deg)
+
+  11 of 11 went to the member nearest the command; random choice p = 5.65e-06
+
+  restricted to runs where "nearest" is unambiguous (margin >= 8 deg):
+    EXCLUDED (+12,+12) 46           margin 4.6 deg
+    10 of 10; random choice p = 1.69e-05
+
+  re-aim pairs (same area, same session: the reference cancels)
+    (-12,-6) rw2a 0        step 1   20.87, step 2  139.11 -> separation  61.76 (+1.76 from 60)
+    first pair (from S8.4)  step 1   17.98, step 2   75.15 -> separation  57.17 (-2.83 from 60)

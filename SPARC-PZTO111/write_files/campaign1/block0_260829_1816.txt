@@ -1,0 +1,74 @@
+==========================================================================
+BLOCK 0  new probe, both channels  2026-08-29 18:16
+==========================================================================
+  MEASUREMENT ONLY. No bias, no litho, no state written.
+  frame 2.5 um, 512 px -> 4.88 nm/px, 2.0 Hz -> tip 10.0 um/s
+  offset (+0.0,+0.0)
+  DART nominals now {'ldart': '635 kHz', 'vdart': '343 kHz'}, tol 100 kHz -> sweep 200 kHz
+  data folder 260829: 60 files, newest 29 Aug 16:38 (1.6 h ago)
+  scanner range, 2 um frame at (+0.0,+0.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+
+--------------------------------------------------------------------------
+LDART at nominal 635 kHz
+--------------------------------------------------------------------------
+  try 1: tuning LDART at 635 kHz, then one 512 px / 2.0 Hz frame
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_LDART_0031.ibw
+     PZTO_LDART_0031.ibw: drive 650.4 kHz, tracked 633.0, offset 17.4 kHz, 100% lines, r12 +0.89, |S| 51.8
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+      tracked 100% of lines, offset 17.4 kHz
+  contact_check PZTO_LDART_0031.ibw
+    drive 650.4 kHz   tracked 633.1 +-4.2 kHz   offset 17.3 kHz
+    |A| 47.1 pm   xi 83 nm (17 px)   consistency 0.88   r12 +0.89   defl SP 0.50 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+
+  --- LDART: PZTO_LDART_0031.ibw ---
+      512 px, 4.88 nm/px, r12 +0.89, |S| 51.8
+      band (nm)          dir    period    aniso        p  reading
+      150-500           82.1     386.9     2.12    0.008  real: 79.2 px per period
+      90-150            71.7     115.3     1.31    0.926  no direction (p >= 0.01)
+      18-90              0.5      81.2     2.83    0.008  ALONG THE FAST SCAN AXIS -- artefact
+
+--------------------------------------------------------------------------
+VDART at nominal 343 kHz
+--------------------------------------------------------------------------
+  try 1: tuning VDART at 343 kHz, then one 512 px / 2.0 Hz frame
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_LDART_0032.ibw
+     PZTO_LDART_0032.ibw: drive 651.0 kHz, tracked 638.8, offset 12.2 kHz, 100% lines, r12 +0.95, |S| 81.1
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+      tracked 100% of lines, offset 12.2 kHz
+  contact_check PZTO_LDART_0032.ibw
+    drive 651.0 kHz   tracked 638.7 +-3.2 kHz   offset 12.2 kHz
+    |A| 69.0 pm   xi 78 nm (8 px)   consistency 0.95   r12 +0.95   defl SP 0.50 V
+    -> OK. Proceed.
+
+  --- VDART: PZTO_LDART_0032.ibw ---
+      256 px, 9.77 nm/px, r12 +0.95, |S| 81.1
+      band (nm)          dir    period    aniso        p  reading
+      150-500           82.1     244.4     2.41    0.008  real: 25.0 px per period
+      90-150           158.9     113.2     1.74    0.256  no direction (p >= 0.01)
+      18-90              0.5      79.9     4.55    0.008  ALONG THE FAST SCAN AXIS -- artefact
+  rigid triad fit on PZTO_LDART_0031.ibw
+    phi0 = 29.0 deg  ->  members 29/89/149 deg
+    triad power 0.598   modulation 0.196 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.22, 0.63, 0.15)
+    deviation from the film triad 2/62/122: 27.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad fit FAILED:
+
+==========================================================================
+VERDICT
+==========================================================================
+  LDART   healthy
+  VDART   frame acquired: the out-of-plane channel is live
+  NO independent nano-domain periodicity on this VIRGIN area.
+  -> This is NOT a probe verdict. The operator reports that the
+     nano-domains are often invisible until the IP super-domain
+     is written or aligned, so absence here is the expected
+     starting state and is the BEFORE half of the measurement.
+     Judge the probe on |S|, r12 and tracking, which are above.

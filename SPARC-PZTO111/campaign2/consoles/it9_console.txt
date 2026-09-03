@@ -1,0 +1,166 @@
+==============================================================================
+IT9  rewrite and retention   2026-08-22 04:44
+==============================================================================
+  data folder 260820: 147 files, newest 22 Aug 04:40 (0.1 h ago)
+
+--- preflight, pass 1 ---
+  preflight: 7 check group(s), 0 failure(s), 2 deferred
+    DEFERRED  S2/S9 geometry (offset not chosen yet) - re-run preflight once it is known
+    DEFERRED  S8 charge per site (dwell solved at run time) - re-run preflight once it is known
+    clear on everything checkable now
+
+1001 legal offsets; nearest first
+  meter at start         defl -0.805
+
+--- candidate 1: (-28.0,-14.0) ---
+  scanner range, 12 um frame at (-28.0,-14.0), limit 50 um:
+    x: |off|+size  40.0   edge at -34.0 / -22.0   ok
+    y: |off|+size  26.0   edge at -20.0 / -8.0   ok
+  position (-28.0,-14.0) is clear of all 6 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -14.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -14.0) um
+  -> PZTO_LDART_0134.ibw
+     PZTO_LDART_0134.ibw: drive 665.0 kHz, tracked 651.7, offset 13.3 kHz, 100% lines, r12 +0.95, |S| 55.2
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0134.ibw
+    phi0 = 4.0 deg  ->  members 4/64/124 deg
+    triad power 0.606   modulation 0.211 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.28, 0.44, 0.28)
+    deviation from the film triad 2/62/122: 2.0 deg
+  triad aligned to reference: ['4', '64', '124'] -> ['4', '64', '124']  (offsets ['2', '2', '2'] deg)
+  modulation 0.211 (need >= 0.18), streak 0.012
+  -> viable
+
+--- candidate 2: (-28.0,-16.0) ---
+  scanner range, 12 um frame at (-28.0,-16.0), limit 50 um:
+    x: |off|+size  40.0   edge at -34.0 / -22.0   ok
+    y: |off|+size  28.0   edge at -22.0 / -10.0   ok
+  position (-28.0,-16.0) is clear of all 6 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -16.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -16.0) um
+  -> PZTO_LDART_0135.ibw
+     PZTO_LDART_0135.ibw: drive 664.0 kHz, tracked 650.2, offset 13.8 kHz, 100% lines, r12 +0.95, |S| 52.4
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0135.ibw
+    phi0 = 4.0 deg  ->  members 4/64/124 deg
+    triad power 0.607   modulation 0.213 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.27, 0.43, 0.30)
+    deviation from the film triad 2/62/122: 2.0 deg
+  triad aligned to reference: ['4', '64', '124'] -> ['4', '64', '124']  (offsets ['2', '2', '2'] deg)
+  modulation 0.213 (need >= 0.18), streak 0.020
+  -> viable
+
+--- candidate 3: (-28.0,-12.0) ---
+  scanner range, 12 um frame at (-28.0,-12.0), limit 50 um:
+    x: |off|+size  40.0   edge at -34.0 / -22.0   ok
+    y: |off|+size  24.0   edge at -18.0 / -6.0   ok
+  position (-28.0,-12.0) is clear of all 6 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -12.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -12.0) um
+  -> PZTO_LDART_0136.ibw
+     PZTO_LDART_0136.ibw: drive 661.0 kHz, tracked 647.4, offset 13.7 kHz, 100% lines, r12 +0.95, |S| 46.2
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0136.ibw
+    phi0 = 4.0 deg  ->  members 4/64/124 deg
+    triad power 0.613   modulation 0.227 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.25, 0.44, 0.31)
+    deviation from the film triad 2/62/122: 2.0 deg
+  triad aligned to reference: ['4', '64', '124'] -> ['4', '64', '124']  (offsets ['2', '2', '2'] deg)
+  modulation 0.227 (need >= 0.18), streak 0.008
+  -> viable
+
+=== area (-28.0,-12.0), triad ['4', '64', '124'], modulation 0.227 ===
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-28.0, -12.0) um
+LDART ready
+  -> PZTO_LDART_0137.ibw
+  -> PZTO_LDART_0138.ibw
+  contact_check PZTO_LDART_0138.ibw
+    drive 665.0 kHz   tracked 645.6 +-2.3 kHz   offset 19.4 kHz
+    |A| 28.7 pm   xi 94 nm (2 px)   consistency 0.84   r12 +0.94   defl SP 0.60 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+  meter after baselines  defl -0.775
+  frame                   worst region   overall     r12
+  PZTO_LDART_0137.ibw             100%      100%    0.96   <- reference
+  PZTO_LDART_0138.ibw             100%      100%    0.94
+  readout window 1.26 um = 27 px, 4.2 periods -> ok
+  Lambda 301 nm, spacing 150 nm, window 1.26 um
+
+  n 16, halo 1.83, pitch 3.76, slots ['(4.12,3.49)', '(7.88,3.49)']
+  slot height ranges: ['14.6', '3.1'] nm
+
+             slot  dominant   command  role
+  HOLD  (4.1,3.5)         4        64  left alone - retention control
+  RW    (7.9,3.5)        64         4  rewritten in stage 2
+
+  sigma 389 = 1.29 sigma_c, dwell 0.88 s, 8.8 V.s per site
+
+  32 control tiles clear of both panels (terrace filter kept 32)
+
+=== STAGE 1: write both panels, commanded ['64', '4'] ===
+  stage1: 512 sites over 2 panel(s), 16069 pts, mean V +0.000000, 10.7 min
+LDART ready
+Wrote 16069 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260822_IT9_stage1.txt'  (path length 81.0 um, 512 strokes)
+260822_IT9_stage1.txt   saved 05:12:50
+  16069 pts   X[2.613,9.082] Y[1.984,5.000] um
+  |V| = [10.]   mean(V) = +0.0000 V   29.9 % at 0 V
+  path 321 um  ->  10.7 min at 0.5 um/s
+  running… ETA 10.7 min
+  done 05:23:51
+  litho stopped (required before the next run)
+LDART ready
+  -> PZTO_LDART_0139.ibw
+  meter after stage 1    defl -0.428
+  contact_check PZTO_LDART_0139.ibw
+    drive 666.0 kHz   tracked 647.7 +-4.4 kHz   offset 18.3 kHz
+    |A| 42.6 pm   xi 94 nm (2 px)   consistency 0.86   r12 +0.95   defl SP 0.60 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+  HOLD  commanded 64: dominant 4 -> 64, w 0.696, excess +0.391 = 7.7 x SWITCHED
+  RW    commanded 4: dominant 64 -> 124, w 0.369, excess +0.187 = 3.4 x SWITCHED
+
+=== STAGE 2: rewrite RW back toward 64 deg (it started there, went to 124) ===
+  HOLD is left alone over the same interval, so retention and
+  reversibility are measured on the same frames.
+  stage2: 256 sites over 1 panel(s), 7927 pts, mean V +0.000000, 5.3 min
+LDART ready
+Wrote 7927 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260822_IT9_stage2.txt'  (path length 38.3 um, 256 strokes)
+260822_IT9_stage2.txt   saved 05:33:12
+  7927 pts   X[6.371,9.387] Y[1.984,5.000] um
+  |V| = [10.]   mean(V) = +0.0000 V   29.0 % at 0 V
+  path 159 um  ->  5.3 min at 0.5 um/s
+  running… ETA 5.3 min
+  done 05:38:48
+  litho stopped (required before the next run)
+LDART ready
+  -> PZTO_LDART_0140.ibw
+  meter after stage 2    defl -0.776
+  contact_check PZTO_LDART_0140.ibw
+    drive 664.8 kHz   tracked 651.2 +-3.5 kHz   offset 13.6 kHz
+    |A| 49.3 pm   xi 94 nm (2 px)   consistency 0.87   r12 +0.95   defl SP 0.60 V
+    -> MOVE TO A DIFFERENT LOCATION AND RETUNE. Raising the setpoint has not fixed it (or it is already >= 0.45 V), so the contact spot itself is bad — debris or a step edge.
+  -> PZTO_LDART_0141.ibw
+
+=== RESULT ===
+  RW, scored toward its ORIGINAL director 64: dominant 64, w 0.757, excess +0.195 = 3.8 x
+  RW, still scored toward stage 1s command 4: w 0.162, excess -0.024 = -0.4 x
+  HOLD, untouched since stage 1, toward 64: w 0.609 (was 0.696), excess +0.300 = 5.9 x, dominant 64
+
+==========================================================================
+IT9 VERDICT
+==========================================================================
+  stage 1 wrote both panels: RW 3.4 x, HOLD 7.7 x
+  reversible: True   retained: True
+
+  -> REVERSIBLE AND NON-VOLATILE. RW was driven to 124 deg,
+     then back to 64 by a second lattice, while HOLD stayed
+     where stage 1 put it over the same interval and the same
+     scans. So the director is a rewritable state variable, not
+     a one-shot change: three addressable states, set and reset
+     at will. This is the result that makes the effect a memory.
+     NEXT: cycle it. Ten writes alternating between two members,
+     watching for fatigue.

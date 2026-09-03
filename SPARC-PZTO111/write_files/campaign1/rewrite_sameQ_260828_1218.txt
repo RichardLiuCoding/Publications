@@ -1,0 +1,93 @@
+==========================================================================
+REWRITE MECHANISM  MODE=sameQ  2026-08-28 12:18
+==========================================================================
+  area (-8.0,-8.0), sigma 667
+  stage 1 pre-orders the zone; stage 2 tries to rewrite it with a
+  continuous TRACE and a pulsed LATTICE, side by side.
+  data folder 260827: 181 files, newest 28 Aug 12:16 (0.0 h ago)
+  live deflection -0.694 V
+
+--- frame 1: virgin ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0173.ibw
+  virgin -> PZTO_LDART_0173.ibw (tune 656.0 kHz)
+  contact_check PZTO_LDART_0173.ibw
+    drive 667.3 kHz   tracked 655.5 +-2.7 kHz   offset 11.8 kHz
+    |A| 66.8 pm   xi 78 nm (4 px)   consistency 0.93   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0173.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.738   modulation 0.477 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.72, 0.13, 0.15)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    triad [16, 76, 136], modulation 0.477, incumbent 16 deg
+    Lambda 301 nm (sp 150 nm)
+    stage 1 will order along A = 76 deg
+    stage 2 will try to rewrite to B = 136 deg
+
+--- stage 1 SKIPPED: this area is already ordered ---
+    ordered-zone mean population [0.53  0.269 0.201] -> dominant 16 deg
+
+--- stage 2: rewrite attempts, lines along B = 136 ---
+  P1 trace points 330 + / 330 - per pass, balanced exactly
+  P1 TRACE    13 strokes x 5 passes, same Q as the lattice
+              12.9 um per pass, sigma 665
+  P2 LATTICE  84 sites, 39 pulses/site, 15.6 V.s/site, sigma 669
+  stage2: 6576 pts -> 4.4 min, |V|max 10.0, mean +0.00e+00
+LDART ready
+Wrote 16308 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260828_1218_RW_stage2.txt'  (path length 101.0 um, 3384 strokes)
+260828_1218_RW_stage2.txt   saved 12:21:14
+  16308 pts   X[0.800,4.154] Y[1.800,3.200] um
+  |V| = [10.]   mean(V) = +0.0000 V   59.7 % at 0 V
+  path 326 um  ->  10.9 min at 0.5 um/s
+  running… ETA 10.9 min
+  done 12:32:25
+  litho stopped (required before the next run)
+
+--- frame 3: after the rewrite attempts ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0174.ibw
+  rewritten -> PZTO_LDART_0174.ibw (tune 653.0 kHz)
+  contact_check PZTO_LDART_0174.ibw
+    drive 667.7 kHz   tracked 653.4 +-3.2 kHz   offset 14.3 kHz
+    |A| 55.7 pm   xi 78 nm (4 px)   consistency 0.92   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0174.ibw
+    phi0 = 11.5 deg  ->  members 12/72/132 deg
+    triad power 0.691   modulation 0.382 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.53, 0.16, 0.30)
+    deviation from the film triad 2/62/122: 9.5 deg
+  triad aligned to reference: ['12', '72', '132'] -> ['12', '72', '132']  (offsets ['10', '10', '10'] deg)
+
+==========================================================================
+RESULT  MODE=sameQ   target B = 136 deg
+==========================================================================
+  triad [12, 72, 132] | modulation virgin 0.477 -> ordered nan -> after 0.382
+
+  window  w virgin             w ordered            w after              dom o->a
+  P1      [0.612 0.19  0.198]  [0.612 0.19  0.198]  [0.341 0.174 0.485]   10->135
+  P2      [0.464 0.243 0.292]  [0.464 0.243 0.292]  [0.275 0.1   0.624]   20->135
+  ctrl1   [0.251 0.326 0.423]  [0.251 0.326 0.423]  [0.261 0.306 0.433]  145->145
+  ctrl2   [0.478 0.392 0.131]  [0.478 0.392 0.131]  [0.476 0.378 0.147]   90-> 90
+  ctrl3   [0.594 0.27  0.136]  [0.594 0.27  0.136]  [0.53  0.312 0.158]   20-> 10
+  ctrl4   [0.797 0.087 0.116]  [0.797 0.087 0.116]  [0.788 0.095 0.118]   15-> 15
+
+  control (ordered, not rewritten) mean change [-0.017  0.004  0.012] | null 0.048
+  P1 trace    excess [-0.254 -0.02   0.274]  max 0.274 = 5.7x null -> REWROTE
+  P2 lattice  excess [-0.172 -0.147  0.32 ]  max 0.320 = 6.6x null -> REWROTE
+
+  --- mechanism ---
+  BOTH templates rewrote the ordered region (trace 5.7x, lattice 6.6x null).
+  At matched dose and matched Q a continuous trace CAN
+  re-orient an ordered domain, so the difficulty reported in
+  practice is not intrinsic to tracing. The likely difference
+  is dose: a trace at ordinary scan speed delivers far less
+  charge per area than it appears to. Here it took 5 passes
+  at 0.50 um/s to reach sigma 667.
+  P1 -> 135 deg, P2 -> 135 deg, target 136
+
+  write minutes: 4.4 total (stage1 + stage2)

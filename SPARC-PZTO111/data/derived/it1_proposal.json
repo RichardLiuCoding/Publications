@@ -1,0 +1,91 @@
+{
+ "name": "IT1_factorial_and_sigma_prediction",
+ "hypothesis": "T3 says the pulse lattice imposes two independent conditions: SELECTION, the template must be commensurate with the lamellae (q = Q), which decides which director; and DRIVE, the areal charge density sigma = (1/spacing^2)*keep*V*dwell must exceed sigma_c, which decides whether anything happens at all. sigma_c = 302 +- 9 V.s/um^2 separates all 19 panels written so far, but it was FITTED to those panels and they share areas and probes, so it has never predicted anything. Section 17 was built to test both conditions and did not return a usable result. This repeats that test in a fresh area and adds the prediction test in the same frame.",
+ "prediction": "A turns (positive control). B turns: it carries the same sigma as A with half the sites and twice the dwell, so count and charge are interchangeable. C does NOT turn: same sites, same sigma, template period doubled to 2 Lambda, so commensuration is required. D does not turn (0.70 sigma_c). E is the prediction: at 1.00 sigma_c it should sit right at the boundary - turning weakly or not at all. Above threshold w(cmd) should follow 0.234*ln(sigma) - 0.887.",
+ "outcomes": {
+  "A turn, B turn, C no, D no": "T3 confirmed in both conditions in a fresh area; sigma_c graduates from fit to law. Next: push the count-charge trade to 25 % x 4 s and find where it breaks.",
+  "B does not turn": "sigma is NOT the drive variable - site density matters in itself, and the 19-panel threshold was keep-fraction masquerading as sigma. Next: vary V at fixed dwell and spacing, which moves sigma without moving the count.",
+  "C turns": "commensuration is NOT required - only the lattice axis matters. Condition 1 collapses to a directional rule and matching Lambda, enforced in every section so far, was never necessary. Next: a single row of pulses, and a 3 Lambda template.",
+  "D turns": "sigma_c is lower in this area than 302. Is it area-dependent, and does it track Lambda or the local wall density? Next: a finer ladder here.",
+  "E turns strongly, not weakly": "the transition is sharper than a threshold at 302 - re-fit sigma_c from this area and check whether the boundary is a step or a steep power law.",
+  "A does not turn": "VOID - do not read the others. Check texture (modulation) and the write gate before writing again."
+ },
+ "offset": [
+  0.0,
+  0.0
+ ],
+ "frame_try": [
+  12.0
+ ],
+ "v": 10.0,
+ "collective": true,
+ "vary_sigma": true,
+ "panels": [
+  {
+   "label": "A",
+   "keep": 1.0,
+   "dwell": 1.0,
+   "sign_every": 1,
+   "spacing_div": 2.0,
+   "sigma": 444.44444444444446,
+   "n": 16,
+   "npulse": 256,
+   "target_ratio": 1.5,
+   "on_resonance": true,
+   "tests": "positive control, and the factorial reference"
+  },
+  {
+   "label": "B",
+   "keep": 0.5,
+   "dwell": 2.0,
+   "sign_every": 1,
+   "spacing_div": 2.0,
+   "sigma": 444.44444444444446,
+   "n": 16,
+   "npulse": 128,
+   "target_ratio": 1.5,
+   "on_resonance": true,
+   "tests": "Q15  half the sites, twice the dwell, same sigma"
+  },
+  {
+   "label": "C",
+   "keep": 1.0,
+   "dwell": 1.0,
+   "sign_every": 2,
+   "spacing_div": 2.0,
+   "sigma": 444.44444444444446,
+   "n": 16,
+   "npulse": 256,
+   "target_ratio": 1.5,
+   "on_resonance": false,
+   "tests": "Q16  template period 2 Lambda, same sigma"
+  },
+  {
+   "label": "D",
+   "keep": 0.9909374999999998,
+   "dwell": 0.48,
+   "sign_every": 1,
+   "spacing_div": 2.0,
+   "sigma": 211.39999999999995,
+   "n": 16,
+   "npulse": 254,
+   "target_ratio": 0.7,
+   "on_resonance": true,
+   "tests": "below threshold: negative control"
+  },
+  {
+   "label": "E",
+   "keep": 0.9992647058823529,
+   "dwell": 0.68,
+   "sign_every": 1,
+   "spacing_div": 2.0,
+   "sigma": 302.0,
+   "n": 16,
+   "npulse": 256,
+   "target_ratio": 1.0,
+   "on_resonance": true,
+   "tests": "AT sigma_c: the prediction test"
+  }
+ ],
+ "notes": "Sample/coarse stage moved to a fresh region on 21 Aug; the scan offset was zeroed and the 12 previously used areas archived, so (0,0) is virgin material at this sample position. Every dose is solved from the LOCAL Lambda at each panel."
+}

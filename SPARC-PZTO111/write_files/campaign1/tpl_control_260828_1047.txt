@@ -1,0 +1,95 @@
+==========================================================================
+TEMPLATE RUN  EXP=control  2026-08-28 10:47
+==========================================================================
+  EXP choices: control | select | shear | shear75 | cross
+  area (+8.0,+0.0), 5 um frame, target sigma 667 V.s/um^2
+  panels 1.4 um at [(1.5, 2.5), (3.5, 2.5)]
+  this WILL write to the sample
+  data folder 260827: 168 files, newest 28 Aug 10:46 (0.0 h ago)
+
+  live deflection -0.717 V  (withdrawn band -0.75..-0.20; if engaged this is the setpoint being held)
+
+--- LDART before ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_LDART_0160.ibw
+    PZTO_LDART_0160.ibw (tune 661.0 kHz)
+  contact_check PZTO_LDART_0160.ibw
+    drive 670.6 kHz   tracked 660.9 +-0.6 kHz   offset 9.7 kHz
+    |A| 73.9 pm   xi 98 nm (5 px)   consistency 0.93   r12 +0.93   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0160.ibw
+    phi0 = 14.0 deg  ->  members 14/74/134 deg
+    triad power 0.607   modulation 0.214 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.29, 0.47, 0.24)
+    deviation from the film triad 2/62/122: 12.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['14', '74', '134'] -> ['14', '74', '134']  (offsets ['12', '12', '12'] deg)
+    triad [14, 74, 134], modulation 0.214, 19.53 nm/px
+    Lambda ['245', '354', '219'] -> median 245 nm  (sp = 123 nm)
+
+--- panels ---
+  P1 solid    solid +/- pair, no periodicity: DRIVE only
+     264 sites, 12 pulses/site, dwell 0.48 s, sigma 647, 4.8 V.s per site
+  P2 parallel parallel along 14 at the same dose: drive + selection
+     128 sites, 26 pulses/site, dwell 1.04 s, sigma 679, 10.4 V.s per site
+
+--- built path ---
+  9006 pts, 35.5 um, 1.2 min at 0.50 um/s (cap 26)
+  |V|max 10.0, mean +0.00e+00, 28% at 0 V
+  x 0.80-4.18, y 1.82-3.18 um
+
+--- writing ---
+LDART ready
+Wrote 9006 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260828_1047_TPL_control.txt'  (path length 35.5 um, 392 strokes)
+260828_1047_TPL_control.txt   saved 10:50:39
+  9006 pts   X[0.800,4.185] Y[1.815,3.184] um
+  |V| = [10.]   mean(V) = +0.0000 V   27.9 % at 0 V
+  path 180 um  ->  6.0 min at 0.5 um/s
+  running… ETA 6.0 min
+  done 10:56:58
+  litho stopped (required before the next run)
+
+--- LDART after ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_LDART_0161.ibw
+    PZTO_LDART_0161.ibw (tune 662.0 kHz)
+  contact_check PZTO_LDART_0161.ibw
+    drive 669.4 kHz   tracked 661.8 +-1.0 kHz   offset 7.6 kHz
+    |A| 80.6 pm   xi 78 nm (4 px)   consistency 0.95   r12 +0.97   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0161.ibw
+    phi0 = 19.0 deg  ->  members 19/79/139 deg
+    triad power 0.714   modulation 0.428 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.56, 0.28, 0.15)
+    deviation from the film triad 2/62/122: 17.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['19', '79', '139'] -> ['19', '79', '139']  (offsets ['17', '17', '17'] deg)
+
+==========================================================================
+RESULT  EXP=control   sigma 667
+==========================================================================
+  triad before [14, 74, 134] (mod 0.214) | after [19, 79, 139] (mod 0.428)
+
+  window  w before               w after                 dom b->a   lat |A|
+  P1      [0.41  0.348 0.242]    [0.243 0.584 0.173]      75-> 70   80.7-> 80.9
+  P2      [0.243 0.429 0.328]    [0.872 0.062 0.066]      90-> 10   80.2->103.2
+  ctrl1   [0.467 0.261 0.273]    [0.46  0.288 0.252]     115-> 20   76.6-> 77.2
+  ctrl2   [0.558 0.272 0.17 ]    [0.548 0.302 0.15 ]      70-> 70   69.3-> 70.6
+  ctrl3   [0.496 0.265 0.239]    [0.456 0.362 0.182]       0->  0   66.9-> 80.0
+  ctrl4   [0.254 0.489 0.257]    [0.268 0.555 0.178]      90-> 90   72.6-> 85.0
+
+  control mean change [-0.011  0.055 -0.044] | null 0.042
+  P1 excess [-0.156  0.181 -0.025]  max 0.181 = 4.3x null  -> CLEARS
+  P2 excess [ 0.64  -0.422 -0.218]  max 0.640 = 15.3x null  -> CLEARS
+
+  --- what this says about SELECTION ---
+  The two panels ended on DIFFERENT directors (70 and 10 deg, 60 apart).
+  Same frame, same dose, same tip: the only difference
+  is the template. That is SELECTION operating.
+    P1 (solid) -> 70 deg; its own template favours 0
+    P2 (parallel) -> 10 deg; its own template favours 14
+
+  write minutes 1.18  (add to the ledger by hand; this driver
+  does not touch campaign_state.json)

@@ -1,0 +1,121 @@
+==========================================================================
+BLOCK 1  one commensurate panel, both channels  2026-08-29 11:30
+==========================================================================
+  data folder 260829: 8 files, newest 29 Aug 11:29 (0.0 h ago)
+  scanner range, 2 um frame at (-4.0,+0.0), limit 50 um:
+    x: |off|+size   6.5   edge at -5.2 / -2.8   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+
+--- LDART before ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-4.0, 0.0) um
+  -> PZTO_LDART_0004.ibw
+    PZTO_LDART_0004.ibw  tracked 100%, offset 7.7 kHz
+  contact_check PZTO_LDART_0004.ibw
+    drive 645.8 kHz   tracked 638.2 +-2.4 kHz   offset 7.7 kHz
+    |A| 65.9 pm   xi 78 nm (16 px)   consistency 0.93   r12 +0.92   defl SP 0.50 V
+    -> OK. Proceed.
+
+--- VDART before ---
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-4.0, 0.0) um
+  -> PZTO_VDART_0004.ibw
+    PZTO_VDART_0004.ibw  tracked 100%, offset 4.1 kHz
+  contact_check PZTO_VDART_0004.ibw
+    drive 348.8 kHz   tracked 344.8 +-0.8 kHz   offset 4.1 kHz
+    |A| 61.2 pm   xi 68 nm (14 px)   consistency 0.94   r12 +0.75   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0004.ibw
+    phi0 = 19.0 deg  ->  members 19/79/139 deg
+    triad power 0.647   modulation 0.294 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.22, 0.54, 0.24)
+    deviation from the film triad 2/62/122: 17.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['19', '79', '139'] -> ['19', '79', '139']  (offsets ['17', '17', '17'] deg)
+
+BEFORE   / 
+  triad [19, 79, 139], dominant 79 deg, modulation 0.294
+  |S| LDART 77.2 pm (r12 +0.92) | VDART 41.7 pm (r12 +0.75)
+  commanding 19.0 deg (incumbent 79, move 60 deg)
+  Lambda pinned by caller: 328 nm (this area measures 253)
+  !! a 1.0 um interior window holds only 3.0 Lambda
+
+PANEL  parallel lattice, 1.2 um, Lambda 328 nm, sp 164 nm
+  52 sites, 9 pulses/site, dwell 0.36 s -> sigma 130 V.s/um^2, 3.60 V.s/site (limit 20)
+  1004 pts -> 0.67 min at 0.50 um/s (S7 cap 26)
+  x 0.68-1.82, y 0.68-1.82 um in a 2.5 um frame
+  |V|max 10.0, net DC +0.00e+00
+  S24: 331.2 of 350 used, 18.8 left; this write needs 0.67
+
+--- writing ---
+LDART ready
+Wrote 1004 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260829_1130_B1.txt'  (path length 8.9 um, 52 strokes)
+260829_1130_B1.txt   saved 11:40:54
+  1004 pts   X[0.678,1.822] Y[0.678,1.822] um
+  |V| = [10.]   mean(V) = +0.0000 V   53.4 % at 0 V
+  path 20 um  ->  0.7 min at 0.5 um/s
+  running… ETA 0.7 min
+  done 11:41:53
+  litho stopped (required before the next run)
+  written.
+
+--- LDART after ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-4.0, 0.0) um
+  -> PZTO_LDART_0005.ibw
+    PZTO_LDART_0005.ibw  tracked 100%, offset 4.8 kHz
+  contact_check PZTO_LDART_0005.ibw
+    drive 647.1 kHz   tracked 642.3 +-1.1 kHz   offset 4.7 kHz
+    |A| 81.8 pm   xi 73 nm (15 px)   consistency 0.96   r12 +0.95   defl SP 0.50 V
+    -> OK. Proceed.
+
+--- VDART after ---
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-4.0, 0.0) um
+  -> PZTO_VDART_0005.ibw
+    PZTO_VDART_0005.ibw  tracked 100%, offset 3.9 kHz
+  contact_check PZTO_VDART_0005.ibw
+    drive 346.3 kHz   tracked 342.4 +-1.5 kHz   offset 3.9 kHz
+    |A| 61.7 pm   xi 83 nm (17 px)   consistency 0.95   r12 +0.85   defl SP 0.50 V
+    -> OK. Proceed.
+
+==========================================================================
+READOUT
+==========================================================================
+
+LDART, panel interior (central 1.0 um):
+  before
+    band (nm)          dir    period    aniso        p  note
+    150-500          138.8     222.5     1.56    0.802  near triad 139 (0 off)
+    90-150            63.8     134.8     2.03    0.207  near triad 79 (15 off)
+    18-90              2.5      78.3     3.89    0.008  fast-axis artefact
+  after 
+    band (nm)          dir    period    aniso        p  note
+    150-500           18.8     273.4     4.30    0.017  near triad 19 (0 off)
+    90-150            11.2     110.1     2.78    0.008  fast-axis artefact
+    18-90            162.5      80.2     5.73    0.008  near triad 139 (24 off)
+
+LDART, surround (the in-frame control, beyond 0.8 um):
+  before
+    band (nm)          dir    period    aniso        p  note
+    150-500           87.4     296.7     2.14    0.017  near triad 79 (8 off)
+    90-150            77.3     134.1     2.32    0.008  near triad 79 (2 off)
+    18-90              0.5      73.4    14.33    0.008  fast-axis artefact
+  after 
+    band (nm)          dir    period    aniso        p  note
+    150-500           87.4     167.2     2.20    0.008  near triad 79 (8 off)
+    90-150            77.3     134.0     2.80    0.008  near triad 79 (2 off)
+    18-90             90.5      81.0    19.23    0.008  near triad 79 (12 off)
+
+P_z AT THE COMMANDED WAVEVECTOR (matched filter, 19.0 deg / 328 nm):
+  VDART before  amp  12.51 pm   z  -0.9   p 0.7727   (null sd 4.25)
+  VDART after   amp 158.22 pm   z +15.7   p 0.0076   (null sd 9.39)
+
+  and at the OLD (incumbent) wavevector 79.0 deg:
+  VDART before  amp  18.83 pm   z  +0.5   p 0.2727
+  VDART after   amp  10.54 pm   z  -0.2   p 0.6742
+
+==========================================================================
+  before: PZTO_LDART_0004.ibw / PZTO_VDART_0004.ibw
+  after : PZTO_LDART_0005.ibw / PZTO_VDART_0005.ibw
+  commanded 19.0 deg at sigma 130

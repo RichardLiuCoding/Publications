@@ -1,0 +1,44 @@
+==========================================================================
+TEMPLATE RUN  EXP=dose7  2026-08-29 02:35
+==========================================================================
+  EXP choices: control | select | shear | shear75 | cross | dose1..3
+  area (-24.0,+0.0), 5 um frame, target sigma 667 V.s/um^2
+  panels 1.4 um at [(1.5, 2.5), (3.5, 2.5)]
+  this WILL write to the sample
+  data folder 260827: 253 files, newest 29 Aug 02:35 (0.0 h ago)
+
+  live deflection -0.695 V  (withdrawn band -0.75..-0.20; if engaged this is the setpoint being held)
+
+--- LDART before ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-24.0, 0.0) um
+  -> PZTO_LDART_0245.ibw
+    PZTO_LDART_0245.ibw (tune 662.0 kHz)
+  contact_check PZTO_LDART_0245.ibw
+    drive 671.7 kHz   tracked 661.9 +-1.1 kHz   offset 9.7 kHz
+    |A| 81.6 pm   xi 78 nm (4 px)   consistency 0.95   r12 +0.97   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0245.ibw
+    phi0 = 21.5 deg  ->  members 22/82/142 deg
+    triad power 0.587   modulation 0.174 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.26, 0.53, 0.22)
+    deviation from the film triad 2/62/122: 19.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['22', '82', '142'] -> ['22', '82', '142']  (offsets ['20', '20', '20'] deg)
+    triad [22, 82, 142], modulation 0.174, 19.53 nm/px
+    Lambda ['231', '301', '635'] -> median 301 nm  (sp = 150 nm)
+    analysis window 1.4 um = 4.7 Lambda
+    incumbent director 82 deg (mean control populations [0.39  0.436 0.175])
+
+--- panels ---
+  P1 parallel lines along 22 at sigma 20
+     86 sites, 1 pulses/site, dwell 0.04 s, sigma 18, 0.4 V.s per site
+  P2 parallel lines along 22 at sigma 30
+     86 sites, 2 pulses/site, dwell 0.08 s, sigma 35, 0.8 V.s per site
+
+--- built path ---
+  2038 pts -> 1.4 min of writing at 0.50 um/s (cap 26)
+  stroke length 30.6 um (1.0 min); the rest is travel between sites
+  |V|max 10.0, mean +0.00e+00, 87% at 0 V
+  x 0.80-4.20, y 1.80-3.20 um
+  S24 budget: 329.5 of 330 used, 0.5 left; this write needs 1.4

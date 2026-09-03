@@ -1,0 +1,94 @@
+==========================================================================
+BLOCK 2  +V then -V over one square, then look  2026-08-29 13:32
+==========================================================================
+  data folder 260829: 28 files, newest 29 Aug 13:27 (0.1 h ago)
+  scanner range, 2 um frame at (+8.0,+0.0), limit 50 um:
+    x: |off|+size  10.5   edge at +6.8 / +9.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+
+--- LDART before ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_LDART_0014.ibw
+    PZTO_LDART_0014.ibw tracked 100%
+  contact_check PZTO_LDART_0014.ibw
+    drive 647.1 kHz   tracked 640.5 +-2.6 kHz   offset 6.6 kHz
+    |A| 63.5 pm   xi 73 nm (15 px)   consistency 0.93   r12 +0.92   defl SP 0.50 V
+    -> OK. Proceed.
+
+--- VDART before ---
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_VDART_0014.ibw
+    PZTO_VDART_0014.ibw tracked 100%
+  contact_check PZTO_VDART_0014.ibw
+    drive 349.2 kHz   tracked 346.4 +-1.0 kHz   offset 2.9 kHz
+    |A| 64.4 pm   xi 83 nm (17 px)   consistency 0.96   r12 +0.78   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0014.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.599   modulation 0.198 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.18, 0.63, 0.19)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+
+  triad [16, 76, 136], modulation 0.198
+
+POLING SQUARE  1.4 um, raster pitch 30 nm, 0.50 um/s
+  94 raster lines (47 per polarity), design sigma 667 per polarity
+  built: 7050 pts, |charge| 2670 V.s over 1.96 um^2 -> sigma 681 per polarity
+  net DC +0.000e+00 V  (S4 needs |mean| <= 0.01)
+  7050 pts -> 4.70 min at 0.50 um/s (S7 cap 26)
+  x 0.55-1.95, y 0.55-1.93 um
+
+BEFORE
+  L before       PZTO_LDART_0014.ibw    |S|  75.9 pm  r12 +0.92
+     super : dir   78.8  period  266.1 nm  aniso   3.44  p 0.0464
+     fine  : dir    2.5  period   79.5 nm  aniso   2.86  p 0.0066  fast-axis
+  V before       PZTO_VDART_0014.ibw    |S|  43.8 pm  r12 +0.78
+     super : dir   63.8  period  243.1 nm  aniso   1.39  p 0.9272
+     fine  : dir    2.5  period   77.2 nm  aniso   2.89  p 0.0066  fast-axis
+  S24: 335.2 of 350 used, 14.8 left; this needs 4.70
+
+--- poling: +V pass then -V pass over the same square ---
+LDART ready
+Wrote 7050 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260829_1332_B2pole.txt'  (path length 136.3 um, 94 strokes)
+260829_1332_B2pole.txt   saved 13:42:16
+  7050 pts   X[0.550,1.950] Y[0.550,1.930] um
+  |V| = [10.]   mean(V) = +0.0000 V   5.3 % at 0 V
+  path 141 um  ->  4.7 min at 0.5 um/s
+  running… ETA 4.7 min
+  done 13:47:17
+  litho stopped (required before the next run)
+  done.
+
+--- LDART after ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_LDART_0015.ibw
+    PZTO_LDART_0015.ibw tracked 100%
+
+--- VDART after ---
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (8.0, 0.0) um
+  -> PZTO_VDART_0015.ibw
+    PZTO_VDART_0015.ibw tracked 100%
+
+AFTER
+  L after        PZTO_LDART_0015.ibw    |S|  37.8 pm  r12 +0.92
+     super : dir   18.8  period  201.7 nm  aniso   8.51  p 0.0066
+     fine  : dir    0.5  period   70.3 nm  aniso   3.98  p 0.0066  fast-axis
+  V after        PZTO_VDART_0015.ibw    |S|  29.0 pm  r12 +0.85
+     super : dir   26.2  period  196.4 nm  aniso   4.83  p 0.0066
+     fine  : dir    2.5  period   75.9 nm  aniso   2.29  p 0.0397  fast-axis
+
+==========================================================================
+READING
+==========================================================================
+  VDART super-band anisotropy 0.00 -> 0.00  (p 0.927 -> 0.007)
+  VDART |S| interior 43.8 -> 29.0 pm
+  -> LDART fine band still explained by the fast axis or by a
+     lamellar harmonic. No clean nano-domain signal.
+
+  before PZTO_LDART_0014.ibw / PZTO_VDART_0014.ibw   after PZTO_LDART_0015.ibw / PZTO_VDART_0015.ibw

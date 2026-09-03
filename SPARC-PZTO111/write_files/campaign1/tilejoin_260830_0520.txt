@@ -1,0 +1,28 @@
+================================================================================
+TILE JOIN, RE-IMAGED  2026-08-30 05:20   (measurement only)
+================================================================================
+  data folder 260829: 185 files, newest 30 Aug 05:20 (0.0 h ago)
+  scanner range, 2 um frame at (-6.0,-18.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size  20.5   edge at -19.2 / -16.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -18.0) um
+  -> PZTO_LDART_0118.ibw
+    PZTO_LDART_0118.ibw header offset (-6.00,-18.00) um
+
+  TILE A, read in this frame, 1.2 um window centred 0.62 um left of centre
+    tile A in the join frame: 1.20 um window holds 4.35 Lambda at 276 nm (need >= 4.0) -> OK
+    director 18.8 deg, Lambda 276 nm, anisotropy 23.89, p 0.0025
+    PZTO_LDART_0107.ibw header offset (-6.80,-18.00) um
+
+  TILE A, in its own frame taken BEFORE tile B was written
+    director 18.8 deg, Lambda 275 nm, anisotropy 19.40, p 0.0025
+
+--------------------------------------------------------------------------------
+  tile A director before tile B: 18.8 deg
+  tile A director after  tile B: 18.8 deg   -> change 0.0 deg
+  -> TILE A IS UNDISTURBED. Writing a neighbouring tile at a
+     different commanded axis 1.6 um away does not overwrite
+     it. Tiles are independent, which is what patterning needs.
+
+  frame for the figure: PZTO_LDART_0118.ibw

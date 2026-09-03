@@ -1,0 +1,57 @@
+==========================================================================
+DIAG: does the tip deliver bias?   2026-08-28 06:47
+==========================================================================
+  two 1.2 um squares at +10 V and -10 V, 60 nm raster pitch
+  area (+8.0,-8.0), 5 um frame -- fresh, and not one the
+  pathway experiments would want
+  NOTE: diagnostic only. campaign_state.json is not touched.
+  data folder 260827: 150 files, newest 28 Aug 06:43 (0.1 h ago)
+
+  built: 54.1 um of path -> 3.6 min at 0.25 um/s
+  |V| max 10.0, mean +0.000, 9% at 0 V
+  x 1.00-4.00 um, y 1.90-3.10 um, inside the 5 um field: yes
+  per-site dose ~ 2.0 V.s (C21 limit 40) -- a raster spreads
+  charge along the line instead of stacking it on one point
+
+--- VDART BEFORE ---
+scan 5.0 um, 128 px, 2.0 Hz, angle 0.0 deg, offset (8.0, -8.0) um
+VDART ready
+  -> PZTO_VDART_0002.ibw
+    before -> PZTO_VDART_0002.ibw
+VDART PZTO_VDART_0002.ibw: up 88.8 / 11.2 %   |<e^i.phi>| 0.748   |A| 48.8 pm   coh 0.95
+   minority in patches >=25 px: 20 %   (287 clusters)
+   -> ONE CLASS ONLY - the fraction below is a fit tail, not domains
+
+--- poling ---
+LDART ready
+Wrote 2865 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260828_0647_DIAG_poling.txt'  (path length 54.1 um, 42 strokes)
+260828_0647_DIAG_poling.txt   saved 06:49:05
+  2865 pts   X[1.000,4.000] Y[1.900,3.100] um
+  |V| = [10.]   mean(V) = +0.0000 V   9.1 % at 0 V
+  path 57 um  ->  3.8 min at 0.25 um/s
+  running… ETA 3.8 min
+  done 06:53:13
+  litho stopped (required before the next run)
+
+--- VDART AFTER ---
+scan 5.0 um, 128 px, 2.0 Hz, angle 0.0 deg, offset (8.0, -8.0) um
+VDART ready
+  -> PZTO_VDART_0003.ibw
+    after -> PZTO_VDART_0003.ibw
+VDART PZTO_VDART_0003.ibw: up 87.6 / 12.4 %   |<e^i.phi>| 0.734   |A| 73.3 pm   coh 0.98
+   minority in patches >=25 px: 71 %   (138 clusters)
+   -> ONE CLASS ONLY - the fraction below is a fit tail, not domains
+
+==========================================================================
+READ IT LIKE THIS
+==========================================================================
+  before PZTO_VDART_0002.ibw
+  after  PZTO_VDART_0003.ibw
+  Look at the AFTER phase image for two 1.2 um squares at
+  (1.6,2.5) and (3.4,2.5) um within the frame.
+
+  squares visible  -> the tip writes; the IP voids are real physics
+  no squares       -> no bias reaches the sample; every void tonight
+                      has one cause, and it is not fixable in
+                      software. Stop writing.
+LDART ready

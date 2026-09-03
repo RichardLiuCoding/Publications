@@ -1,0 +1,546 @@
+[
+ {
+  "rec": 2,
+  "ts": "2026-08-03T02:24:28.947Z",
+  "kind": "operator",
+  "w": 31,
+  "text": "@\"C:\\Users\\Asylum User\\AppData\\Local\\Temp\\Crystal_Symmetry_Theory_for_IP_OP_Superdomain_Switching_and_Intermediate_State.docx\" @\"C:\\Users\\Asylum User\\AppData\\Local\\Temp\\1_Experimental_Findings_Trajectory_Lithography_PZTO111.docx\" @\"C:\\Users\\Asylum User\\AppData\\Local\\Temp\\2_Unified_Symmetry_Theory_of_IP_OP_Superdomain_Switching.docx\" @\"C:\\Users\\Asylum User\\AppData\\Local\\Temp\\3_Theory_Applied_to_the_Experimental_Record.docx\" @\"C:\\Users\\Asylum User\\AppData\\Local\\Temp\\4_Pathway_Prediction_Controllable_Reconfiguration_and_ML.docx\"\nRead these files carefully and get ready to take new measurements together with me on the real instrument and real sample.",
+  "md": 1
+ },
+ {
+  "rec": 101,
+  "ts": "2026-08-03T02:28:07.503Z",
+  "kind": "operator",
+  "w": 57,
+  "text": "Read these files carefully and get ready to take new measurements together with me on the real instrument and real sample. I don't need you to run the codes. You only need to analyze the results, suggest the next steps, and refine the theory model. I will execute these instrument commands and let you know the results",
+  "md": 28
+ },
+ {
+  "rec": 119,
+  "ts": "2026-08-03T02:38:31.244Z",
+  "kind": "operator",
+  "w": 34,
+  "text": "I'm currently remotely control this windows computer via Windows remote desktop on my Macbook at home. However, the texts and control sizes in the Igor pro software are very small. How to change that?",
+  "md": 32
+ },
+ {
+  "rec": 125,
+  "ts": "2026-08-03T02:42:28.634Z",
+  "kind": "operator",
+  "w": 136,
+  "text": "I got a \"Syntax error\" which brings me to: SetIgorOption [mainKeyword,] keyword= value \nSetIgorOption [mainKeyword,] keyword= ? \nThe SetIgorOption operation makes unusual and temporary changes to Igor Pro's behavior. This operation is not compilable and you will need to use the Execute operation to use it in a user function. The details of the syntax depend on the application and are documented where the alternate behaviors are described. In most cases the current value of a setting can be read using the keyword =?  syntax. Simple numeric options are stored in V_flag and color options are stored in V_Red, V_Green, and V_Blue. The settings last for the life of the Igor session. \nSee Also\nSyntax Coloring for some usage examples; Macintosh and LAPACK Library; Limitations of Independent Modules; Conditional Compilation; Pre-Carbon Page Setup Records. MarkPerfTestTime operation.",
+  "md": 34
+ },
+ {
+  "rec": 134,
+  "ts": "2026-08-03T02:44:53.359Z",
+  "kind": "operator",
+  "w": 2,
+  "text": "It's 6.38",
+  "md": 36
+ },
+ {
+  "rec": 140,
+  "ts": "2026-08-03T13:24:28.106Z",
+  "kind": "operator",
+  "w": 49,
+  "text": "@\"C:\\Users\\Asylum User\\Downloads\\Adv Elect Materials - 2026 - Vasudevan - Scan\u2010Path\u2010 and Initial\u2010State\u2010Dependent Superdomain Switching in  111 \u2010Oriented PZT.pdf\"\nTwo questions, the experiment results are loaded in \"Trajectory Litho Read Data_v1.ipynb\". Are you able to read it? 2, Read the attached PDF and let's refine our understanding and experimental plan.",
+  "md": 38
+ },
+ {
+  "rec": 220,
+  "ts": "2026-08-03T13:47:35.285Z",
+  "kind": "operator",
+  "w": 19,
+  "text": "wait a minute, after they write the superdomain direction, were they able to re-configure it with trajectory writing path?",
+  "md": 62
+ },
+ {
+  "rec": 225,
+  "ts": "2026-08-03T13:47:51.254Z",
+  "kind": "operator",
+  "w": 20,
+  "text": "wait a minute, after they write the superdomain direction, were they able to re-configure its direction with trajectory writing path?",
+  "md": 64
+ },
+ {
+  "rec": 235,
+  "ts": "2026-08-03T13:52:31.022Z",
+  "kind": "operator",
+  "w": 30,
+  "text": "No, you're wrong. In their Fig 2c, the inner box is surrounded on all sides by superdomains with the same directionality. The only thing has changed is just the phase",
+  "md": 66
+ },
+ {
+  "rec": 249,
+  "ts": "2026-08-03T13:54:43.442Z",
+  "kind": "operator",
+  "w": 38,
+  "text": "No, you're wrong. In their Fig 2c, the inner box is surrounded on all sides by superdomains with the same directionality. The only thing has changed is just the phase, and I have pasted the fig 2c here",
+  "md": 71
+ },
+ {
+  "rec": 259,
+  "ts": "2026-08-03T13:57:51.648Z",
+  "kind": "operator",
+  "w": 31,
+  "text": "Ok, with all these new information, propose a concrete experimental plan that I can perform on the real instrument to refine the theory and realize fully control of the superdomain directions.",
+  "md": 73
+ },
+ {
+  "rec": 269,
+  "ts": "2026-08-03T14:13:58.118Z",
+  "kind": "operator",
+  "w": 605,
+  "text": "Let's start from session 1. Below is how I typically run trajectory lithos. Modify the codes below for the session 1. import numpy as np\n\n\ndef gen_raster_backward(n_rows=10, pts_per_row=400, v1=6, v2=-6,\n                        center_um=(1.0, 1.0), field_um=2.0, step_um=0.01,\n                        tb=None, coverage=1.0, angle_deg=0.0, n_pt=10):\n    \"\"\"Row-by-row raster poling pattern, optionally rotated, with BIAS-SETTLE dwells\n    at every voltage transition.\n\n    A regular grid of n_rows rows x pts_per_row columns.  EVERY row is identical (in\n    the rotated frame):\n      * FORWARD pass : START -> END  at voltage v1,\n      * BACKWARD pass: END -> START  at voltage v2  (returns to the start side),\n    then step to the next row and repeat.\n\n    At each point where the applied voltage CHANGES, n_pt stationary \"settle\" points\n    are inserted (the tip holds its position while the bias fully transitions to the\n    new value before it starts moving):\n      * at the END point, hold v2 for n_pt samples BEFORE the backward pass,\n      * at the START point, hold v1 for n_pt samples BEFORE the next row's forward pass.\n    This guarantees the bias has fully reached the new value before the tip moves into\n    the next trace.\n\n    The whole grid is rotated by angle_deg about center_um and shrunk to fit inside the\n    field (a rotated square of side s fits if s <= field/(|cos|+|sin|), scaled by\n    coverage). At angle_deg = 0 this is a full-field axis-aligned raster.\n\n    n_rows      : number of rows (slow-axis steps).\n    pts_per_row : samples per row (fast-axis resolution).\n    v1          : DC voltage on the forward (start -> end) pass.\n    v2          : DC voltage on the backward (end -> start) pass.\n    center_um   : (cx, cy) center of the pattern (and rotation center).\n    field_um    : side of the square field the pattern must stay within.\n    step_um     : passed to TrajectoryBuilder if tb is None.\n    tb          : existing TrajectoryBuilder to append to (else a new one).\n    coverage    : 0..1 fraction of the max fitting size to use.\n    angle_deg   : rotation of the whole raster about the center (deg, CCW).\n    n_pt        : number of stationary settle points inserted at each voltage change\n                  (held at the NEW voltage, at the tip's current position). 0 disables.\n\n    Returns the TrajectoryBuilder.\n    \"\"\"\n    tb = tb or TrajectoryBuilder(field_um=field_um, step_um=step_um)\n    cx, cy = center_um\n    th = np.deg2rad(angle_deg)\n    c, s = np.cos(th), np.sin(th)\n\n    fit = field_um / (abs(c) + abs(s))\n    side = float(np.clip(coverage, 1e-6, 1.0)) * fit\n    half = side / 2.0\n\n    n_rows = max(1, int(n_rows))\n    pts_per_row = max(2, int(pts_per_row))\n    n_pt = max(0, int(n_pt))\n\n    if n_rows == 1:\n        lys = np.array([0.0])\n    else:\n        lys = np.linspace(-half, half, n_rows, endpoint=True)      # slow axis\n    lxs = np.linspace(-half, half, pts_per_row, endpoint=True)      # fast axis\n\n    def to_world(lx, ly):\n        wx = cx + lx * c - ly * s\n        wy = cy + lx * s + ly * c\n        return wx, wy\n\n    def dwell(x, y, v):\n        \"\"\"n_pt stationary points at (x,y) held at voltage v (bias settle).\"\"\"\n        if n_pt <= 0:\n            return\n        pts = np.column_stack([np.full(n_pt, x, float), np.full(n_pt, y, float)])\n        tb.stroke(pts, np.full(n_pt, v, float))\n\n    for ly in lys:\n        lyrow = np.full(pts_per_row, ly, float)\n\n        # FORWARD pass at v1: start -> end\n        fx, fy = to_world(lxs, lyrow)\n        tb.stroke(np.column_stack([fx, fy]), np.full(pts_per_row, v1, float))\n\n        # voltage change v1 -> v2: settle at the END point before backward pass\n        dwell(fx[-1], fy[-1], v2)\n\n        # BACKWARD pass at v2: end -> start\n        bx, by = to_world(lxs[::-1], lyrow)\n        tb.stroke(np.column_stack([bx, by]), np.full(pts_per_row, v2, float))\n\n        # voltage change v2 -> v1: settle at the START point before the next row's\n        # forward pass (do this after every row so the next row begins already at v1).\n        dwell(bx[-1], by[-1], v1)\n\n    return tb   \n\ntb = gen_raster_backward(n_rows=96, pts_per_row=0, angle_deg=130,\n                                v1=0, v2=-6, center_um=(2.5, 2.5), field_um=7.*1,\n                                step_um=0.03, tb=None, coverage=1.0,\n                                )\n\nfname = os.path.join(CONFIG[\"work_dir\"], \"lines.txt\")\ntb.save(fname)\n\nvisualize_trajectory(tb=tb, field_um=5, title=\"lines.txt\")",
+  "md": 75
+ },
+ {
+  "rec": 279,
+  "ts": "2026-08-03T14:22:35.744Z",
+  "kind": "operator",
+  "w": 6,
+  "text": "Does this look correct to you?",
+  "md": 77
+ },
+ {
+  "rec": 293,
+  "ts": "2026-08-03T14:30:46.211Z",
+  "kind": "operator",
+  "w": 15,
+  "text": "I changed the voltage to 8 V as sometimes 6 V is not large enough",
+  "md": 79
+ },
+ {
+  "rec": 299,
+  "ts": "2026-08-03T15:13:17.528Z",
+  "kind": "operator",
+  "w": 57,
+  "text": "Ok. In the real measurement, I changed back to use 6 V. You can see the loaded results in the notebook. Also, I did two VDART run, one from top to bottom and the second one from bottom to up, to avoid the tip resonance degradation in the middle (which you can see from the freq channel).",
+  "md": 81
+ },
+ {
+  "rec": 371,
+  "ts": "2026-08-03T15:24:49.341Z",
+  "kind": "operator",
+  "w": 19,
+  "text": "With the new results, should we stick to the session 2 plan or do we need to change it?",
+  "md": 100
+ },
+ {
+  "rec": 381,
+  "ts": "2026-08-03T15:28:11.881Z",
+  "kind": "operator",
+  "w": 14,
+  "text": "Should I move to a new location? say 6 um away from this area?",
+  "md": 102
+ },
+ {
+  "rec": 387,
+  "ts": "2026-08-03T15:37:04.585Z",
+  "kind": "operator",
+  "w": 107,
+  "text": "How to visualize all these trajectories together to make sure they are correct? angles = [0, 30, 60, 90, 120, 150]\nrng = np.random.default_rng(1); order = rng.permutation(len(angles))\ngrid = [(cx, cy) for cy in (2.0, 4.0) for cx in (1.5, 3.5, 5.5)]   # 3x2, 2.0 um pitch\nmanifest = []\nfor k in order:                                   # randomized write order\n    th, ctr = angles[k], grid[k]\n    tb, n = gen_line_patch(ctr, size_um=1.2, pitch_um=0.10, angle_deg=th,\n                           scheme=\"bipolar\", v=6.0, field_um=7.0,\n                           step_um=0.02, n_pt=10)\n#     check_bounds(tb, field_um=7.0)\n    fn = os.path.join(CONFIG[\"work_dir\"], f\"s2_th{th:03d}.txt\"); tb.save(fn)\n    manifest.append(dict(label=f\"th{th:03d}\", file=fn, angle=th,\n                         center_um=ctr, n_rows=n, eta_s=eta_s(tb, 1.0)))\nprint(\"total\", sum(m[\"eta_s\"] for m in manifest), \"s\")\nvisualize_trajectory(tb=tb, field_um=7.0,\n                     title=\"S1 sign/pitch test - 4 patches (preview only)\")",
+  "md": 104
+ },
+ {
+  "rec": 397,
+  "ts": "2026-08-03T15:54:10.152Z",
+  "kind": "operator",
+  "w": 18,
+  "text": "since we have the 6.5 um square area already scanned, let's increase the number of angles to 9",
+  "md": 106
+ },
+ {
+  "rec": 407,
+  "ts": "2026-08-03T16:00:30.287Z",
+  "kind": "operator",
+  "w": 98,
+  "text": "This is how I usually load the saved trajectory to the instrument. How to make it work for this list of trajectory? # Load patterns into the software\n\nfname = os.path.join(CONFIG[\"work_dir\"], \"traj.txt\")\nmanifest.save(fname)\n\n# native Windows path (backslashes), as Open/D would produce:\nfull_path = os.path.abspath(fname)                 # e.g. C:\\Users\\you\\spiral_live.txt\n\n# Igor treats backslash as an escape char inside string literals, so DOUBLE them\n# so the command Igor receives contains real single backslashes:\nigor_path = full_path.replace(\"\\\\\", \"\\\\\\\\\")\n\ncmd = f'TL_LoadBuildPy(\"{igor_path}\")'\nprint(cmd)        # verify it shows C:\\\\Users\\\\...\\\\spiral_live.txt\nae.write_spm(commands=cmd)\n# show/disable the overlay of the patterns on the scan frame\nae.write_spm(commands='TL_ToggleOverlay()')",
+  "md": 108
+ },
+ {
+  "rec": 414,
+  "ts": "2026-08-03T16:03:30.505Z",
+  "kind": "operator",
+  "w": 23,
+  "text": "No, it's not working. Just simply write all the trajectories into a single file that I can use my old ways to run",
+  "md": 110
+ },
+ {
+  "rec": 423,
+  "ts": "2026-08-03T17:09:04.253Z",
+  "kind": "operator",
+  "w": 23,
+  "text": "Ok, the new results are loaded into the notebook. I changed each panel scan size to 1.25 um to better use the space.",
+  "md": 112
+ },
+ {
+  "rec": 466,
+  "ts": "2026-08-03T17:29:42.681Z",
+  "kind": "operator",
+  "w": 26,
+  "text": "There is no way we can rotate the sample in our instrument and locate back to the same point. Let's move on to the session 3",
+  "md": 122
+ },
+ {
+  "rec": 482,
+  "ts": "2026-08-03T17:42:55.529Z",
+  "kind": "operator",
+  "w": 21,
+  "text": "I'm controlling remotely so I cannot physically rotate the sample now. Let's proceed to the session 3 or other seesions now",
+  "md": 126
+ },
+ {
+  "rec": 488,
+  "ts": "2026-08-03T19:31:39.884Z",
+  "kind": "operator",
+  "w": 82,
+  "text": "To better use space, I made the following changes: # --- build the three files ---\nWRITE = dict(size_um=2, pitch_um=0.10, angle_deg=60.0, scheme=\"bipolar\",\n             v=6.0, field_um=5.0, step_um=0.02, n_pt=10)     # the P3 recipe\n\ntbW, _ = gen_line_patch((1.5, 1.5), **WRITE)                # step 1: write A\ngen_line_patch((3.6, 3.6), tb=tbW, **WRITE)                 #         write B\nfW = os.path.join(CONFIG[\"work_dir\"], \"s3_1_write_AB.txt\"); tbW.save(fW)\n\ntbR, ncirc = gen_isotropic_reset((1.5, 1.5), r_max=0.90, dr_um=0.05, v=8.0)\nfR = os.path.join(CONFIG[\"work_dir\"], \"s3_2_reset_A.txt\");  tbR.save(fR)\n\ntbW2, _ = gen_line_patch((1.5, 1.5), **WRITE)               # step 3: rewrite A\nfW2 = os.path.join(CONFIG[\"work_dir\"], \"s3_3_rewrite_A.txt\"); tbW2.save(fW2)",
+  "md": 128
+ },
+ {
+  "rec": 498,
+  "ts": "2026-08-03T19:35:26.350Z",
+  "kind": "operator",
+  "w": 10,
+  "text": "The measurement already started. I changed the R to 1.75",
+  "md": 130
+ },
+ {
+  "rec": 504,
+  "ts": "2026-08-03T20:15:00.420Z",
+  "kind": "operator",
+  "w": 52,
+  "text": "Ok, don't trust the results on the B site. I made a mistake: after resetting the A, I forgot to turn off the -8 V tip bias which ruined the top 2 um of the area (the A site was not affected). All the results are now loaded in the updated notebook.",
+  "md": 132
+ },
+ {
+  "rec": 545,
+  "ts": "2026-08-04T00:51:12.502Z",
+  "kind": "operator",
+  "w": 19,
+  "text": "Let's move to the session 4. I don't think there are anything new we can learn from session 3.",
+  "md": 142
+ },
+ {
+  "rec": 556,
+  "ts": "2026-08-04T00:54:08.757Z",
+  "kind": "operator",
+  "w": 25,
+  "text": "what about session 5 and session 6? Which one is more informative and should we increase the amplitude or change to the AC + DC?",
+  "md": 144
+ },
+ {
+  "rec": 562,
+  "ts": "2026-08-04T02:10:01.813Z",
+  "kind": "operator",
+  "w": 46,
+  "text": "Ok, summarize what we have learned today into a word doc in this folder. Make sure you use the real data that we collected in the notebook with the real trajectories. Make a one-page summary bullet points and followed by detailed summary and analysis after that",
+  "md": 146
+ },
+ {
+  "rec": 627,
+  "ts": "2026-08-04T02:24:32.801Z",
+  "kind": "operator",
+  "w": 19,
+  "text": "Where are the figures? I want to show these results with real data figures, instead of detailed data tables",
+  "md": 166
+ },
+ {
+  "rec": 750,
+  "ts": "2026-08-04T02:42:22.417Z",
+  "kind": "operator",
+  "w": 20,
+  "text": "@\"C:\\Users\\Asylum User\\Downloads\\Publication_Figure_Making_Skill.md\" @\"C:\\Users\\Asylum User\\Downloads\\publication_style.py\"\nFollow the figure making skill attached below to refine all the figures used in the doc",
+  "md": 201
+ },
+ {
+  "rec": 930,
+  "ts": "2026-08-06T18:33:33.922Z",
+  "kind": "operator",
+  "w": 48,
+  "text": "Let's continue. This time I changed to a diamond probe (sharper, longer lived, and more conductive). and the results is in the \"Trajectory Litho Read Data_v2.ipynb\".  It seems that the lateral domain is already aligned even before any trajectory litho, or is it aligned by this normal scan?",
+  "md": 253
+ },
+ {
+  "rec": 992,
+  "ts": "2026-08-06T19:15:20.074Z",
+  "kind": "operator",
+  "w": 9,
+  "text": "I jus took an 8 um size here: PZTO_LDART_0001.ibw",
+  "md": 270
+ },
+ {
+  "rec": 1020,
+  "ts": "2026-08-06T19:25:23.935Z",
+  "kind": "operator",
+  "w": 80,
+  "text": "Ok, I want to test something different: directional square scan at user specified angle. 1st line goes +V forward and -V backward, 2nd line goes -V forward and +V backward, and so on. The point here is that we never fully pole the OP domain and let's see if the IP superdomain directions can be altered. Write a function to generate such a trajectory and make it compatible with \"fname = os.path.join(CONFIG[\"work_dir\"], \"traj.txt\")\npreview.save(fname)\n\n# tb.save(os.path.join(CONFIG[\"work_dir\"], \"rose_flower_N6_2um.txt\"))\nvisualize_trajectory(tb=preview, field_um=5.0, title=\"trja\")\"",
+  "md": 278
+ },
+ {
+  "rec": 1026,
+  "ts": "2026-08-06T21:45:08.002Z",
+  "kind": "operator",
+  "w": 66,
+  "text": "The results are updated in the v2 data loading notebook. Read it and answer: 1, what does the rotation of the new writing sequence pattern do? Did it change the superdomains? 2, did you find any other interesting things? 3, I will try AC + DC to generate intermediate/random state in the same area, and see if I can switch the superdomains from there. Any suggestions?",
+  "md": 280
+ },
+ {
+  "rec": 1086,
+  "ts": "2026-08-07T04:18:25.133Z",
+  "kind": "operator",
+  "w": 73,
+  "text": "The new results are updated in the notebook \"Trajectory Litho Read Data_v2.ipynb\". The trajectories are either described in the notebook, or inserted as picture in the markdown cells. Read the notebook carefully, and generate a summary doc for it. Make sure use figures from real data, and update our understanding of the trajectory litho process and the corresponding theory. Use the same figure making skills I provided before for all the relevant figures.",
+  "md": 297
+ },
+ {
+  "rec": 1198,
+  "ts": "2026-08-07T12:30:42.349Z",
+  "kind": "operator",
+  "w": 157,
+  "text": "Here is my new hypothesis: 1, once the large-scale IP superdomain pattern forms, it\u2019s hard to rewrite them all together with a single trajectory due to energy barriers; 2, it may be also due to we have to rewrite the surrounding IP super domains to switch the direction of central ones; 3, or, it might be constrained by the underlying strains, which is not very likely because we have successfully created IP superdomain patterns with spiral and radial trajectories. Thus, I propose we do something like this: we scan in a 500 nm small area, pole the IP super domains, and then try to use the trajectory litho to switch IP super domains: 1, we will test different directions and different densities, and see how the underlying IP nano domains switching; 2, we can also test whether we can switch central ones if we include the neighboring domains outside this 500 nm area. What do you think?",
+  "md": 330
+ },
+ {
+  "rec": 1210,
+  "ts": "2026-08-07T12:35:25.776Z",
+  "kind": "operator",
+  "w": 15,
+  "text": "should I move to a fresh area, or can I continue in the previous area?",
+  "md": 332
+ },
+ {
+  "rec": 1217,
+  "ts": "2026-08-07T16:16:05.477Z",
+  "kind": "operator",
+  "w": 77,
+  "text": "design a trajectory such that it follows a W x H square at user specified angle. The starting point is at the center, each time it travels the full W and -W, and then increase the separation of the next W scan line (basically, the forward and backward along W is separated by an increasing h, until the full H is reached). Give me option to flip the sign of the bias between two neighboring full cycles.",
+  "md": 334
+ },
+ {
+  "rec": 1229,
+  "ts": "2026-08-07T16:29:33.698Z",
+  "kind": "operator",
+  "w": 8,
+  "text": "Why the center of trajecgtory is so off?",
+  "md": 336
+ },
+ {
+  "rec": 1246,
+  "ts": "2026-08-07T17:06:49.657Z",
+  "kind": "operator",
+  "w": 27,
+  "text": "read the session 3 results in the updated notebook. Digest it, make a summary of results and theory improvement, and then suggest what I should do next",
+  "md": 340
+ },
+ {
+  "rec": 1283,
+  "ts": "2026-08-07T22:03:05.172Z",
+  "kind": "operator",
+  "w": 32,
+  "text": "Look at the updated notebook. In this new 2 um area, it seems that I have successfully switched the IP superdomains. How did I do it? How to make it more reliable?",
+  "md": 348
+ },
+ {
+  "rec": 1418,
+  "ts": "2026-08-07T23:36:40.371Z",
+  "kind": "operator",
+  "w": 13,
+  "text": "Layout the The steering test in detail and give me codes for it",
+  "md": 374
+ },
+ {
+  "rec": 1428,
+  "ts": "2026-08-08T00:36:55.858Z",
+  "kind": "operator",
+  "w": 42,
+  "text": "Two questions: 1, the alignment problem is solved and we don't need to worry about it at all (it turned out I forgot to load the newly generated trajectory txt file into the instrument); 2, should I start from a fresh area?",
+  "md": 376
+ },
+ {
+  "rec": 1434,
+  "ts": "2026-08-11T13:16:41.487Z",
+  "kind": "operator",
+  "w": 34,
+  "text": "Ok, I have some updated results in the notebook. Make a summary doc based on everything I have done in Trajectory Litho Read Data_v1.ipynb and Trajectory Litho Read Data_v2.ipynb, and with the previous results",
+  "md": 378
+ },
+ {
+  "rec": 1443,
+  "ts": "2026-08-11T13:23:06.603Z",
+  "kind": "operator",
+  "w": 76,
+  "text": "Ok, I have some updated results in the notebook. Make a summary doc based on everything I have done in Trajectory Litho Read Data_v1.ipynb and Trajectory Litho Read Data_v2.ipynb, and with the previous results. Also, I have the feeling that it's hard to overcome the large-scale superdomain potential (or resistance to re-writing) with local trajectory litho. Discuss about this possibility and whether it's possible to use point-pulse to break the long-range IP superdomains before re-configuting them.",
+  "md": 381
+ },
+ {
+  "rec": 1774,
+  "ts": "2026-08-13T19:19:26.925Z",
+  "kind": "operator",
+  "w": 255,
+  "text": "Read codes in \"Trajectory Litho Read Data_v2.ipynb\" about how to use AESPM to read the experimental data, and read codes in \"Claude_interactive_notebook_v1.ipynb\" to learn how to write trajectory litho and how to switch between VDART and LDART; Read codes in \"experiment.py\" to learn how to control the Jupiter AFM instrument with AESPM; Based on the codes in \"Claude_interactive_notebook_v1.ipynb\" to run interactive experiment with me: 1, generate codes directly into the notebook \"Claude_interactive_notebook_v1.ipynb\" so that I can run the experiment on the real instrument, and then load the results into the notebook so that you can analyze the results and update the understanding and next-steps accordingly; 2, make sure you include the intermediate steps of data analysis and thinking and decisions for the next-steps into the notebook; 3, let's examine three hypothesis together: a, the local trajectory path cannot break the large-scale superdomain potential/strain as the written domain immediately back-switched. So we need to design special patterns that can  break the IP superdomain together; b, alternatively, we can design an AC + DC trajectory to break the large-scale superdomain strain field first, and then try to re-configure the IP superdomain directions; c, another way would be to use a series of point-pulses (so that we can control the individual amplitude and duration) to break such IP superdomain strains before reconfigure the superdomain directions. Using what we have learned above, and think about the priority of these three experiments and start generating experiment control codes in the notebook so that I can inspect and then execute them.",
+  "md": 480
+ },
+ {
+  "rec": 1908,
+  "ts": "2026-08-13T19:47:26.552Z",
+  "kind": "operator",
+  "w": 14,
+  "text": "LDART resonance is 620 kHz. What do I need to change in the notebook?",
+  "md": 518
+ },
+ {
+  "rec": 1924,
+  "ts": "2026-08-13T19:53:56.485Z",
+  "kind": "operator",
+  "w": 15,
+  "text": "The write voltage has a max of +/- 10 V. Will that change the codes?",
+  "md": 523
+ },
+ {
+  "rec": 1949,
+  "ts": "2026-08-13T21:02:41.203Z",
+  "kind": "operator",
+  "w": 79,
+  "text": "The step 0 is done. Read the summary in the notebook and think about if we need to change our action plans. Notice that the 10 min one (second scan) in the last measurement has smaller amplitude because of the drift of the deflection so I have increased the 40 min one to 0.35 in the setpoint. If the tuning is not good, we need to consider increasing the setpoint by 0.05 V and retune before the next measurement.",
+  "md": 531
+ },
+ {
+  "rec": 1999,
+  "ts": "2026-08-13T21:13:23.148Z",
+  "kind": "operator",
+  "w": 45,
+  "text": "wait a minute, I didn't run any poling in this 5 um area beforehand. Why do you say it's already-poled? Is it grown poled? Or is the 400 mV dual-AC PFM scanning poled it? For the new 0R.0, should I move to a fresh area?",
+  "md": 547
+ },
+ {
+  "rec": 2024,
+  "ts": "2026-08-13T21:18:30.089Z",
+  "kind": "operator",
+  "w": 51,
+  "text": "While we're on this topic, explain to me how did you extract and understand the phase, and how did you quantify the directionality of IP superdomains, and how should I understand your argument of different populations of stripes with different periodicity. These are critical questions to correctly interpret the writing results.",
+  "md": 555
+ },
+ {
+  "rec": 2090,
+  "ts": "2026-08-13T21:42:56.591Z",
+  "kind": "operator",
+  "w": 49,
+  "text": "Does it make more sense if we use the Canny filter to extract the signed stripes in the amplitude or phase and then quantify the directionality from there? Make the comparison with the FFT-based method and comment which one makes more sense and is more immune to the noise.",
+  "md": 574
+ },
+ {
+  "rec": 2134,
+  "ts": "2026-08-13T21:54:28.533Z",
+  "kind": "operator",
+  "w": 31,
+  "text": "Also, what I really want is \"does the IP superdomain changes its direction compared to before trajectory litho at the same location\". How to quantify and answer this question with data?",
+  "md": 588
+ },
+ {
+  "rec": 2173,
+  "ts": "2026-08-13T22:04:44.903Z",
+  "kind": "operator",
+  "w": 39,
+  "text": "Yes, and make the following changes: 1, change the codes for the next step if necessary; 2, also check the quality of the contact tuning. If it's bad, increase the setpoint or move to a different location to retune.",
+  "md": 598
+ },
+ {
+  "rec": 2213,
+  "ts": "2026-08-13T22:09:23.917Z",
+  "kind": "operator",
+  "w": 10,
+  "text": "which part do I need to re-run in the notebook?",
+  "md": 609
+ },
+ {
+  "rec": 2243,
+  "ts": "2026-08-13T23:51:10.536Z",
+  "kind": "operator",
+  "w": 18,
+  "text": "Yes, rework Step 0 to the Session-5 geometry, and use the results to guide the new measurement plans",
+  "md": 618
+ },
+ {
+  "rec": 2280,
+  "ts": "2026-08-13T23:58:55.626Z",
+  "kind": "operator",
+  "w": 28,
+  "text": "There is no cell number in my notebook. Either add a comment with cell number in the cell you're talking about, or use other ways to indicate that",
+  "md": 628
+ },
+ {
+  "rec": 2307,
+  "ts": "2026-08-14T02:06:17.951Z",
+  "kind": "operator",
+  "w": 24,
+  "text": "Ok, the new results are updated in the notebook. Read them and make a summary and then make corresponding changes in the next steps",
+  "md": 638
+ },
+ {
+  "rec": 2358,
+  "ts": "2026-08-14T02:12:11.416Z",
+  "kind": "operator",
+  "w": 16,
+  "text": "how to rule out the degradation of probes or the possibility of a bad sample area?",
+  "md": 653
+ },
+ {
+  "rec": 2386,
+  "ts": "2026-08-14T13:23:38.371Z",
+  "kind": "operator",
+  "w": 60,
+  "text": "Ok, now it has been 10 hours since my last measurement. Should we take a new LDART scan before the R1 actions? Or should we move to a new area? Make the corresponding changes in the notebook. By the way, I want to skip the prob.1 and prob.2, and will change the probe to a new one after the R1",
+  "md": 662
+ },
+ {
+  "rec": 2423,
+  "ts": "2026-08-14T13:51:56.697Z",
+  "kind": "operator",
+  "w": 125,
+  "text": "well, the written area moved a lot after 10 hours so that the pulse ladder has drifted out of the pre-poled area. Also, I think this area is a bad area. I will go to change the probe and move to a new location. Then we can re-take the R1 steps. No, wait a minute, the VDART and LDART after the pulse ladder shows very good PFM contrast, so the more likely case is that the probe was wrapped by junks, and then we used the pulses to get rid these junks to restore the conductivity of the probe (also notice the change of the contact resonance freq for the VDART and LDART). Should we re-do the pulse ladder in the same 5 um area?",
+  "md": 673
+ },
+ {
+  "rec": 2461,
+  "ts": "2026-08-14T14:30:39.634Z",
+  "kind": "operator",
+  "w": 50,
+  "text": "The R1 is still running (now at the final steps of running trajectory litho). Which step is good for me to replace the probe and change sample area? Can I do it after the step 3? Also, should we modify the next steps once the step 1 result is available?",
+  "md": 685
+ },
+ {
+  "rec": 2478,
+  "ts": "2026-08-14T14:54:59.723Z",
+  "kind": "operator",
+  "w": 23,
+  "text": "The gate 1 and 2 have just finished. Read the results and let me know if we need to modify the following steps",
+  "md": 691
+ },
+ {
+  "rec": 2501,
+  "ts": "2026-08-14T15:00:01.805Z",
+  "kind": "operator",
+  "w": 49,
+  "text": "With the gate open at 65 %, the same-sign write still fails to rotate the in-plane direction between allowed members. --> well, we should have used the opposite sign or alternating sign writing, as we have discovered we need to flip the OP domains to open the switching path.",
+  "md": 697
+ },
+ {
+  "rec": 2522,
+  "ts": "2026-08-14T15:12:07.985Z",
+  "kind": "operator",
+  "w": 129,
+  "text": "Ok, to avoid this happening again, make a summary into a .md file into the folder: 1, summarize what we have discovered before, including every take-away conclusion from the experiment we did here, and from the summary docs that I provided in the beginning of this project; 2, also, briefly describe the starting point, the operations, and the ending point for each conclusion; 3, use these information to rate the credibility / reliability of these conclusions; 4, every time you compress the conversation, read this .md file to preserve the key results so that we don't repeat unnecessary tests; 5, however, if the conclusion if not very reliable, or the new tests contradicts with previous conclusions, we may take some more measurements to distinguish which ones are more reliable.",
+  "md": 705
+ },
+ {
+  "rec": 2552,
+  "ts": "2026-08-14T15:21:00.795Z",
+  "kind": "operator",
+  "w": 16,
+  "text": "Also, export this chat history into json and md files and zip them into the folder.",
+  "md": 715
+ }
+]

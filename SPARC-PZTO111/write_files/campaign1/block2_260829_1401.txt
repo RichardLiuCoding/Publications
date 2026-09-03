@@ -1,0 +1,13 @@
+==========================================================================
+BLOCK 2  +V then -V over one square, then look  2026-08-29 14:01
+==========================================================================
+
+POLING SQUARE  1.4 um, raster pitch 30 nm, 0.50 um/s, lines along 60.0 deg
+  triad member nearest the raster direction: 76 deg
+  94 raster lines (47 per polarity), design sigma 667 per polarity
+  built: 7050 pts, |charge| 2670 V.s over 1.96 um^2 -> sigma 681 per polarity
+  net DC +0.000e+00 V  (S4 needs |mean| <= 0.01)
+  7050 pts -> 4.70 min at 0.50 um/s (S7 cap 26)
+  x 0.31-2.21, y 0.29-2.20 um
+
+DRY RUN: gates pass, nothing written.

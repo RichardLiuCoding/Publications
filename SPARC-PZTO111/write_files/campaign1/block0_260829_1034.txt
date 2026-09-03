@@ -1,0 +1,78 @@
+==========================================================================
+BLOCK 0  new probe, both channels  2026-08-29 10:34
+==========================================================================
+  MEASUREMENT ONLY. No bias, no litho, no state written.
+  frame 2.5 um, 512 px -> 4.88 nm/px, 2.0 Hz -> tip 10.0 um/s
+  offset (+0.0,+0.0)
+  DART nominals now {'ldart': '600 kHz', 'vdart': '320 kHz'}, tol 100 kHz -> sweep 200 kHz
+  data folder 260829 is the configured session folder and is still EMPTY - no frame has landed yet, so the freshness checks are deferred to the next call.
+  scanner range, 2 um frame at (+0.0,+0.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+
+--------------------------------------------------------------------------
+LDART at nominal 600 kHz
+--------------------------------------------------------------------------
+  try 1: tuning LDART at 600 kHz, then one 512 px / 2.0 Hz frame
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_LDART_0000.ibw
+     PZTO_LDART_0000.ibw: drive 637.8 kHz, tracked 634.7, offset 3.1 kHz, 100% lines, r12 +0.94, |S| 74.3
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+      tracked 100% of lines, offset 3.1 kHz
+  contact_check PZTO_LDART_0000.ibw
+    drive 637.8 kHz   tracked 634.7 +-1.5 kHz   offset 3.1 kHz
+    |A| 64.9 pm   xi 73 nm (15 px)   consistency 0.94   r12 +0.94   defl SP 0.50 V
+    -> OK. Proceed.
+
+  --- LDART: PZTO_LDART_0000.ibw ---
+      512 px, 4.88 nm/px, r12 +0.94, |S| 74.3
+      super-domain scale: 500 nm  (1.8x the band median)
+      nano-domain scale : 119 nm  (620.3x the band median)
+      pixels per nano-domain: 24.4  -> RESOLVED
+
+--------------------------------------------------------------------------
+VDART at nominal 320 kHz
+--------------------------------------------------------------------------
+  try 1: tuning VDART at 320 kHz, then one 512 px / 2.0 Hz frame
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_VDART_0000.ibw
+     PZTO_VDART_0000.ibw: drive 344.6 kHz, tracked 343.1, offset 1.5 kHz, 100% lines, r12 +0.76, |S| 38.9
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+      tracked 100% of lines, offset 1.5 kHz
+  contact_check PZTO_VDART_0000.ibw
+    drive 344.6 kHz   tracked 343.1 +-0.3 kHz   offset 1.5 kHz
+    |A| 66.2 pm   xi 68 nm (14 px)   consistency 0.96   r12 +0.76   defl SP 0.50 V
+    -> OK. Proceed.
+
+  --- VDART: PZTO_VDART_0000.ibw ---
+      512 px, 4.88 nm/px, r12 +0.76, |S| 38.9
+      super-domain scale: 500 nm  (2.6x the band median)
+      nano-domain scale : 119 nm  (567.6x the band median)
+      pixels per nano-domain: 24.4  -> RESOLVED
+  rigid triad fit on PZTO_LDART_0000.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.636   modulation 0.273 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.28, 0.57, 0.15)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+
+--------------------------------------------------------------------------
+IN-PLANE STATE at this offset
+--------------------------------------------------------------------------
+  triad [16, 76, 136], dominant 76 deg, modulation 0.273, streak 0.019
+  Lambda per member ['219', '219', '280'] -> median 219 nm
+
+==========================================================================
+VERDICT
+==========================================================================
+  LDART   healthy
+  VDART   frame acquired: the out-of-plane channel is live
+  NANO-DOMAINS RESOLVED at 119 nm = 24.4 px.
+  -> the pathway experiment is possible as designed.
+  Lambda 219 nm -> a 4-Lambda FFT window needs 0.87 um.
+     A 1.2 um panel in a 2.5 um frame CLEARS this.
+
+  frames kept: PZTO_LDART_0000.ibw, PZTO_VDART_0000.ibw

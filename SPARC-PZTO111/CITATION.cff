@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+title: >-
+  SPARC: human-agent discovery of reconfigurable in-plane superdomain
+  control in PbZr0.2Ti0.8O3(111)
+message: If you use this repository, please cite both the software and the paper.
+type: software
+authors:
+  - given-names: Yu
+    family-names: Liu
+    email: yliu206@utk.edu
+    affiliation: >-
+      Department of Materials Science and Engineering, University of
+      Tennessee, Knoxville
+  - given-names: Boris
+    family-names: Slautin
+    affiliation: >-
+      Department of Materials Science and Engineering, University of
+      Tennessee, Knoxville
+  - given-names: Ching-Che
+    family-names: Lin
+    affiliation: Rice Advanced Materials Institute, Rice University
+  - given-names: Jaegyu
+    family-names: Kim
+    affiliation: Rice Advanced Materials Institute, Rice University
+  - given-names: Lane W.
+    family-names: Martin
+    affiliation: Rice Advanced Materials Institute, Rice University
+  - given-names: Sergei V.
+    family-names: Kalinin
+    email: sergei2@utk.edu
+    affiliation: >-
+      Department of Materials Science and Engineering, University of
+      Tennessee, Knoxville
+license: MIT
+license-url: https://opensource.org/licenses/MIT
+keywords:
+  - scanning probe microscopy
+  - piezoresponse force microscopy
+  - ferroelectric domains
+  - ferroelastic switching
+  - agentic experimentation
+  - large language model agents
+  - autonomous experimentation
+preferred-citation:
+  type: article
+  title: >-
+    Human-agent discovery of reconfigurable in-plane ferroelectric
+    superdomain control
+  journal: Digital Discovery
+  year: 2026
+  authors:
+    - given-names: Yu
+      family-names: Liu
+    - given-names: Boris
+      family-names: Slautin
+    - given-names: Ching-Che
+      family-names: Lin
+    - given-names: Jaegyu
+      family-names: Kim
+    - given-names: Lane W.
+      family-names: Martin
+    - given-names: Sergei V.
+      family-names: Kalinin

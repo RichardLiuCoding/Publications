@@ -1,0 +1,74 @@
+==========================================================================
+REWRITE MECHANISM  MODE=sameQ  2026-08-28 11:47
+==========================================================================
+  area (-8.0,-8.0), sigma 667
+  stage 1 pre-orders the zone; stage 2 tries to rewrite it with a
+  continuous TRACE and a pulsed LATTICE, side by side.
+  data folder 260827: 179 files, newest 28 Aug 11:46 (0.0 h ago)
+  live deflection -0.700 V
+
+--- frame 1: virgin ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0171.ibw
+  virgin -> PZTO_LDART_0171.ibw (tune 660.0 kHz)
+  contact_check PZTO_LDART_0171.ibw
+    drive 669.4 kHz   tracked 660.4 +-0.9 kHz   offset 9.0 kHz
+    |A| 83.3 pm   xi 78 nm (4 px)   consistency 0.94   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0171.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.637   modulation 0.273 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.34, 0.47, 0.18)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    triad [16, 76, 136], modulation 0.273, incumbent 76 deg
+    Lambda 301 nm (sp 150 nm)
+    stage 1 will order along A = 16 deg
+    stage 2 will try to rewrite to B = 136 deg
+
+--- stage 1: pre-order the zone (lines along 16) ---
+  708 sites over 16.0 um^2, 38 pulses/site, 15.2 V.s/site
+  stage1: 26904 pts -> 17.9 min, |V|max 10.0, mean +0.00e+00
+LDART ready
+Wrote 33403 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260828_1147_RW_stage1.txt'  (path length 109.1 um, 708 strokes)
+260828_1147_RW_stage1.txt   saved 11:50:53
+  33403 pts   X[0.802,4.198] Y[0.150,4.850] um
+  |V| = [10.]   mean(V) = +0.0000 V   19.5 % at 0 V
+  path 668 um  ->  22.3 min at 0.5 um/s
+  running… ETA 22.3 min
+  done 12:13:28
+  litho stopped (required before the next run)
+
+--- frame 2: after pre-ordering ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, -8.0) um
+  -> PZTO_LDART_0172.ibw
+  ordered -> PZTO_LDART_0172.ibw (tune 658.0 kHz)
+  contact_check PZTO_LDART_0172.ibw
+    drive 665.4 kHz   tracked 658.3 +-1.1 kHz   offset 7.1 kHz
+    |A| 78.4 pm   xi 78 nm (4 px)   consistency 0.94   r12 +0.96   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0172.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.773   modulation 0.547 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.76, 0.11, 0.14)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    triad [16, 76, 136], modulation 0.273 -> 0.547
+    window  w after stage 1        dominant
+    P1      [0.727 0.129 0.144]    10 deg
+    P2      [0.626 0.165 0.209]    15 deg
+    ctrl1   [0.469 0.213 0.318]    10 deg
+    ctrl2   [0.572 0.281 0.147]    15 deg
+    ctrl3   [0.629 0.243 0.128]    20 deg
+    ctrl4   [0.788 0.09  0.122]    15 deg
+    ordered-zone mean population [0.615 0.207 0.179] -> dominant 16 deg
+
+--- stage 2: rewrite attempts, lines along B = 136 ---
+  P1 TRACE    13 strokes x 5 passes, same Q as the lattice
+              12.9 um per pass, sigma 665
+  P2 LATTICE  84 sites, 39 pulses/site, 15.6 V.s/site, sigma 669
+  stage2: 6511 pts -> 4.3 min, |V|max 10.0, mean +1.16e-02

@@ -1,0 +1,22 @@
+2026-08-21 13:05:41  created campaign_state.json
+2026-08-21 13:21:31  IT1 failed: AttributeError: 'Experiment' object has no attribute 'check_files'
+2026-08-21 13:39:58  IT1 halted: slot (0.93,4.10) halo leaves the frame
+2026-08-21 14:10:37  IT1 failed: NameError: name 'visualize_trajectory' is not defined
+2026-08-21 14:55:22  IT1 wrote 896 pulses in 18.7 min; after frame PZTO_LDART_0071.ibw
+2026-08-21 14:59:41  logged iteration 1 to the notebook at cell 86
+2026-08-21 16:11:02  IT2 halted: none of the three nearest legal areas passed the quality gate. The film here is weakly textured; move the coarse stage or relax MOD_MIN_IT2 knowingly.
+2026-08-21 16:18:43  IT2 failed: NameError: name 'LAM_CONSIST_MAX' is not defined
+2026-08-21 16:50:04  IT2 halted: this area cannot support the measurement: baseline floor 0.511, flip 57%. Writing here would produce another unreadable iteration, as IT1 did. Move.
+2026-08-21 18:01:56  IT2 failed: UnboundLocalError: local variable 'res' referenced before assignment
+2026-08-21 18:45:52  IT3 halted: dangling names in the driver: ['builtins']. Faults 5 and 6 of the IT1/IT2 retrospective were exactly this.
+2026-08-21 20:05:41  logged iteration 2 to the notebook at cell 88
+2026-08-21 21:17:17  IT4 halted: only 1 panel fits, and a uniform panel cannot be written without its opposite-sign partner (net DC, C13). Shrink the frame or the lattice.
+2026-08-21 22:08:43  IT4 failed: KeyError: 'ctrl_mean'
+2026-08-21 22:13:02  logged iteration 4 to the notebook at cell 92
+2026-08-22 01:08:23  IT5 failed: KeyError: 'sigma'
+2026-08-22 01:10:10  logged iteration 5 to the notebook at cell 94
+2026-08-22 02:25:54  IT6 halted: preflight (pass 2): S9 footprint: overlaps IT6_UTK at (-14.0,-14.0) 12 um (need 12.5, have dx 0.0 dy 0.0)
+2026-08-22 02:43:02  IT10b halted: preflight: S9 footprint: overlaps IT6_UTK at (-14.0,-14.0) 12 um (need 12.5, have dx 0.0 dy 0.0)
+2026-08-22 04:06:15  logged iteration 5 to the notebook at cell 96
+2026-08-22 04:43:25  IT7 halted: this area cannot support the measurement: baseline floor 0.151, flip 31%. Writing here would produce another unreadable iteration, as IT1 did. Move.
+2026-08-22 05:55:02  logged iteration 8 to the notebook at cell 100

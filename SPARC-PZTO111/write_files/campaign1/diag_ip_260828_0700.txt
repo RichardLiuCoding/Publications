@@ -1,0 +1,46 @@
+==========================================================================
+DIAG: in-plane director inside a KNOWN-reversed square   2026-08-28 07:00
+==========================================================================
+  area (+8.0,-8.0), 5 um, LDART
+  the +10 V square is confirmed 180 deg reversed out of plane;
+  the -10 V square is confirmed NOT reversed. So the two squares
+  are also a control for each other: same dose, same geometry,
+  same tip, opposite outcome out of plane.
+  diagnostic only: no state is written.
+  data folder 260827: 152 files, newest 28 Aug 06:54 (0.1 h ago)
+
+--- LDART frame at the poled area ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (8.0, -8.0) um
+  -> PZTO_LDART_0148.ibw
+    PZTO_LDART_0148.ibw (tune centre 664.0 kHz)
+  contact_check PZTO_LDART_0148.ibw
+    drive 670.6 kHz   tracked 664.2 +-0.7 kHz   offset 6.4 kHz
+    |A| 60.5 pm   xi 98 nm (5 px)   consistency 0.93   r12 +0.94   defl SP 0.50 V
+    -> OK. Proceed.
+    px 19.53 nm/px
+  rigid triad fit on PZTO_LDART_0148.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.688   modulation 0.375 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.35, 0.49, 0.16)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+    whole-frame triad [16, 76, 136], modulation 0.375
+
+  region                w(t0)    w(t1)    w(t2)   dominant
+  +10V (reversed)    failed: name 'AMP' is not defined
+  -10V (unchanged)   failed: name 'AMP' is not defined
+  control A-below    failed: name 'AMP' is not defined
+  control A-above    failed: name 'AMP' is not defined
+  control B-below    failed: name 'AMP' is not defined
+  control B-above    failed: name 'AMP' is not defined
+
+  control mean     0.221    0.538    0.241
+  control-to-control spread (the only null available here): 0.141
+
+  +10V (reversed)    max |w - control| = 0.617  -> DIFFERS from the surrounding film
+  -10V (unchanged)   max |w - control| = 0.543  -> DIFFERS from the surrounding film
+
+  lateral amplitude and modulation, which do NOT depend on a
+  3-component fit from a 4-period window:

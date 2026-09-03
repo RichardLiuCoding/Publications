@@ -1,0 +1,99 @@
+==============================================================================
+1. THE DATASET
+==============================================================================
+  panel rows                                               40
+  distinct runs                                            20
+  distinct areas                                           20
+  Lambda range (nm)                                        245 - 388
+  dose range (V.s/um^2)                                    19 - 803
+
+==============================================================================
+2. THE 4-LAMBDA READOUT GATE (PITFALLS 19.15)
+==============================================================================
+  window                                                   1.4 um; needs >= 4 periods, i.e. Lambda <= 350 nm
+  panels FAILING the gate                                  4 of 40
+      260828_2350 P1  Lambda 354 nm = 3.95 periods  (sigma 144)
+      260828_2350 P2  Lambda 354 nm = 3.95 periods  (sigma 222)
+      260829_0036 P1  Lambda 388 nm = 3.61 periods  (sigma 19)
+      260829_0036 P2  Lambda 388 nm = 3.61 periods  (sigma 28)
+  panels carried forward                                   36
+
+==============================================================================
+3. SELECTION: DOES A PANEL REACH THE DIRECTOR IT WAS COMMANDED?
+==============================================================================
+  targeted panels on valid film                            34
+  within 15 deg of the commanded director                  30  (88 %)
+  median |offset| over ALL targeted panels                 3.5 deg
+  median |offset| over the hits                            1.5 deg
+  90th percentile |offset| over the hits                   4.2 deg
+   misses:
+      260829_0055 P2  want 136 got 20  off 64 deg  sigma 658
+      260829_0204 P2  want 132 got 10  off 58 deg  sigma 114
+      260829_0153 P2  want 132 got 0  off 48 deg  sigma 120
+      260828_2101 P2  want 134 got 0  off 46 deg  sigma 669
+  distance commanded vs distance moved, Pearson r (travel > 5 deg) 0.903  on n = 33
+
+==============================================================================
+4. EFFECT SIZE AGAINST THE PER-FRAME NULL
+==============================================================================
+  excess / null, median                                    18.9 x
+  excess / null, range                                     2.2 - 56.2 x
+  panels clearing their own frame null                     34 of 34
+
+==============================================================================
+5. DOSE
+==============================================================================
+  commensurate-template panels                             34
+  on target                                                30
+  LOWEST dose on target (V.s/um^2)                         52
+  off-target doses                                         [114, 120, 658, 669]
+  aperiodic solid squares in the set                       2
+      260828_2124 sigma 647  dominant 90 -> 80  excess 0.111 = 8.9 x null
+      260829_0106 sigma 647  dominant 90 -> 90  excess 0.078 = 5.2 x null
+  above 100: correlation of final excess with log(dose)    0.534  on n = 27
+  final excess above 100, range                            0.05 - 0.64
+
+==============================================================================
+6. GEOMETRY: SQUARE vs TRIANGULAR LATTICE AT THE SAME Q
+==============================================================================
+      260828_2208 theta 90 deg  want 19  135 -> 20   excess 0.635 = 33.4 x null
+      260828_2208 theta 60 deg  want 19  70 -> 20   excess 0.402 = 21.1 x null
+      260829_0118 theta 90 deg  want 16  90 -> 10   excess 0.521 = 54.3 x null
+      260829_0118 theta 60 deg  want 16  90 -> 20   excess 0.539 = 56.2 x null
+  every sheared panel reached its commanded member         True
+
+==============================================================================
+7. STARTING STATE DOES NOT DECIDE THE OUTCOME
+==============================================================================
+      commanded  12 deg, n= 4 : started from [0, 20, 25, 65] -> ended [10, 15]
+      commanded  14 deg, n= 4 : started from [0, 90, 115] -> ended [10]
+      commanded  16 deg, n= 4 : started from [20, 90] -> ended [10, 15, 20]
+      commanded  19 deg, n= 8 : started from [70, 90, 115, 125, 135] -> ended [15, 20, 25]
+      commanded 136 deg, n= 4 : started from [90, 115] -> ended [20, 135]
+
+==============================================================================
+7b. WHERE THE MISSES ARE: hit rate by which triad member was
+    commanded. All four misses are on the SAME member index.
+==============================================================================
+      member 0 (approx  17 deg in the pinned triad): 22 panels, 22 hit, 0 miss
+      member 1 (approx  75 deg in the pinned triad):  3 panels,  3 hit, 0 miss
+      member 2 (approx 135 deg in the pinned triad):  9 panels,  5 hit, 4 miss
+      all 4 misses fall in member 2 (9 of 34 panels).
+      P(that by chance, misses placed at random) = 0.0049
+      NOT a controlled result: member index is confounded with
+      panel position (member 2 is always the P2 panel) and with
+      the lab-frame scan direction. Reported as a lead, not a
+      finding.
+
+==============================================================================
+8. WHAT IS NOT ESTABLISHED
+==============================================================================
+   * no lattice failure was observed on VALID film at any dose down
+     to sigma 52, so the lattice threshold is a BOUND, not a
+     measurement.
+   * the crosstalk hypothesis (M21) is graded C and its one
+     controlled test was underpowered: Fisher p = 1.000.
+   * the crystallographic identity of the nano-domains is NOT
+     claimed; this work measures orientation, not lattice vectors.
+
+numbers cached to summary_stats.json

@@ -1,0 +1,110 @@
+[
+ {
+  "label": "th020",
+  "file": "output\\s2_th020.txt",
+  "angle": 20,
+  "slot": 0,
+  "center_um": [
+   1.5,
+   1.5
+  ],
+  "n_rows": 13,
+  "write_order": 0
+ },
+ {
+  "label": "th040",
+  "file": "output\\s2_th040.txt",
+  "angle": 40,
+  "slot": 1,
+  "center_um": [
+   3.5,
+   1.5
+  ],
+  "n_rows": 13,
+  "write_order": 1
+ },
+ {
+  "label": "th080",
+  "file": "output\\s2_th080.txt",
+  "angle": 80,
+  "slot": 2,
+  "center_um": [
+   5.5,
+   1.5
+  ],
+  "n_rows": 13,
+  "write_order": 2
+ },
+ {
+  "label": "th100",
+  "file": "output\\s2_th100.txt",
+  "angle": 100,
+  "slot": 5,
+  "center_um": [
+   5.5,
+   3.5
+  ],
+  "n_rows": 13,
+  "write_order": 3
+ },
+ {
+  "label": "th060",
+  "file": "output\\s2_th060.txt",
+  "angle": 60,
+  "slot": 4,
+  "center_um": [
+   3.5,
+   3.5
+  ],
+  "n_rows": 13,
+  "write_order": 4
+ },
+ {
+  "label": "th160",
+  "file": "output\\s2_th160.txt",
+  "angle": 160,
+  "slot": 3,
+  "center_um": [
+   1.5,
+   3.5
+  ],
+  "n_rows": 13,
+  "write_order": 5
+ },
+ {
+  "label": "th140",
+  "file": "output\\s2_th140.txt",
+  "angle": 140,
+  "slot": 6,
+  "center_um": [
+   1.5,
+   5.5
+  ],
+  "n_rows": 13,
+  "write_order": 6
+ },
+ {
+  "label": "th000",
+  "file": "output\\s2_th000.txt",
+  "angle": 0,
+  "slot": 7,
+  "center_um": [
+   3.5,
+   5.5
+  ],
+  "n_rows": 13,
+  "write_order": 7
+ },
+ {
+  "label": "th120",
+  "file": "output\\s2_th120.txt",
+  "angle": 120,
+  "slot": 8,
+  "center_um": [
+   5.5,
+   5.5
+  ],
+  "n_rows": 13,
+  "write_order": 8
+ }
+]

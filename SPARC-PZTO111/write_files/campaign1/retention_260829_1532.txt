@@ -1,0 +1,58 @@
+==============================================================================
+RETENTION  2026-08-29 15:32   (measurement only)
+==============================================================================
+  data folder 260829: 48 files, newest 29 Aug 15:30 (0.0 h ago)
+
+--- (+0.0,+0.0)  written 10:55 at sigma 133, commanded 16.5 deg, template 219 nm ---
+  scanner range, 2 um frame at (+0.0,+0.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_LDART_0024.ibw
+    LDART PZTO_LDART_0024.ibw  interior   97.12 pm (was  150.27 right after the write, -35 %)  z +5.9  p 0.0076 | corners  46.40
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_VDART_0024.ibw
+    VDART PZTO_VDART_0024.ibw  interior  112.30 pm (was  122.28 right after the write, -8 %)  z +21.8  p 0.0076 | corners  35.25
+
+--- (+4.0,+0.0)  written 11:15 at sigma 122, commanded 4.0 deg, template 225 nm ---
+  scanner range, 2 um frame at (+4.0,+0.0), limit 50 um:
+    x: |off|+size   6.5   edge at +2.8 / +5.2   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (4.0, 0.0) um
+  -> PZTO_LDART_0025.ibw
+    LDART PZTO_LDART_0025.ibw  interior   99.64 pm (was  124.96 right after the write, -20 %)  z +7.0  p 0.0076 | corners  36.09
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (4.0, 0.0) um
+  -> PZTO_VDART_0025.ibw
+    VDART PZTO_VDART_0025.ibw  interior  115.59 pm (was  179.26 right after the write, -36 %)  z +30.9  p 0.0076 | corners  42.18
+
+--- (+0.0,-4.0)  written 12:15 at sigma 263, commanded 16.5 deg, template 251 nm ---
+  scanner range, 2 um frame at (+0.0,-4.0), limit 50 um:
+    x: |off|+size   2.5   edge at -1.2 / +1.2   ok
+    y: |off|+size   6.5   edge at -5.2 / -2.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, -4.0) um
+  -> PZTO_LDART_0026.ibw
+    LDART PZTO_LDART_0026.ibw  interior  156.97 pm (was  208.94 right after the write, -25 %)  z +17.5  p 0.0076 | corners  66.80
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (0.0, -4.0) um
+  -> PZTO_VDART_0026.ibw
+    VDART PZTO_VDART_0026.ibw  interior  163.72 pm (was  202.62 right after the write, -19 %)  z +37.5  p 0.0076 | corners  40.90
+
+==============================================================================
+DECAY
+==============================================================================
+  area        chan     then (pm)   now (pm)  retained  reading
+  ( +0.0, +0.0) LDART       150.27      97.12       65 %  partly decayed
+  ( +0.0, +0.0) VDART       122.28     112.30       92 %  persists
+  ( +4.0, +0.0) LDART       124.96      99.64       80 %  persists
+  ( +4.0, +0.0) VDART       179.26     115.59       64 %  partly decayed
+  ( +0.0, -4.0) LDART       208.94     156.97       75 %  persists
+  ( +0.0, -4.0) VDART       202.62     163.72       81 %  persists
+
+  retained fraction: median 77 %, range 64-92 %
+  -> THE MODULATION PERSISTS. It is not a relaxing surface
+     charge; something structural was written.

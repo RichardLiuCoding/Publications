@@ -1,0 +1,42 @@
+====================================================================================
+RASTER RETENTION  2026-08-30 05:26   (measurement only)
+====================================================================================
+  data folder 260829: 186 files, newest 30 Aug 05:25 (0.0 h ago)
+
+--- (-6.8,-18.0)  raster 0 deg written 03:51 ---
+  scanner range, 2 um frame at (-6.8,-18.0), limit 50 um:
+    x: |off|+size   9.3   edge at -8.1 / -5.5   ok
+    y: |off|+size  20.5   edge at -19.2 / -16.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.8, -18.0) um
+  -> PZTO_LDART_0119.ibw
+    PZTO_LDART_0119.ibw  director 18.8 -> 18.8 deg (drift 0.0), anisotropy 19.40 -> 19.71, p 0.0033
+
+--- (-5.2,-18.0)  raster 60 deg written 04:15 ---
+  scanner range, 2 um frame at (-5.2,-18.0), limit 50 um:
+    x: |off|+size   7.7   edge at -6.5 / -4.0   ok
+    y: |off|+size  20.5   edge at -19.2 / -16.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-5.2, -18.0) um
+  -> PZTO_LDART_0120.ibw
+    PZTO_LDART_0120.ibw  director 78.8 -> 78.8 deg (drift 0.0), anisotropy 36.06 -> 28.31, p 0.0033
+
+--- (+6.0,-12.0)  raster 120 deg written 05:16 ---
+  scanner range, 2 um frame at (+6.0,-12.0), limit 50 um:
+    x: |off|+size   8.5   edge at +4.8 / +7.2   ok
+    y: |off|+size  14.5   edge at -13.2 / -10.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (6.0, -12.0) um
+  -> PZTO_LDART_0121.ibw
+    PZTO_LDART_0121.ibw  director 138.8 -> 138.8 deg (drift 0.1), anisotropy 3.64 -> 3.56, p 0.0399
+
+====================================================================================
+area          raster     then      now   drift aniso then aniso now    p now
+( -6.8,-18.0)      0     18.8     18.8     0.0     19.40     19.71   0.0033
+( -5.2,-18.0)     60     78.8     78.8     0.0     36.06     28.31   0.0033
+( +6.0,-12.0)    120    138.8    138.8     0.1      3.64      3.56   0.0399
+
+  director drift: median 0.0 deg, max 0.1 deg
+  anisotropy retained: median 98 %, range 78-102 %
+  still significant at p < 0.01: 2 of 3
+  -> the written direction does NOT hold; report the drift.

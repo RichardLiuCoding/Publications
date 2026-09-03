@@ -1,0 +1,19 @@
+==================================================================================
+FINE ANGLE  2026-08-30 00:31   (measurement-free)
+==================================================================================
+  (+12,+12)   FAILED
+  (-6,-6)     raster   0.0  member  24.0 | peak  19.55 /  19.72 | delta -4.45 / -4.28 | Delta -24.0
+  (0,-6)      raster 120.0  member 139.0 | peak 140.98 / 140.77 | delta +1.98 / +1.77 | Delta -19.0
+  (0,+18)     raster  41.0  member  16.5 | peak  19.78 /  20.25 | delta +3.28 / +3.75 | Delta +24.5
+  (+18,-18)   FAILED
+  (-6,0) rw2  raster  60.0  member  84.0 | peak  75.15 /  74.98 | delta -8.85 / -9.02 | Delta -24.0
+
+----------------------------------------------------------------------------------
+  repeatability between the two independent images of the same
+  panel: median 0.19 deg, max 0.47 deg  (4 panels)
+  -- against the 3.75 deg resolution of the blind band estimator.
+
+  mean delta per panel (deg): -4.37, +1.88, +3.51, -8.93
+  3 of 4 lean toward the commanded axis; sign test p = 0.625
+  implied B/A: median 3.31, range -1.92-7.55
+  panels whose |delta| exceeds twice the repeatability: 4 of 4

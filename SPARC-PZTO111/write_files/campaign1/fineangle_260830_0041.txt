@@ -1,0 +1,38 @@
+==================================================================================
+FINE ANGLE  2026-08-30 00:40   (measurement-free)
+==================================================================================
+  (+12,+12)   raster  46.0  member  16.5 | peak  16.62 /  16.15 | delta +0.12 / -0.35 | Delta +29.5
+  (-6,-6)     raster   0.0  member  24.0 | peak  19.55 /  19.72 | delta -4.45 / -4.28 | Delta -24.0
+  (0,-6)      raster 120.0  member 139.0 | peak 140.98 / 140.77 | delta +1.98 / +1.77 | Delta -19.0
+  (0,+18)     raster  41.0  member  16.5 | peak  19.78 /  20.25 | delta +3.28 / +3.75 | Delta +24.5
+  (+18,-18)   raster  41.0  member  16.5 | peak  18.14 /  17.67 | delta +1.64 / +1.17 | Delta +24.5
+  (-6,0) rw2  raster  60.0  member  84.0 | peak  75.15 /  74.98 | delta -8.85 / -9.02 | Delta -24.0
+
+----------------------------------------------------------------------------------
+  repeatability between the two independent images of the same
+  panel: median 0.34 deg, max 0.47 deg  (6 panels)
+  -- against the 3.75 deg resolution of the blind band estimator.
+
+  mean delta per panel (deg): -0.11, -4.37, +1.88, +3.51, +1.40, -8.93
+  4 of 6 lean toward the commanded axis; sign test p = 0.688
+  implied B/A: median 2.05, range -1.92-7.55
+  panels whose |delta| exceeds twice the repeatability: 5 of 6
+
+----------------------------------------------------------------------------------
+  IS THE CRYSTALLOGRAPHIC REFERENCE GOOD ENOUGH?
+    rewrite pair, same area: step 1 17.98 deg, step 2 75.15 deg
+    separation 57.17 deg against the required 60.00 deg -> error -2.83 deg
+    landings modulo 60 deg : 16.39, 19.63, 20.88, 20.01, 17.90, 15.07
+    as-grown fits modulo 60: 16.50, 24.00, 19.00, 16.50, 16.50, 24.00
+    written  spread 6.51 deg about a common 18.32 deg
+    as-grown spread 7.50 deg
+    -> the WRITTEN orientations agree far better than the fits
+       they are compared against. The reference, not the
+       landing, carries the scatter.
+    P(6 uniform draws all inside a 6.51 deg arc) = 8.99e-05
+    commanded angles modulo 60: 46.0, 0.0, 0.0, 41.0, 41.0, 0.0  (spread 46.0 deg)
+    -- the commands are NOT clustered, so the landings did not
+       inherit their clustering from what was asked for.
+    3 areas sharing member 16.5: landings 16.39, 20.01, 17.90
+    spread 3.63 deg (max-min) -- the same member, measured on
+    independently screened areas, does not sit at one angle.

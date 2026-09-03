@@ -1,0 +1,11 @@
+==========================================================================
+BLOCK 2  +V then -V over one square, then look  2026-08-29 12:48
+==========================================================================
+
+POLING SQUARE  1.4 um, raster pitch 30 nm, 0.50 um/s
+  6674 points (3337 per polarity), sigma 667 V.s/um^2 per polarity
+  net DC +0.000e+00 V  (S4 needs |mean| <= 0.01)
+  26790 pts -> 17.86 min at 0.50 um/s (S7 cap 26)
+  x 0.55-1.95, y 0.55-1.93 um
+
+DRY RUN: gates pass, nothing written.

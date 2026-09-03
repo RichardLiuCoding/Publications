@@ -1,0 +1,66 @@
+[
+ {
+  "label": "read five theory documents and the paper",
+  "mins": 15.2,
+  "ai_turns": 19,
+  "tools": 23,
+  "human": 5,
+  "words": 6471
+ },
+ {
+  "label": "build the state variable and the first session plan",
+  "mins": 53.5,
+  "ai_turns": 26,
+  "tools": 18,
+  "human": 9,
+  "words": 19194
+ },
+ {
+  "label": "diagnose the channel sign error",
+  "mins": 6.4,
+  "ai_turns": 7,
+  "tools": 4,
+  "human": 2,
+  "words": 3297
+ },
+ {
+  "label": "build and race three orientation estimators",
+  "mins": 7.4,
+  "ai_turns": 9,
+  "tools": 9,
+  "human": 1,
+  "words": 4433
+ },
+ {
+  "label": "build the paired same location analysis",
+  "mins": 14.9,
+  "ai_turns": 12,
+  "tools": 14,
+  "human": 4,
+  "words": 4240
+ },
+ {
+  "label": "install the hardware verdict guard after R4",
+  "mins": 4.0,
+  "ai_turns": 5,
+  "tools": 8,
+  "human": 1,
+  "words": 1280
+ },
+ {
+  "label": "find the write voltage sign bug",
+  "mins": 5.2,
+  "ai_turns": 5,
+  "tools": 4,
+  "human": 1,
+  "words": 1609
+ },
+ {
+  "label": "write the graded findings and failure records",
+  "mins": 9.8,
+  "ai_turns": 7,
+  "tools": 8,
+  "human": 2,
+  "words": 1907
+ }
+]

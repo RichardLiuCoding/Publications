@@ -1,0 +1,34 @@
+==============================================================================
+BLOCK 3  DC raster  offtriad_raster  2026-08-29 19:03
+==============================================================================
+  data folder 260829: 74 files, newest 29 Aug 19:01 (0.0 h ago)
+  scanner range, 2 um frame at (+12.0,+12.0), limit 50 um:
+    x: |off|+size  14.5   edge at +10.8 / +13.2   ok
+    y: |off|+size  14.5   edge at +10.8 / +13.2   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (12.0, 12.0) um
+  -> PZTO_LDART_0045.ibw
+  before LDART -> PZTO_LDART_0045.ibw (100% tracked)
+  contact_check PZTO_LDART_0045.ibw
+    drive 649.3 kHz   tracked 637.9 +-4.9 kHz   offset 11.3 kHz
+    |A| 57.9 pm   xi 73 nm (15 px)   consistency 0.93   r12 +0.93   defl SP 0.50 V
+    -> OK. Proceed.
+VDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (12.0, 12.0) um
+  -> PZTO_VDART_0029.ibw
+  before VDART -> PZTO_VDART_0029.ibw (100% tracked)
+  contact_check PZTO_VDART_0029.ibw
+    drive 350.5 kHz   tracked 343.9 +-3.6 kHz   offset 6.6 kHz
+    |A| 50.2 pm   xi 68 nm (14 px)   consistency 0.96   r12 +0.76   defl SP 0.50 V
+    -> OK. Proceed.
+  rigid triad fit on PZTO_LDART_0045.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.588   modulation 0.175 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.26, 0.57, 0.17)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+
+  triad [16, 76, 136], dominant 76 deg, modulation 0.175
+  topography: roughness 0.37 nm, 1-99% range 1.71 nm
+  interior: 1.00 um window holds nan Lambda at nan nm (need >= 4.0) -> TOO FEW PERIODS

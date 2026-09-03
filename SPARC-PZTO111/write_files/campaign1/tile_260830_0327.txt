@@ -1,0 +1,38 @@
+================================================================================
+TILE BOUNDARY  2026-08-30 03:27
+================================================================================
+  area (-6.0,-18.0); squares at -6.8 and -5.2; angles 0 / 60
+  data folder 260829: 165 files, newest 30 Aug 03:27 (0.0 h ago)
+  scanner range, 2 um frame at (-6.0,-18.0), limit 50 um:
+    x: |off|+size   8.5   edge at -7.2 / -4.8   ok
+    y: |off|+size  20.5   edge at -19.2 / -16.8   ok
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -18.0) um
+  -> PZTO_LDART_0105.ibw
+  before frame PZTO_LDART_0105.ibw, Lambda 246 nm
+  4-Lambda gate: tile readout: 1.20 um window holds 4.87 Lambda at 246 nm (need >= 4.0) -> OK
+  writing tileA: raster 0 deg at (-6.80,-18.00)
+    rc=0 in 23.5 min | -> ALIGNED to the member nearest the raster. Rule holds.
+  writing tileB: raster 60 deg at (-5.20,-18.00)
+    rc=0 in 23.6 min | -> ALIGNED to the member nearest the raster. Rule holds.
+
+  reading the boundary frame at (-6.0,-18.0)
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-6.0, -18.0) um
+  -> PZTO_LDART_0110.ibw
+  after frame PZTO_LDART_0110.ibw
+    A (0 deg)      before   63.8 (aniso  3.82, p 0.0075)
+                   after    18.8 deg (fine  17.58)  aniso  16.85  Lambda 229  p 0.0025
+    B (60 deg)     before   56.2 (aniso  1.98, p 0.2918)
+                   after    18.8 deg (fine  18.09)  aniso   7.67  Lambda 247  p 0.0025
+
+  matched-filter landings: 17.58 and 18.09 deg -> separation 0.50
+    tile A lands 0.74 deg from the film-wide member at 18.32
+    tile B lands 0.23 deg from the film-wide member at 18.32
+
+  separation between the two tiles: 0.0 deg
+  commanded separation: 60.0 deg
+  -> the two tiles hold the SAME direction. Either the
+     second write reached across the boundary, or both
+     landed on the same member. Check the commanded angles
+     against the triad before concluding anything.

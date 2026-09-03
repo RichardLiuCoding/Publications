@@ -1,0 +1,12 @@
+==============================================================================
+BLOCK 3  AC raster    2026-08-29 18:20
+==============================================================================
+
+AC SQUARE  1.4 um, pitch 30 nm, 0.50 um/s, along 60.0 deg
+  TWO passes, sign flips every 2 points = 40 nm; spatial sign period 80 nm (dose matched to MODE=dc)
+  built 7094 pts, |charge| 2026 V.s over 1.96 um^2 -> sigma 517 (design 667 per pass)
+  net DC -1.331e-15 V  |V|max 10.0
+  4.73 min at 0.50 um/s (S7 cap 26)
+  x 0.31-2.21  y 0.29-2.20 um
+
+DRY RUN: gates pass, nothing written.

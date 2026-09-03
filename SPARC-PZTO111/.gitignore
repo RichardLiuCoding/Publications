@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+
+# Flat working directory built by setup_workspace.py
+workspace/
+
+# Raw instrument data is deposited separately. See docs/DATA_AVAILABILITY.md.
+*.ibw
+*.pxp
+
+# Raw session transcripts are deposited with the frames, not tracked here.
+chat_history_*.json
+chat_history_*.zip
+
+# Figure output
+figures_manuscript/
+figures_ms/
+figures_today/
+
+# Local scratch
+*.bak
+*.bak_*

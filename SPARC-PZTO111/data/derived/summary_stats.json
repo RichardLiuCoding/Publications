@@ -1,0 +1,20 @@
+{
+ "n_rows": 40,
+ "n_areas": 20,
+ "n_valid": 36,
+ "n_gated": 4,
+ "n_targeted": 34,
+ "n_hit": 30,
+ "hit_pct": 88.23529411764706,
+ "median_offset_all": 3.5,
+ "median_offset_hits": 1.5,
+ "travel_r": 0.9034344059473147,
+ "travel_n": 33,
+ "xnull_median": 18.925,
+ "sigma_min_ontarget": 52.0,
+ "flat_r": 0.5339103228034962,
+ "shear_all_hit": true,
+ "shear_n": 4,
+ "miss_member": 2,
+ "miss_p_all": 0.004909693370529568
+}

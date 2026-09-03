@@ -1,0 +1,39 @@
+==============================================================================
+SCAN ROTATION  16:28   (measurement only)
+==============================================================================
+  area (-8.0,+0.0), scan angles [0.0, 60.0] deg
+  feature of interest: 56.5 deg / 300 nm in the 0 deg scan frame
+  data folder 260829: 58 files, newest 29 Aug 16:28 (0.0 h ago)
+  scanner range, 2 um frame at (-8.0,+0.0), limit 50 um:
+    x: |off|+size  10.5   edge at -9.2 / -6.8   ok
+    y: |off|+size   2.5   edge at -1.2 / +1.2   ok
+
+--- scan angle 0 deg ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 0.0 deg, offset (-8.0, 0.0) um
+  -> PZTO_LDART_0029.ibw
+    PZTO_LDART_0029.ibw  tracked 100%, r12 +0.94, 4.88 nm/px
+    super band :   63.8 deg   279.7 nm  aniso  2.88  p 0.0399
+    45-90 band :   19.8 deg    81.5 nm  aniso  1.97  p 0.1196
+
+--- scan angle 60 deg ---
+LDART ready
+scan 2.5 um, 512 px, 2.0 Hz, angle 60.0 deg, offset (-8.0, 0.0) um
+  -> PZTO_LDART_0030.ibw
+    PZTO_LDART_0030.ibw  tracked 100%, r12 +0.94, 4.88 nm/px
+    super band :  131.2 deg   281.2 nm  aniso  3.18  p 0.0266
+    45-90 band :  129.7 deg    79.1 nm  aniso  1.39  p 0.9203
+
+==============================================================================
+RESULT   scan rotated by +60 deg
+==============================================================================
+  written feature : measured angle moved  +67.5 deg
+  45-90 nm band   : measured angle moved  -70.2 deg
+
+  prediction if the feature is REAL on the sample : +60 deg
+  prediction if it is fixed in the SCAN frame     :   +0 deg
+
+  -> the written feature ROTATED WITH THE SAMPLE. It is a real
+     spatial structure, and M28 stands.
+
+  frames: PZTO_LDART_0029.ibw, PZTO_LDART_0030.ibw

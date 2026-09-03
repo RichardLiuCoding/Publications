@@ -1,0 +1,14 @@
+{
+ "mechanism": {
+  "ts": "2026-08-07T22:20:19.228Z",
+  "text": "cels the polarity pattern point by point, so the film sees an isotropic agitation and relaxes into the local pin at 150\u00b0. The same-sign mode leaves a standing sign template whose stripes run along the write direction, and *that* is what the in-plane variant selection couples to. It is the Vasudevan mechanism you corrected me on: the trajectory controls the sign/phase pattern, and the in-plane direction follows from the geometry of that pattern. Note it is also **half the dose** \u2014 one pass per line instead of two. Structured dose, not more dose. Two things are confounded with `within"
+ },
+ "estimator": {
+  "ts": "2026-08-13T21:50:20.868Z",
+  "text": "e FFT is nearly unbiased but very high-variance.** With only 14\u201320 periods across the region it's classic spectral-estimation variance \u2014 few independent samples per family. That explains the 0.014\u20130.047 frame-to-frame |\u0394w| we measured on unchanged real states. The tensor averages over ~10\u2074 pixels and has almost no variance. ## But Canny measures the wrong quantity This is the more important finding, and it's why I wouldn't adopt it regardless of noise. Walls run parallel to stripes, so edge orientation gives the right *direction* \u2014 but edge *length* per unit area scales as area/\u039b. So a finer-period family is over-counted. The control settles it. Same layout, same area fractions, only the periods change: | | truth (area) | wall-length prediction | Canny reads | err vs area"
+ },
+ "guard": {
+  "ts": "2026-08-14T13:27:37.632Z",
+  "text": "from the ladder is ambiguous** between \"pulses can't reopen the gate\" and \"this probe or area can't switch at all\". The mitigation is that the ladder subsumes it. It spans 4\u201310 V and 40 ms\u20135 s, so if none of the sixteen pulses switches an orbit, that's the same verdict the positive control would have given. I've changed `pulse_discs` so a complete null now prints a **hardware/area verdict** \u2014 check the bias path and coating, move \u2265 50 \u00b5m \u2014 rather than sending you up the dwell/density/repeat escalation ladder, which only applies once *something* has switched. Worth keeping `[PROBE.1]` for the new probe: it's the fastest way to confirm a fresh tip is electrica"
+ }
+}

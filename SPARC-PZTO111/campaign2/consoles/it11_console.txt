@@ -1,0 +1,134 @@
+==============================================================================
+IT11/RW1-Z  pathway map: which neighbour can you reach?  2026-08-27 17:28
+==============================================================================
+
+--- static audit (before any instrument command) ---
+  toolkit: 7 cells, 58 functions called, 0 undefined
+  driver: 0 dangling global name(s)
+  -> audit clean
+  data folder 260827: 27 files, newest 27 Aug 17:20 (0.1 h ago)
+
+--- preflight, pass 1: pre-registration and the loop stops ---
+  preflight: 7 check group(s), 0 failure(s), 2 deferred
+    DEFERRED  S2/S9 geometry (offset not chosen yet) - re-run preflight once it is known
+    DEFERRED  S8 charge per site (dwell solved at run time) - re-run preflight once it is known
+    clear on everything checkable now
+
+1369 legal offsets for a 14 um frame; trying the nearest first
+  meter at start       defl -0.203  |  +6.320  -0.203  +0.087  +0.041  +53.200  +0.099
+
+--- candidate 1: (+0.0,+0.0) ---
+  scanner range, 14 um frame at (+0.0,+0.0), limit 50 um:
+    x: |off|+size  14.0   edge at -7.0 / +7.0   ok
+    y: |off|+size  14.0   edge at -7.0 / +7.0   ok
+  position (+0.0,+0.0) is clear of all 0 used areas and inside the scanner range at 14 um
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.7 Hz frame
+LDART ready
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_LDART_0027.ibw
+     PZTO_LDART_0027.ibw: drive 667.7 kHz, tracked 658.2, offset 9.5 kHz, 100% lines, r12 +0.97, |S| 88.7
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0027.ibw
+    phi0 = 19.0 deg  ->  members 19/79/139 deg
+    triad power 0.590   modulation 0.180 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.32, 0.43, 0.24)
+    deviation from the film triad 2/62/122: 17.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['19', '79', '139'] -> ['19', '79', '139']  (offsets ['17', '17', '17'] deg)
+  AREA GATE: modulation 0.180 (need >= 0.18), streak 0.011 (need <= 0.10); Lambda ['245', '354', '482'] spread 66% (reported only)
+  -> rejected: modulation 0.180 below the hard floor 0.18
+
+--- candidate 2: (-2.0,+0.0) ---
+  scanner range, 14 um frame at (-2.0,+0.0), limit 50 um:
+    x: |off|+size  16.0   edge at -9.0 / +5.0   ok
+    y: |off|+size  14.0   edge at -7.0 / +7.0   ok
+  position (-2.0,+0.0) is clear of all 0 used areas and inside the scanner range at 14 um
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (-2.0, 0.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.7 Hz frame
+LDART ready
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (-2.0, 0.0) um
+  -> PZTO_LDART_0028.ibw
+     PZTO_LDART_0028.ibw: drive 668.8 kHz, tracked 659.1, offset 9.7 kHz, 100% lines, r12 +0.96, |S| 90.9
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0028.ibw
+    phi0 = 19.0 deg  ->  members 19/79/139 deg
+    triad power 0.601   modulation 0.202 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.35, 0.40, 0.25)
+    deviation from the film triad 2/62/122: 17.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['19', '79', '139'] -> ['19', '79', '139']  (offsets ['17', '17', '17'] deg)
+  AREA GATE: modulation 0.202 (need >= 0.18), streak 0.011 (need <= 0.10); Lambda ['280', '261', '482'] spread 65% (reported only)
+  -> viable (modulation 0.202)
+     NOT BUILDABLE: n would be 32 not 16 (the 1.42 um window does not fit inside a 16-site panel at 140 nm spacing); no layout fits (halo 3.68 um needs pitch 7.47 um in a 14 um frame)
+     worst command ANGF 1.411 on triad [19, 79, 139], Lambda 280 nm
+
+--- candidate 3: (+0.0,-2.0) ---
+  scanner range, 14 um frame at (+0.0,-2.0), limit 50 um:
+    x: |off|+size  14.0   edge at -7.0 / +7.0   ok
+    y: |off|+size  16.0   edge at -9.0 / +5.0   ok
+  position (+0.0,-2.0) is clear of all 0 used areas and inside the scanner range at 14 um
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (0.0, -2.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.7 Hz frame
+LDART ready
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (0.0, -2.0) um
+  -> PZTO_LDART_0029.ibw
+     PZTO_LDART_0029.ibw: drive 669.2 kHz, tracked 661.1, offset 8.0 kHz, 100% lines, r12 +0.96, |S| 87.9
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0029.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.574   modulation 0.148 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.34, 0.40, 0.26)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+  AREA GATE: modulation 0.148 (need >= 0.18), streak 0.006 (need <= 0.10); Lambda ['301', '261', '354'] spread 30% (reported only)
+  -> rejected: modulation 0.148 below the hard floor 0.18
+
+--- candidate 4: (+0.0,+2.0) ---
+  scanner range, 14 um frame at (+0.0,+2.0), limit 50 um:
+    x: |off|+size  14.0   edge at -7.0 / +7.0   ok
+    y: |off|+size  16.0   edge at -5.0 / +9.0   ok
+  position (+0.0,+2.0) is clear of all 0 used areas and inside the scanner range at 14 um
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (0.0, 2.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.7 Hz frame
+LDART ready
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (0.0, 2.0) um
+  -> PZTO_LDART_0030.ibw
+     PZTO_LDART_0030.ibw: drive 667.1 kHz, tracked 659.0, offset 8.0 kHz, 100% lines, r12 +0.97, |S| 95.2
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0030.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.605   modulation 0.210 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.32, 0.45, 0.22)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+  AREA GATE: modulation 0.210 (need >= 0.18), streak 0.005 (need <= 0.10); Lambda ['245', '354', '354'] spread 34% (reported only)
+  -> viable (modulation 0.210)
+     NOT BUILDABLE: n would be 32 not 16 (the 1.49 um window does not fit inside a 16-site panel at 177 nm spacing); no layout fits (halo 4.50 um needs pitch 9.11 um in a 14 um frame)
+     worst command ANGF 1.414 on triad [16, 76, 136], Lambda 354 nm
+
+--- candidate 5: (+2.0,+0.0) ---
+  scanner range, 14 um frame at (+2.0,+0.0), limit 50 um:
+    x: |off|+size  16.0   edge at -5.0 / +9.0   ok
+    y: |off|+size  14.0   edge at -7.0 / +7.0   ok
+  position (+2.0,+0.0) is clear of all 0 used areas and inside the scanner range at 14 um
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (2.0, 0.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.7 Hz frame
+LDART ready
+scan 14.0 um, 256 px, 0.7142857142857143 Hz, angle 0.0 deg, offset (2.0, 0.0) um
+  -> PZTO_LDART_0031.ibw
+     PZTO_LDART_0031.ibw: drive 665.0 kHz, tracked 657.7, offset 7.3 kHz, 100% lines, r12 +0.96, |S| 91.1
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0031.ibw
+    phi0 = 16.5 deg  ->  members 16/76/136 deg
+    triad power 0.598   modulation 0.196 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.30, 0.48, 0.22)
+    deviation from the film triad 2/62/122: 14.5 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['16', '76', '136'] -> ['16', '76', '136']  (offsets ['14', '14', '14'] deg)
+  AREA GATE: modulation 0.196 (need >= 0.18), streak 0.014 (need <= 0.10); Lambda ['245', '354', '430'] spread 54% (reported only)
+  -> viable (modulation 0.196)
+     NOT BUILDABLE: n would be 32 not 16 (the 1.49 um window does not fit inside a 16-site panel at 177 nm spacing); no layout fits (halo 4.50 um needs pitch 9.11 um in a 14 um frame)
+     worst command ANGF 1.414 on triad [16, 76, 136], Lambda 354 nm

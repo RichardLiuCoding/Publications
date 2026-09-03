@@ -1,0 +1,15 @@
+# Analysis and figures
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+scikit-image>=0.21
+scikit-learn>=1.3
+igor2>=0.5            # reads the Igor binary wave (.ibw) frames
+Pillow>=10.0
+lxml>=4.9
+ipython>=8.0          # notebooks
+
+# Instrument control. Needed only to re-run acquisition, not analysis.
+# Requires a Windows host running Asylum Research Igor Pro.
+aespm>=0.1
+python-pptx>=0.6      # native-shape figure panels

@@ -1,0 +1,96 @@
+==============================================================================
+IT10b  UTK along the raster, on IT6s canvas   2026-08-22 02:45
+==============================================================================
+  data folder 260820: 137 files, newest 22 Aug 02:36 (0.2 h ago)
+
+--- resuming on the canvas IT6 prepared ---
+    area (-14.0,-14.0), background 62 deg at w = 0.601
+    reference frame PZTO_LDART_0123.ibw (post-raster, pre-letters)
+    IT6 spent 23.5 min rastering this; re-running stage A would
+    spend it again on film that is already prepared.
+  scanner range, 12 um frame at (-14.0,-14.0), limit 50 um:
+    x: |off|+size  26.0   edge at -20.0 / -8.0   ok
+    y: |off|+size  26.0   edge at -20.0 / -8.0   ok
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-14.0, -14.0) um
+LDART ready
+  meter at start         defl +0.600  |  +6.274  +0.600  +0.075  +0.210  -83.654  +51.465
+  readout window 1.22 um = 26 px, 4.4 periods -> ok
+
+--- is the canvas still aligned? (fresh frame, same offset) ---
+  -> PZTO_LDART_0125.ibw
+    w(  2 deg) = 0.179 +- 0.130 over 80 windows
+    w( 62 deg) = 0.598 +- 0.249 over 80 windows   <- the raster direction
+    w(122 deg) = 0.222 +- 0.161 over 80 windows
+    dominant 62 deg at w = 0.598, lead 0.376  (IT6 measured 62 at 0.601)
+    -> the canvas holds. This is also a RETENTION measurement: the
+       raster-aligned state survived about an hour and several scans.
+
+=== write UTK, commanded 2 deg against a 62 deg background ===
+  word laid along 62 deg so it lies on the rastered stripe
+  spans x 2.60-9.40, y 1.15-10.85 in the scan frame
+  topography under each letter:
+    U at (4.31,2.82):   2.2 nm
+    T at (6.00,6.00):  15.3 nm
+    K at (7.69,9.18):  15.5 nm
+    masked lattice: 693 at +V, 694 at -V -> trimming to 693 each
+  1386 sites {'U': 548, 'T': 435, 'K': 403}, dwell 0.72 s -> sigma 367 = 1.22 sigma_c, 7.2 V.s per site
+  38680 pts, mean V +0.000000, 25.8 min, footprint x [2.02,9.90] y [0.59,11.32]
+
+--- preflight ---
+    S9: proposal declares reuse of IT6_UTK -> skipping 1 matching entry(ies). This is an explicit exception, not a pass.
+  preflight: 7 check group(s), 0 failure(s), 0 deferred
+    all clear
+Wrote 38680 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260822_IT10b_UTK.txt'  (path length 237.8 um, 1386 strokes)
+260822_IT10b_UTK.txt   saved 02:57:49
+  38680 pts   X[2.016,9.901] Y[0.586,11.322] um
+  |V| = [10.]   mean(V) = +0.0000 V   35.5 % at 0 V
+  path 774 um  ->  25.8 min at 0.5 um/s
+  running… ETA 25.8 min
+  done 03:23:55
+  litho stopped (required before the next run)
+LDART ready
+  -> PZTO_LDART_0126.ibw
+  meter after letters    defl -0.778  |  +6.270  -0.778  +0.038  +0.047  +75.091  +3.617
+  contact_check PZTO_LDART_0126.ibw
+    drive 670.0 kHz   tracked 652.1 +-2.9 kHz   offset 17.9 kHz
+    |A| 48.0 pm   xi 94 nm (2 px)   consistency 0.86   r12 +0.95   defl SP 0.60 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+  -> PZTO_LDART_0127.ibw
+
+=== DID THE LETTERS TAKE? ===
+  89 probes on a stroke, 43 between (window 1.22 um)
+  w(2) on strokes   0.483 +- 0.207   (before 0.081)
+  w(2) between      0.157 +- 0.136   (before 0.076)
+  letter contrast +0.321 against a 2-sigma null of 0.029 -> 11.1 x
+  dominant within 20 deg of the command: 63 % on strokes, 5 % between
+
+  per letter (all should be alike now that coverage is uniform):
+    U: w 0.093 -> 0.394, gain +0.301 over 62 probes
+    T: w 0.051 -> 0.469, gain +0.418 over 39 probes
+    K: w 0.043 -> 0.559, gain +0.516 over 62 probes
+
+--- VDART at 128 px ---
+scan 12.0 um, 128 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-14.0, -14.0) um
+VDART ready
+  -> PZTO_VDART_0012.ibw
+VDART PZTO_VDART_0012.ibw: up 53.7 / 46.3 %   |<e^i.phi>| 0.406   |A| 54.9 pm   coh 0.87
+   minority in patches >=25 px: 89 %   (273 clusters)
+   -> two classes, balanced -> GATE OPEN
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-14.0, -14.0) um
+  meter at end           defl +0.600  |  +6.275  +0.600  +0.178  +0.164  -11.303  +82.072
+
+  director map 13 x 17 over two frames, about 12 min
+  figure -> C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\IT10b_UTK.png
+
+==========================================================================
+IT10b VERDICT
+==========================================================================
+  canvas held at 62 deg, w 0.598 (IT6 left it at 0.601)
+  contrast +0.321 = 11.1 x the null; on target 63 % on strokes against 5 % between
+  per-letter gains U +0.301, T +0.418, K +0.516, spread 0.216
+
+  -> THE LETTERS ARE THERE, on a background the raster
+     aligned and the letters then locally overrode. An
+     arbitrary shape written into super-domain ORIENTATION and
+     read back as an image: the rules compose.

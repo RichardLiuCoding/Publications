@@ -1,0 +1,168 @@
+==============================================================================
+IT4  axis only: uniform vs alternating  2026-08-21 21:21
+==============================================================================
+
+--- static audit (before any instrument command) ---
+  toolkit: 7 cells, 58 functions called, 0 undefined
+  driver: 0 dangling global name(s)
+  -> audit clean
+  data folder 260820: 116 files, newest 21 Aug 21:14 (0.1 h ago)
+
+--- preflight, pass 1: pre-registration and the loop stops ---
+  preflight: 7 check group(s), 0 failure(s), 2 deferred
+    DEFERRED  S2/S9 geometry (offset not chosen yet) - re-run preflight once it is known
+    DEFERRED  S8 charge per site (dwell solved at run time) - re-run preflight once it is known
+    clear on everything checkable now
+
+--- RESUMING at (+0.0,-28.0) ---
+    baselines already on disk: 0103, 0104, 0105
+    the previous launch halted in PLACEMENT, before any write,
+    so nothing has touched this area and the frames still
+    describe it. Re-deriving them would cost ~30 min of probe
+    life for the same numbers.
+  scanner range, 12 um frame at (+0.0,-28.0), limit 50 um:
+    x: |off|+size  12.0   edge at -6.0 / +6.0   ok
+    y: |off|+size  40.0   edge at -34.0 / -22.0   ok
+  position (+0.0,-28.0) is clear of all 3 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, -28.0) um
+  meter at resume      defl -0.822  |  +6.270  -0.822  +0.117  +0.061  +47.287  +263.526
+  rigid triad fit on PZTO_LDART_0105.ibw
+    phi0 = 0.0 deg  ->  members 0/60/120 deg
+    triad power 0.596   modulation 0.192 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.21, 0.51, 0.29)
+    deviation from the film triad 2/62/122: 2.0 deg
+  triad aligned to reference: ['0', '60', '120'] -> ['0', '60', '120']  (offsets ['2', '2', '2'] deg)
+    triad ['0', '60', '120'], modulation 0.192, Lambda per member ['354', '280', '301'] -> 301 nm
+  frame                   worst region   overall     r12
+  PZTO_LDART_0105.ibw             100%      100%    0.95   <- reference
+  PZTO_LDART_0103.ibw             100%      100%    0.95
+  PZTO_LDART_0104.ibw             100%      100%    0.95
+  frame_gate PZTO_LDART_0105.ibw: r12 +0.95  consistency 0.85  tracked 100%  |S| rel 1.03  -> OK
+
+--- baseline floor: is this area measurable? (16 tiles) ---
+    0103 vs 0104: floor 0.126, 1/16 flipped (6%)
+    0104 vs 0105: floor 0.125, 1/16 flipped (6%)
+    0103 vs 0105: floor 0.219, 2/16 flipped (12%)
+    worst pair: floor 0.219 (max 0.25), flip 12% (max 25%)
+    -> measurable. An effect above 0.658 will be readable.
+  readout window 1.26 um = 27 px, 4.2 periods -> ok
+
+--- placement as a fixed point (2x2: 3 written + 1 control) ---
+    3x1 pass 1: factor 1.000, n 16, halo 1.75, pitch 3.61, dominants [60, 120, 60] -> commands [0, 0, 0] -> need 1.000
+  settled: 3 slots, 3 written + 0 in-grid control, factor 1.000, n 16, halo 1.75, pitch 3.61
+
+  one sigma for every panel: 601 V.s/um^2 = 1.99 x sigma_c
+  spacing 150 nm, dwell 1.36 s (13.6 V.s/site), keep 100%
+
+  uniform pair matched: both on dominant 60 -> command 0, so a UP-UM difference is polarity, not starting state
+    A   -> slot 1 at (6.00,3.42), dominant 120 -> command 0
+    UP  -> slot 0 at (2.39,3.42), dominant 60 -> command 0
+    UM  -> slot 2 at (9.61,3.42), dominant 60 -> command 0
+    unwritten: none
+
+           cmd        period   sites   sigma  tests
+  A          0         1.0 L     256     601  period Lambda, balanced - the reference
+     UP uniform by design: mean V +10.00, 256 sites all +V - expect LOCAL out-of-plane re-poling (C13)
+  UP         0         1.0 L     256     601  ALL +V, uniform polarity, no template
+     UM uniform by design: mean V -10.00, 256 sites all -V - expect LOCAL out-of-plane re-poling (C13)
+  UM         0         1.0 L     256     601  ALL -V, uniform polarity, opposite sign
+
+--- preflight, pass 2: geometry and dose, now that they exist ---
+  preflight: 7 check group(s), 0 failure(s), 0 deferred
+    all clear
+
+  768 pulses, 33590 pts, mean V +0.000000, 22.4 min of writing
+  uniform panels: 1 at +V, 1 at -V -> cancel at file level
+
+  predictions, fixed now:
+    UP ~ UM ~ A       the sign map is irrelevant; axis plus
+                      density is the whole mechanism.
+    UP != UM          polarity matters - the selection
+                      couples to field direction.
+    UP, UM both fail  some alternation is needed after all.
+LDART ready
+Wrote 33590 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260821_IT4_axis_only.txt'  (path length 126.8 um, 768 strokes)
+260821_IT4_axis_only.txt   saved 21:24:00
+  33590 pts   X[1.267,10.733] Y[2.288,4.544] um
+  |V| = [10.]   mean(V) = +0.0000 V   22.3 % at 0 V
+  path 672 um  ->  22.4 min at 0.5 um/s
+  running… ETA 22.4 min
+  done 21:46:43
+  litho stopped (required before the next run)
+  area (+0.0,-28.0) and 22.4 min committed to the state before the
+  readout, so a crash here cannot lose the record as IT2s did.
+LDART ready
+  -> PZTO_LDART_0106.ibw
+  meter after write    defl -0.789  |  +6.270  -0.789  +0.043  +0.113  +186.691  +82.785
+  contact_check PZTO_LDART_0106.ibw
+    drive 655.6 kHz   tracked 651.9 +-2.2 kHz   offset 3.7 kHz
+    |A| 54.8 pm   xi 94 nm (2 px)   consistency 0.86   r12 +0.96   defl SP 0.60 V
+    -> MOVE TO A DIFFERENT LOCATION AND RETUNE. Raising the setpoint has not fixed it (or it is already >= 0.45 V), so the contact spot itself is bad — debris or a step edge.
+  -> PZTO_LDART_0107.ibw
+
+  control tiles: 32 of 64 grid candidates clear every written panel by 0.05 um
+    0 of them sit inside an unwritten slot, at the same height as the panels
+
+=== floors, measured three ways on untouched film ===
+  before vs after   floor 0.209  flip 12%   <- the comparison used
+  after  vs after   floor 0.122  flip 9%   drift DURING readout
+  before vs before  floor 0.193  flip 3%   baseline noise
+  using the worst: 0.209 (32 tiles)
+
+=== WITHIN-FRAME CONTRAST (the primary metric) ===
+  32 untouched tiles, read separately along each command:
+    command   0 deg: after w 0.251 +- 0.099, before 0.249 +- 0.100, lead -0.263
+  A panel is switched if its panel-minus-tiles contrast GAINS more
+  than 2 sd of those tiles relative to the same contrast before the
+  write. Each term is within-frame, so drift cancels; the difference
+  cancels layout bias as well.
+                  design    w(cmd)  vs tiles     x2sd  verdict
+  A      balanced, 1.0 L     0.518    +0.183      0.9  above the tiles but within 2 sd   (after +0.267, before +0.085)
+  UP          uniform +V     0.221    +0.014      0.1  above the tiles but within 2 sd   (after -0.029, before -0.044)
+  UM          uniform -V     0.109    -0.036     -0.2  no   (after -0.142, before -0.106)
+
+=== before/after, for continuity only ===
+         period   sigma  dom b  dom a   lead b   lead a    xfl  w(cmd)  verdict
+  A       1.0 L     601    120      0   -0.080   +0.188    1.3   0.518  on target, within floor
+  UP      1.0 L     601     60     60   -0.271   -0.325   -0.3   0.221  dominant 60
+  UM      1.0 L     601     60     60   -0.411   -0.566   -0.7   0.109  dominant 60
+
+  populations
+                    w(0)             w(60)            w(120)
+  A      0.334->0.518       0.253->0.330       0.414->0.152    
+  UP     0.205->0.221       0.477->0.547       0.318->0.232    
+  UM     0.143->0.109       0.554->0.675       0.302->0.216    
+
+--- VDART at 128 px ---
+scan 12.0 um, 128 px, 0.8333333333333334 Hz, angle 0.0 deg
+VDART ready
+  -> PZTO_VDART_0010.ibw
+VDART PZTO_VDART_0010.ibw: up 32.4 / 67.6 %   |<e^i.phi>| 0.502   |A| 39.0 pm   coh 0.83
+   minority in patches >=25 px: 47 %   (831 clusters)
+   -> two classes, balanced -> GATE OPEN
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg
+  meter at end         defl +0.600  |  +6.275  +0.600  +0.742  +0.818  +55.034  +189.239
+
+==========================================================================
+IT4 VERDICT
+==========================================================================
+  ranked by within-frame excess over the untouched tiles:
+    A    balanced, 1.0 L    w(cmd) 0.518   excess +0.183 (0.9 x 2sd)   -
+         dominant 120 -> 0, commanded 0
+    UP   uniform +V         w(cmd) 0.221   excess +0.014 (0.1 x 2sd)   -
+         dominant 60 -> 60, commanded 0
+    UM   uniform -V         w(cmd) 0.109   excess -0.036 (-0.2 x 2sd)   -
+         dominant 60 -> 60, commanded 0
+  switched on the within-frame metric: none
+  |UP - UM| = 0.050 against the 2 sd threshold 0.199  ->  indistinguishable
+
+  NOTHING SWITCHED, not even the balanced reference. sigma
+  1.99 x sigma_c was not enough here, or the write did not take.
+  This is not evidence against the axis hypothesis: the
+  reference failed too, so the iteration says nothing about
+  uniform polarity. Check the meter log and the VDART, then
+  repeat at a higher sigma before concluding anything.
+
+  for continuity, the weaker before/after metric cleared 3x
+  its floor for: none

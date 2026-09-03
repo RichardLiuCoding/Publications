@@ -1,0 +1,160 @@
+==============================================================================
+IT1  2026-08-21 14:13
+==============================================================================
+
+--- folder and range (before any instrument command) ---
+  data folder 260820: 75 files, newest 21 Aug 14:09 (0.1 h ago)
+  scanner range, 12 um frame at (+0.0,+0.0), limit 50 um:
+    x: |off|+size  12.0   edge at -6.0 / +6.0   ok
+    y: |off|+size  12.0   edge at -6.0 / +6.0   ok
+  position (+0.0,+0.0) is clear of all 0 used areas and inside the scanner range at 12 um
+  newest frame 4 min ago -> idle
+
+--- tune, verified on a full-resolution frame at this offset ---
+  12 um at 0.83 Hz = 20 um/s tip speed, 5.1 min per frame
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, 0.0) um
+  -> PZTO_LDART_0068.ibw
+     PZTO_LDART_0068.ibw: drive 664.7 kHz, tracked 645.8, offset 18.9 kHz, 100% lines, r12 +0.94, |S| 34.0
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  LDART centre 646 kHz, 100% tracked; PZTO_LDART_0068.ibw is baseline 1
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg
+LDART ready
+  -> PZTO_LDART_0069.ibw
+  -> PZTO_LDART_0070.ibw
+  contact_check PZTO_LDART_0070.ibw
+    drive 661.8 kHz   tracked 639.6 +-2.1 kHz   offset 22.2 kHz
+    |A| 20.8 pm   xi 94 nm (2 px)   consistency 0.78   r12 +0.87   defl SP 0.60 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+     t   f_trk  f_sd  |A|lat  |A|vrt  xi nm  res nm  z rms  part    r12  note
+ 14:29   639.6   2.1    20.8     0.0     94     167  0.468    11  +0.87  IT1 reference, sample position 2
+  sampling limit at this pixel size: 94 nm — resolution figures at or below this are sampling-limited, not tip-limited
+
+--- reference frame: r12 gate, then coverage, over three ---
+  frame                   worst region   overall     r12
+  PZTO_LDART_0068.ibw             100%      100%    0.94   <- reference
+  PZTO_LDART_0070.ibw             100%      100%    0.87
+  PZTO_LDART_0069.ibw              90%       88%    0.92
+  frame_gate PZTO_LDART_0068.ibw: r12 +0.94  consistency 0.85  tracked 100%  |S| rel 1.38  -> OK
+
+--- streak screen on untouched film (C36) ---
+  streak index PZTO_LDART_0068.ibw: 0.019
+  streak index PZTO_LDART_0069.ibw: 0.012
+  streak index PZTO_LDART_0070.ibw: 0.025
+  rigid triad fit on PZTO_LDART_0068.ibw
+    phi0 = 6.5 deg  ->  members 6/66/126 deg
+    triad power 0.590   modulation 0.181 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.26, 0.46, 0.28)
+    deviation from the film triad 2/62/122: 4.5 deg
+  triad aligned to reference: ['6', '66', '126'] -> ['6', '66', '126']  (offsets ['4', '4', '4'] deg)
+  triad ['6', '66', '126']  modulation 0.181  frame-median Lambda 280 nm
+  readout window 1.22 um = 26 px, 4.4 periods -> ok
+  extent factor by director: 6 deg 1.107  66 deg 1.316  126 deg 1.399
+
+--- placement as a fixed point over the commands ---
+    the command is chosen per panel, so the extent factor is not
+    known until the placement is chosen. Start on the cheapest
+    director, read what the commands would be, re-size on those,
+    repeat. Fall back to a smaller grid if it will not settle.
+    3x2 pass 1: factor 1.107, n 16, halo 1.79, pitch 3.67, dominants [6, 126, 66, 66, 6] -> commands [66, 6, 6, 6, 66] -> need 1.316
+    3x2 factor 1.316 -> halo 2.01 pitch 4.11: does NOT fit
+    2x2 pass 1: factor 1.107, n 16, halo 1.79, pitch 3.67, dominants [66, 66, 66, 66] -> commands [6, 6, 6, 6] -> need 1.107
+  settled on a 2x2 grid: factor 1.107, n 16, halo 1.79 um, pitch 3.67 um
+  4 slots: (4.16,3.40)  (7.84,3.40)  (4.16,7.08)  (7.84,7.08)
+  !! only 4 written panels fit, so DROPPING E.
+     Priority kept: A/B/C are the factorial (Q15 and Q16) and D
+     anchors the threshold. E deserves its own cheap iteration
+     rather than compromising the factorial.
+  planning 4 condition(s), Lambda 280 nm, budget 26 min of writing, mean dwell 0.90 s
+   frame  rate   um/s  window   limit    n   grid   cap   write   total  min/cond  
+       6  1.00   12.0    1.17  Lambda   16    1x1     1       5      27      26.5  only 1 fit
+       7  1.00   14.0    1.17  Lambda   16    1x1     1       5      27      26.5  only 1 fit
+       8  1.00   16.0    1.17  Lambda   16    2x1     2      10      32      15.9  only 2 fit
+       9  1.00   18.0    1.17  Lambda   16    2x1     2      10      32      15.9  only 2 fit
+      10  1.00   20.0    1.17  Lambda   16    2x2     4      21      42      10.5  <- chosen
+      11  0.91   20.0    1.17  Lambda   16    2x2     4      21      44      11.1  
+      12  0.83   20.0    1.22  pixels   16    3x2     6      21      46      11.6  
+      13  0.77   20.0    1.32  pixels   16    3x3     9      21      48      12.1  
+      14  0.71   20.0    1.42  pixels   16    3x3     9      21      51      12.7  
+      16  0.62   20.0    1.62  pixels   20    3x3     9      32      67      16.6  over budget
+
+--- Lambda: is a per-panel value measurable here? ---
+    per triad member on the full frame: 280  354  261 nm
+  local Lambda per panel: 172  197  172  219 nm
+    mean 190 nm, spread 25 % across the frame
+    !! over 15 %% - use the PER-PANEL value for each
+       spacing. With a frame-average, the outlying panels
+       would be off resonance, which is the difference
+       between testing Condition 1 and confounding it.
+    spread across triad members at FULL resolution: 31%
+    -> Lambda is NOT a single well-determined number here. The
+       local estimate does not converge with block size, which
+       is an estimator artefact rather than real variation, so
+       every panel uses the frame median 280 nm.
+       Consequence: sigma is unaffected (it uses the spacing we
+       COMMAND, which is exact), but "period = Lambda" is only
+       defined to about +-30 %. The Lambda vs 2 Lambda contrast
+       in panel C survives; a fine detuning would not.
+
+--- command per panel, 60 deg from ITS OWN dominant director ---
+  A  Lambda 280 nm  dom  66 -> cmd   6  keep 100%  dwell 0.88 s  sigma   450 (1.49 x)  3/3 agree
+  B  Lambda 280 nm  dom  66 -> cmd   6  keep  50%  dwell 1.76 s  sigma   450 (1.49 x)  !! BASELINES DISAGREE
+  C  Lambda 280 nm  dom  66 -> cmd   6  keep 100%  dwell 0.88 s  sigma   450 (1.49 x)  3/3 agree
+  D  Lambda 280 nm  dom  66 -> cmd   6  keep 100%  dwell 0.40 s  sigma   204 (0.68 x)  3/3 agree
+  factorial sigma: ['450', '450', '450']  spread 0.0%
+
+          n   sites  PULSE_N    dwell   site s
+  A      16     256       22     0.88      3.8
+  B      16     128       44     1.76      3.8
+  C      16     256       22     0.88      3.8
+  D      16     256       10     0.40      1.7
+
+  896 pulses, 27998 pts, mean V +0.000000
+  13.0 min of dwell, 18.7 min of writing (travel 1.44x)
+
+--- writing (18.7 min) ---
+LDART ready
+Wrote 27998 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260821_IT1_factorial.txt'  (path length 152.7 um, 896 strokes)
+260821_IT1_factorial.txt   saved 14:30:52
+  27998 pts   X[3.003,8.997] Y[2.244,8.238] um
+  |V| = [10.]   mean(V) = +0.0000 V   30.5 % at 0 V
+  path 560 um  ->  18.7 min at 0.5 um/s
+  running… ETA 18.7 min
+  done 14:49:51
+  litho stopped (required before the next run)
+--- write returned, taking the after frame ---
+LDART ready
+  -> PZTO_LDART_0071.ibw
+  contact_check PZTO_LDART_0071.ibw
+    drive 659.7 kHz   tracked 649.9 +-2.7 kHz   offset 9.8 kHz
+    |A| 40.9 pm   xi 94 nm (2 px)   consistency 0.85   r12 +0.95   defl SP 0.60 V
+    -> MOVE TO A DIFFERENT LOCATION AND RETUNE. Raising the setpoint has not fixed it (or it is already >= 0.45 V), so the contact spot itself is bad — debris or a step edge.
+  tracking PZTO_LDART_0071.ibw: median 649.9 kHz, MAD 1.77 kHz, 100% of lines within 10.0 kHz
+IT1 wrote 896 pulses in 18.7 min; after frame PZTO_LDART_0071.ibw
+
+=== DID THE SUPERDOMAINS TURN? ===
+  no spare slot for an in-grid control; the edge bands carry it
+  control: 16 tiles, d(lead) -0.062 +- 0.127, max|d| 0.352, director flipped 5/16 (31%)  -> NOT USABLE
+    !! the frame pair is the problem, not the write. Untouched film should not change direction.
+  A      sigma  449.9  dom  66 ->   6  lead -0.116 -> +0.170  d +0.286 (0.8x)  w(cmd) 0.531  on target, within floor
+  B      sigma  449.9  dom  66 ->   6  lead -0.251 -> +0.106  d +0.357 (1.0x)  w(cmd) 0.451  on target, within floor
+  C      sigma  449.9  dom  66 ->   6  lead -0.130 -> +0.589  d +0.719 (2.0x)  w(cmd) 0.728  on target, within floor
+  D      sigma  204.5  dom  66 ->   6  lead -0.393 -> +0.317  d +0.710 (2.0x)  w(cmd) 0.598  on target, within floor
+
+--- VDART: re-poling check at 128 px ---
+scan 12.0 um, 128 px, 0.8333333333333334 Hz, angle 0.0 deg
+VDART ready
+  -> PZTO_VDART_0007.ibw
+VDART PZTO_VDART_0007.ibw: up 19.5 / 80.5 %   |<e^i.phi>| 0.662   |A| 29.2 pm   coh 0.85
+   minority in patches >=25 px: 55 %   (581 clusters)
+   -> two classes, strongly skewed -> GATE SHUT
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg
+
+==========================================================================
+IT1 VERDICT
+==========================================================================
+  UNREADABLE, not unsuccessful. flip rate 31%, floor 0.352.
+  The panels are written and can be re-scored from fresh baselines. This counts as a strike, not a result.

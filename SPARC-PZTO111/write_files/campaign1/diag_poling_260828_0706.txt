@@ -1,0 +1,68 @@
+==========================================================================
+DIAG: does the tip deliver bias?   2026-08-28 07:06
+==========================================================================
+  two 1.2 um squares at +10 V and -10 V, 60 nm raster pitch
+  area (+16.0,-8.0), 5 um frame -- fresh, and not one the
+  pathway experiments would want
+  NOTE: diagnostic only. campaign_state.json is not touched.
+  data folder 260827: 153 files, newest 28 Aug 07:03 (0.0 h ago)
+
+  built: 54.1 um of path -> 3.6 min at 0.25 um/s
+  |V| max 10.0, mean +0.000, 9% at 0 V
+  x 1.00-4.00 um, y 1.90-3.10 um, inside the 5 um field: yes
+  per-site dose ~ 2.0 V.s (C21 limit 40) -- a raster spreads
+  charge along the line instead of stacking it on one point
+
+--- BEFORE ---
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (16.0, -8.0) um
+  -> PZTO_LDART_0149.ibw
+    LDART before -> PZTO_LDART_0149.ibw (tune 654.0 kHz)
+scan 5.0 um, 128 px, 2.0 Hz, angle 0.0 deg, offset (16.0, -8.0) um
+VDART ready
+  -> PZTO_VDART_0004.ibw
+    before -> PZTO_VDART_0004.ibw
+VDART PZTO_VDART_0004.ibw: up 90.7 / 9.3 %   |<e^i.phi>| 0.791   |A| 47.1 pm   coh 0.96
+   minority in patches >=25 px: 17 %   (227 clusters)
+   -> ONE CLASS ONLY - the fraction below is a fit tail, not domains
+
+--- poling ---
+LDART ready
+Wrote 2865 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260828_0706_DIAG_poling.txt'  (path length 54.1 um, 42 strokes)
+260828_0706_DIAG_poling.txt   saved 07:11:11
+  2865 pts   X[1.000,4.000] Y[1.900,3.100] um
+  |V| = [10.]   mean(V) = +0.0000 V   9.1 % at 0 V
+  path 57 um  ->  3.8 min at 0.25 um/s
+  running… ETA 3.8 min
+  done 07:15:19
+  litho stopped (required before the next run)
+
+--- AFTER ---
+scan 5.0 um, 128 px, 2.0 Hz, angle 0.0 deg, offset (16.0, -8.0) um
+VDART ready
+  -> PZTO_VDART_0005.ibw
+    after -> PZTO_VDART_0005.ibw
+VDART PZTO_VDART_0005.ibw: up 82.9 / 17.1 %   |<e^i.phi>| 0.640   |A| 75.4 pm   coh 0.97
+   minority in patches >=25 px: 59 %   (234 clusters)
+   -> two classes, strongly skewed -> GATE SHUT
+LDART ready
+scan 5.0 um, 256 px, 2.0 Hz, angle 0.0 deg, offset (16.0, -8.0) um
+  -> PZTO_LDART_0150.ibw
+    LDART after -> PZTO_LDART_0150.ibw (tune 660.0 kHz)
+
+==========================================================================
+READ IT LIKE THIS
+==========================================================================
+  VDART  before PZTO_VDART_0004.ibw   after PZTO_VDART_0005.ibw
+  LDART  before PZTO_LDART_0149.ibw   after PZTO_LDART_0150.ibw
+  The LDART pair is the one that matters for the mission: it makes
+  the in-plane comparison BEFORE/AFTER on the same patch, instead of
+  inside-vs-outside on one frame.
+  Look at the AFTER phase image for two 1.2 um squares at
+  (1.6,2.5) and (3.4,2.5) um within the frame.
+
+  squares visible  -> the tip writes; the IP voids are real physics
+  no squares       -> no bias reaches the sample; every void tonight
+                      has one cause, and it is not fixable in
+                      software. Stop writing.
+LDART ready

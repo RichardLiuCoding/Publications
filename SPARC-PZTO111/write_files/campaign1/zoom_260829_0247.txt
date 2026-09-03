@@ -1,0 +1,14 @@
+==========================================================================
+ZOOM PATHWAY  2026-08-29 02:47
+==========================================================================
+  area (+0.0,+0.0), panel centre (1.50,2.50) in the frame
+  2.0 um at 256 px -> 7.81 nm/px  (38 px per Lambda at 300 nm)
+  measurement only: no bias, no litho, no state written
+  data folder 260827: 257 files, newest 29 Aug 02:47 (0.0 h ago)
+
+  stage offset for the zoom: (-1.00,+0.00)
+  scanner range, 2 um frame at (-1.0,+0.0), limit 50 um:
+    x: |off|+size   3.0   edge at -2.0 / +0.0   ok
+    y: |off|+size   2.0   edge at -1.0 / +1.0   ok
+LDART ready
+scan 2.0 um, 256 px, 5.0 Hz, angle 0.0 deg, offset (-1.0, 0.0) um

@@ -1,0 +1,162 @@
+==============================================================================
+IT2  commensuration series  2026-08-21 16:52
+==============================================================================
+  data folder 260820: 93 files, newest 21 Aug 16:47 (0.1 h ago)
+
+1352 legal offsets for a 12 um frame; trying the nearest first
+  meter at start       defl -0.827  |  +6.269  -0.827  +0.050  +0.016  -79.544  +13.490
+
+--- candidate 1: (-14.0,+0.0) ---
+  scanner range, 12 um frame at (-14.0,+0.0), limit 50 um:
+    x: |off|+size  26.0   edge at -20.0 / -8.0   ok
+    y: |off|+size  12.0   edge at -6.0 / +6.0   ok
+  position (-14.0,+0.0) is clear of all 1 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-14.0, 0.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-14.0, 0.0) um
+  -> PZTO_LDART_0084.ibw
+     PZTO_LDART_0084.ibw: drive 663.3 kHz, tracked 651.6, offset 11.7 kHz, 100% lines, r12 +0.95, |S| 53.3
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0084.ibw
+    phi0 = 1.5 deg  ->  members 2/62/122 deg
+    triad power 0.602   modulation 0.205 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.24, 0.45, 0.30)
+    deviation from the film triad 2/62/122: 0.5 deg
+  triad aligned to reference: ['2', '62', '122'] -> ['2', '62', '122']  (offsets ['0', '0', '0'] deg)
+  AREA GATE: modulation 0.205 (need >= 0.18), streak 0.023 (need <= 0.10); Lambda ['354', '301', '548'] spread 62% (reported only)
+  -> viable (modulation 0.205)
+
+--- candidate 2: (+0.0,-14.0) ---
+  scanner range, 12 um frame at (+0.0,-14.0), limit 50 um:
+    x: |off|+size  12.0   edge at -6.0 / +6.0   ok
+    y: |off|+size  26.0   edge at -20.0 / -8.0   ok
+  position (+0.0,-14.0) is clear of all 1 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, -14.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, -14.0) um
+  -> PZTO_LDART_0085.ibw
+     PZTO_LDART_0085.ibw: drive 666.2 kHz, tracked 645.1, offset 21.1 kHz, 100% lines, r12 +0.93, |S| 41.0
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0085.ibw
+    phi0 = 4.0 deg  ->  members 4/64/124 deg
+    triad power 0.601   modulation 0.203 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.26, 0.43, 0.31)
+    deviation from the film triad 2/62/122: 2.0 deg
+  triad aligned to reference: ['4', '64', '124'] -> ['4', '64', '124']  (offsets ['2', '2', '2'] deg)
+  AREA GATE: modulation 0.203 (need >= 0.18), streak 0.015 (need <= 0.10); Lambda ['261', '325', '325'] spread 21% (reported only)
+  -> viable (modulation 0.203)
+
+--- candidate 3: (+0.0,+14.0) ---
+  scanner range, 12 um frame at (+0.0,+14.0), limit 50 um:
+    x: |off|+size  12.0   edge at -6.0 / +6.0   ok
+    y: |off|+size  26.0   edge at +8.0 / +20.0   ok
+  position (+0.0,+14.0) is clear of all 1 used areas and inside the scanner range at 12 um
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, 14.0) um
+  try 1: tuning LDART at 650 kHz, then one 256 px / 0.8 Hz frame
+LDART ready
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (0.0, 14.0) um
+  -> PZTO_LDART_0086.ibw
+     PZTO_LDART_0086.ibw: drive 663.3 kHz, tracked 653.2, offset 10.2 kHz, 100% lines, r12 +0.94, |S| 50.6
+     -> good: 100% tracked, offset within 22 kHz. This frame is baseline 1.
+  rigid triad fit on PZTO_LDART_0086.ibw
+    phi0 = 59.0 deg  ->  members 59/119/179 deg
+    triad power 0.598   modulation 0.197 (virgin ~0.17, poled ~0.53, isotropic ~0)
+    population w = (0.45, 0.30, 0.26)
+    deviation from the film triad 2/62/122: 57.0 deg
+    !! more than 10 deg from the established film triad. That would mean a different grain or a rotated sample - verify before trusting it.
+  triad aligned to reference: ['59', '119', '179'] -> ['179', '59', '119']  (offsets ['3', '3', '3'] deg)
+  AREA GATE: modulation 0.197 (need >= 0.18), streak 0.013 (need <= 0.10); Lambda ['280', '325', '261'] spread 22% (reported only)
+  -> viable (modulation 0.197)
+
+  3 viable candidate(s); taking the best modulation: (-14.0,+0.0) at 0.205
+  Lambda per member ['354', '301', '548'] -> spread 62% (reported, not gated: the
+  per-member spread ran 15-62%% across every area today, which is
+  estimator noise. The median 354 nm is what the recipe uses.
+
+=== area (-14.0,+0.0): triad ['2', '62', '122'], modulation 0.205, Lambda 354 nm
+
+--- three CONSECUTIVE baselines at the chosen area ---
+    the screening frame PZTO_LDART_0084.ibw is discarded: the stage moved away and
+    back after it, and offset hysteresis made it disagree with
+    consecutive frames by 0.45-0.51 in lead and 50-57 %% in flips.
+scan 12.0 um, 256 px, 0.8333333333333334 Hz, angle 0.0 deg, offset (-14.0, 0.0) um
+LDART ready
+  -> PZTO_LDART_0087.ibw
+  -> PZTO_LDART_0088.ibw
+  -> PZTO_LDART_0089.ibw
+  contact_check PZTO_LDART_0089.ibw
+    drive 664.4 kHz   tracked 649.2 +-2.0 kHz   offset 15.2 kHz
+    |A| 41.9 pm   xi 94 nm (2 px)   consistency 0.87   r12 +0.95   defl SP 0.60 V
+    -> RETUNE HERE. The DART loop is more than 15 kHz off the tracked resonance, so neither sideband is on the peak.
+  meter after baselines defl -0.439  |  +6.273  -0.439  +0.077  +0.038  +100.291  +57.686
+  frame                   worst region   overall     r12
+  PZTO_LDART_0089.ibw             100%      100%    0.95   <- reference
+  PZTO_LDART_0087.ibw             100%      100%    0.95
+  PZTO_LDART_0088.ibw             100%      100%    0.95
+  frame_gate PZTO_LDART_0089.ibw: r12 +0.95  consistency 0.87  tracked 100%  |S| rel 0.95  -> OK
+
+--- baseline floor: is this area measurable? (14 tiles) ---
+    0087 vs 0088: floor 0.183, 0/14 flipped (0%)
+    0088 vs 0089: floor 0.181, 1/14 flipped (7%)
+    0087 vs 0089: floor 0.104, 1/14 flipped (7%)
+    worst pair: floor 0.183 (max 0.25), flip 7% (max 25%)
+    -> measurable. An effect above 0.550 will be readable.
+  readout window 1.49 um = 32 px, 4.2 periods -> ok
+
+--- placement as a fixed point (3 panels in a row) ---
+    3x1 factor 1.026 halo 1.99 pitch 4.07: does NOT fit
+    2x1 pass 1: factor 1.026, n 16, halo 1.99, pitch 4.07, dominants [121, 121] -> commands [1, 1] -> need 1.026
+  !! only 2 panels fit, dropping P4
+  settled: 2 panels, factor 1.026, n 16, halo 1.99, pitch 4.07
+
+  one sigma for every panel: 600 V.s/um^2 = 1.99 x sigma_c
+  spacing 177 nm, dwell 1.88 s (18.8 V.s/site), keep 100%
+
+           cmd        period   sites   sigma  tests
+  P1         2         1.0 L     256     600  period Lambda    - on resonance, T3 Condition 1
+  P2         2         2.0 L     256     600  period 2 Lambda  - IT1s panel C, the strongest there
+
+  512 pulses, 29412 pts, mean V +0.000000, 19.6 min of writing
+
+  predictions, fixed now:
+    P1 best, P2 and P4 fail  -> T3 Condition 1 holds
+    P4 > P2 > P1             -> longer period is better; Condition 1
+                                is wrong and IT1s hint was real
+    all three equal          -> the sign map is irrelevant; only the
+                                site density and the axis matter
+LDART ready
+Wrote 29412 pts to 'C:\Users\Asylum User\Documents\AEtesting\Experiments\TrajectoryLitho\output\260821_IT2_commensuration.txt'  (path length 95.2 um, 512 strokes)
+260821_IT2_commensuration.txt   saved 17:28:22
+  29412 pts   X[2.602,9.398] Y[2.512,5.235] um
+  |V| = [10.]   mean(V) = +0.0000 V   18.2 % at 0 V
+  path 588 um  ->  19.6 min at 0.5 um/s
+  running… ETA 19.6 min
+  done 17:48:17
+  litho stopped (required before the next run)
+LDART ready
+  -> PZTO_LDART_0090.ibw
+  meter after write    defl -0.786  |  +6.269  -0.786  +0.091  +0.039  +151.984  +137.947
+  contact_check PZTO_LDART_0090.ibw
+    drive 661.2 kHz   tracked 654.2 +-1.7 kHz   offset 7.0 kHz
+    |A| 55.7 pm   xi 94 nm (2 px)   consistency 0.87   r12 +0.95   defl SP 0.60 V
+    -> MOVE TO A DIFFERENT LOCATION AND RETUNE. Raising the setpoint has not fixed it (or it is already >= 0.45 V), so the contact spot itself is bad — debris or a step edge.
+  -> PZTO_LDART_0091.ibw
+
+=== floors, measured three ways on untouched film ===
+  before vs after   floor 0.223  flip 7%   <- the comparison used
+  after  vs after   floor 0.187  flip 21%   drift DURING readout
+  before vs before  floor 0.138  flip 0%   baseline noise
+  using the worst: 0.223 (14 tiles)
+
+=== WITHIN-FRAME CONTRAST (the primary metric) ===
+  untouched tiles in the after-frame: w(cmd) 0.254 +- 0.100 over 14 tiles, lead -0.259 +- 0.170
+  a panel is switched if its panel-minus-tiles contrast GAINS more
+  than 2 sd = 0.199 relative to the same contrast before the write.
+         period    w(cmd)  vs tiles     x2sd  verdict
+  same tiles in the BEFORE frame: w(cmd) 0.215 +- 0.077  ->  the
+  panel-minus-tiles contrast is corrected with its own before value,
+  so layout bias cancels as well as drift.
+  P1      1.0 L     0.499    +0.234      1.2  SWITCHED   (after +0.245, before +0.011)
+  P2      2.0 L     0.750    +0.429      2.2  SWITCHED   (after +0.496, before +0.067)
