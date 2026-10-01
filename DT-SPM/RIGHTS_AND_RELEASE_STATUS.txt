@@ -1,0 +1,19 @@
+Prepared package: R1-repro-2026-09-30
+GitHub packaging date: 2026-09-30
+Code destination: https://github.com/RichardLiuCoding/Publications/tree/main/DT-SPM
+Code upload status: prepared locally; no commit or push performed.
+Dataset access: https://drive.google.com/file/d/1ckGptfEbkKzbnl_eHDzDHCAU6Hjbhyce/view?usp=sharing
+Dataset access check: downloaded and SHA-256 verified on 2026-09-30.
+Code licence: author decision pending.
+Data licence: author decision pending.
+Final code release tag and commit: pending.
+Code archive DOI: pending.
+Data archive DOI: pending.
+Creators, ORCIDs, affiliations and funding metadata: author confirmation pending.
+Manuscript CRediT and conflict statements: author confirmation pending.
+Instrument model and probe identities: author confirmation pending.
+
+This file records unresolved release fields. It does not grant a new licence or
+change any existing rights in the authors' work or third-party dependencies.
+Python dependencies are installed from their distributions and retain their
+own licences; their package code is not redistributed here.

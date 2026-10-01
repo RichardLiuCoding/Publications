@@ -1,0 +1,166 @@
+{
+  "validation_date": "2026-09-30",
+  "scope": "GitHub packaging and dataset download; full 14-stage scientific validation retained from source package",
+  "dataset": {
+    "url": "https://drive.google.com/file/d/1ckGptfEbkKzbnl_eHDzDHCAU6Hjbhyce/view?usp=sharing",
+    "downloaded_without_account_cookies": true,
+    "archive_bytes": 668283428,
+    "archive_sha256": "0c8f3788aee370c07b29fa8d337efd8eb6d76c7a7b622f4088e48bec794748e5",
+    "archive_checksum_passed": true,
+    "files_verified": 375,
+    "all_file_checksums_passed": true
+  },
+  "scientific_python_files_unchanged": 49,
+  "helper_tests": {
+    "passed": 9,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "notebook_smoke": {
+    "python": "3.10.19",
+    "default_cells_executed": true,
+    "full_reanalysis_enabled": false,
+    "fd_report": {
+      "Tap300_AlScN": {
+        "drive": {
+          "shape": [
+            31
+          ],
+          "reference_shape": [
+            31
+          ],
+          "allclose": true,
+          "max_abs_diff": 7.105427357601002e-15
+        },
+        "amp": {
+          "shape": [
+            30,
+            1000
+          ],
+          "reference_shape": [
+            30,
+            1000
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "height": {
+          "shape": [
+            30,
+            1000
+          ],
+          "reference_shape": [
+            30,
+            1000
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "phase": {
+          "shape": [
+            30,
+            1000
+          ],
+          "reference_shape": [
+            30,
+            1000
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "amp2": {
+          "shape": [
+            30,
+            1000
+          ],
+          "reference_shape": [
+            30,
+            1000
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "height2": {
+          "shape": [
+            30,
+            1000
+          ],
+          "reference_shape": [
+            30,
+            1000
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "phase2": {
+          "shape": [
+            30,
+            1000
+          ],
+          "reference_shape": [
+            30,
+            1000
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        }
+      },
+      "cali_fd": {
+        "height": {
+          "shape": [
+            15,
+            50
+          ],
+          "reference_shape": [
+            15,
+            50
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "amp": {
+          "shape": [
+            15,
+            50
+          ],
+          "reference_shape": [
+            15,
+            50
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "phase": {
+          "shape": [
+            15,
+            50
+          ],
+          "reference_shape": [
+            15,
+            50
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        },
+        "drive": {
+          "shape": [
+            15
+          ],
+          "reference_shape": [
+            15
+          ],
+          "allclose": true,
+          "max_abs_diff": 0.0
+        }
+      }
+    }
+  },
+  "publication_actions": {
+    "commit_created": false,
+    "pushed": false,
+    "doi_created": false
+  },
+  "archive_coverage": {
+    "source_code_manifest_entries": 80,
+    "missing_from_code_zip": []
+  }
+}

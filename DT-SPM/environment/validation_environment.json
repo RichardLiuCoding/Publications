@@ -1,0 +1,10 @@
+{
+  "python": "3.10.19 (main, Dec  1 2025, 08:27:54) [Clang 17.0.0 (clang-1700.0.13.5)]",
+  "implementation": "CPython",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "validation_date": "2026-09-30",
+  "execution": "CPU; driver fixes BLAS/OpenMP environment; notebook trainers set PyTorch to two threads",
+  "dependency_metadata_exception": "aespm 1.1.4 declares numpy<2.0; numpy 2.2.6 retained to match revised analyses",
+  "original_submission_environment": "not established by these records"
+}

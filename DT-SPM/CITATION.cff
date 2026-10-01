@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and the final archived code/data versions once assigned. Creator metadata requires author confirmation."
+title: "DT-SPM R1: coupled sample and instrument digital twins for amplitude-modulation atomic force microscopy"
+type: software
+version: "R1-repro-2026-09-30"
+authors:
+  - family-names: Liu
+    given-names: Yu
+  - family-names: Slautin
+    given-names: Boris
+  - family-names: Mercer
+    given-names: Ian
+  - family-names: Maria
+    given-names: Jon-Paul
+  - family-names: Kalinin
+    given-names: Sergei V.
+repository-code: "https://github.com/RichardLiuCoding/Publications/tree/main/DT-SPM"
+url: "https://github.com/RichardLiuCoding/Publications/tree/main/DT-SPM"
+# Public release date, final tag/commit, licence and DOIs remain pending.

@@ -1,0 +1,50 @@
+{
+  "status": "prepared GitHub upload; author metadata confirmation required",
+  "local_package_id": "R1-repro-2026-09-30",
+  "title": "DT-SPM R1: code for coupled sample and instrument digital twins for amplitude-modulation atomic force microscopy",
+  "resource_type": "software",
+  "creators_from_existing_release_draft": [
+    {
+      "given_names": "Yu",
+      "family_name": "Liu"
+    },
+    {
+      "given_names": "Boris",
+      "family_name": "Slautin"
+    },
+    {
+      "given_names": "Ian",
+      "family_name": "Mercer"
+    },
+    {
+      "given_names": "Jon-Paul",
+      "family_name": "Maria"
+    },
+    {
+      "given_names": "Sergei V.",
+      "family_name": "Kalinin"
+    }
+  ],
+  "creator_confirmation": null,
+  "repository": "GitHub",
+  "version": "R1-repro-2026-09-30",
+  "doi": null,
+  "related_code_or_data_doi": null,
+  "article_doi": null,
+  "release_tag": null,
+  "commit": null,
+  "license": null,
+  "publication_date": null,
+  "funding": null,
+  "keywords": [
+    "atomic force microscopy",
+    "digital twin",
+    "AlScN",
+    "calibration grating",
+    "reproducibility"
+  ],
+  "description": "Offline revision analyses with target-scan exclusion, historical correction audit, measured scan and force-distance records, explicit calibration inputs, split manifests and numerical verification. The AlScN FD library postdates the scan grid; the benchmark is retrospective.",
+  "repository_url": "https://github.com/RichardLiuCoding/Publications/tree/main/DT-SPM",
+  "dataset_url": "https://drive.google.com/file/d/1ckGptfEbkKzbnl_eHDzDHCAU6Hjbhyce/view?usp=sharing",
+  "archive_repository": "Zenodo (planned; deposition pending)"
+}

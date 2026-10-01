@@ -1,0 +1,42 @@
+[
+  {
+    "path": "revision_2026-09/codes/rv_common.py",
+    "change": "import os\nREV = Path(os.environ.get(\"DTSPM_RUN_DIR\", str(ROOT / \"runs\" / \"latest\"))).resolve()\nREV.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "path": "revision_2026-09/codes/rv_common.py",
+    "change": "FIG = REV / \"figures\"\nOUT.mkdir(parents=True, exist_ok=True)\nFIG.mkdir(parents=True, exist_ok=True)\n(REV / \"manuscript\").mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "path": "DT-SPM_colab/DT-SPM_full_digital_twin.ipynb",
+    "change": "Local root discovery; clear stored notebook outputs. Scientific code cells unchanged."
+  },
+  {
+    "path": "DT-SPM framework TRANSFER \u2014 Multi75 cali.ipynb",
+    "change": "Local root discovery; clear stored notebook outputs. Scientific code cells unchanged."
+  },
+  {
+    "path": "Fit DT controller parameters to experimental scans_v2.ipynb",
+    "change": "Cleared stored outputs; historical source retained for provenance."
+  },
+  {
+    "path": "FD_calibration_Tap300_v2.ipynb",
+    "change": "Cleared stored outputs; historical source retained for provenance."
+  },
+  {
+    "path": "FD_calibration_cali_fd_v2.ipynb",
+    "change": "Cleared stored outputs; historical source retained for provenance."
+  },
+  {
+    "path": "Clean up data to train DT.ipynb",
+    "change": "Cleared stored outputs; historical source retained for provenance."
+  },
+  {
+    "path": "DT-SPM_FD based_RL_v9.ipynb",
+    "change": "Cleared stored outputs; historical source retained for provenance."
+  },
+  {
+    "path": "revision_2026-09/codes/rv_invariance_test.py",
+    "change": "tested prediction for those conditions (one blocked fold: scanner, GBM, hybrid GBM and hybrid ridge)."
+  }
+]

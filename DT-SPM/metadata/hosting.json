@@ -1,0 +1,13 @@
+{
+  "package_id": "R1-repro-2026-09-30",
+  "packaging_date": "2026-09-30",
+  "code_url": "https://github.com/RichardLiuCoding/Publications/tree/main/DT-SPM",
+  "dataset_url": "https://drive.google.com/file/d/1ckGptfEbkKzbnl_eHDzDHCAU6Hjbhyce/view?usp=sharing",
+  "dataset_configuration": "dataset_config.json",
+  "dataset_access_check": "Downloaded without account cookies and verified on 2026-09-30",
+  "code_publication_status": "Prepared locally; no commit or push performed",
+  "release_tag": null,
+  "commit": null,
+  "code_doi": null,
+  "data_doi": null
+}

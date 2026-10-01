@@ -1,0 +1,29 @@
+{
+  "review_date": "2026-09-30",
+  "no_ai_slop": "pass; manual editorial review using eval.md",
+  "humanizer": "pass; final prose review",
+  "reviewed": [
+    "README.md",
+    "NOTEBOOKS.md",
+    "UPLOAD_INSTRUCTIONS.md",
+    "DEPOSITION_CHECKLIST.md",
+    "VERIFICATION_REPORT.md",
+    "RIGHTS_AND_RELEASE_STATUS.txt",
+    "DT-SPM_R1_reproduce.ipynb markdown cells"
+  ],
+  "changes": [
+    "Replaced outdated combined-archive setup with the GitHub and Google Drive workflow.",
+    "Kept setup commands concrete and separated historical notebooks from the tested reproduction route.",
+    "Retained scientific limitations, exact environment details and recorded numerical deviations.",
+    "Distinguished verified dataset access from pending code upload, release identifiers and DOI deposition."
+  ],
+  "scientific_qualifications_preserved": [
+    "retrospective calibration timing",
+    "target-scan leakage in historical correction",
+    "scope of invariance test",
+    "historical calibration inputs",
+    "small numerical differences",
+    "dependency metadata conflict",
+    "public identifiers pending"
+  ]
+}

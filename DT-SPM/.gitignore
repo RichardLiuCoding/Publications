@@ -1,0 +1,26 @@
+# Dataset and archived numerical results are distributed through Google Drive.
+/data/
+/output/
+/calibration_cache/
+/reference/
+/verification/
+/splits/
+/metadata/array_inventory.json
+/metadata/data_record_draft.json
+/metadata/figure_sources.csv
+/metadata/submission_tables.json
+
+# Download, extraction, runtime and distribution files.
+/downloads/
+/.dataset-extract-*/
+/runs/
+/dist/
+/.venv/
+/venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.nbc
+*.nbi
+.DS_Store
+*.zip

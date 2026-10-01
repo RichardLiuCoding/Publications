@@ -1,0 +1,10 @@
+{
+  "dataset_id": "R1-repro-2026-09-30",
+  "url": "https://drive.google.com/file/d/1ckGptfEbkKzbnl_eHDzDHCAU6Hjbhyce/view?usp=sharing",
+  "google_drive_file_id": "1ckGptfEbkKzbnl_eHDzDHCAU6Hjbhyce",
+  "filename": "DT-SPM_R1_data_2026-09-30.zip",
+  "bytes": 668283428,
+  "sha256": "0c8f3788aee370c07b29fa8d337efd8eb6d76c7a7b622f4088e48bec794748e5",
+  "archive_root": "DT-SPM_R1",
+  "manifest_sha256": "aafd1b1644228f10eed8f6721244dddb02b4558e52a7677c6fc060de2b84400a"
+}

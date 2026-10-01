@@ -1,0 +1,10 @@
+numpy-2.2.6.dist-info installed 2025-12-01
+scipy-1.15.3.dist-info installed 2025-12-01
+scikit_learn-1.7.2.dist-info installed 2025-12-01
+torch-2.9.1.dist-info installed 2025-12-01
+numba-0.62.1.dist-info installed 2025-12-07
+llvmlite-0.45.1.dist-info installed 2025-12-07
+pandas-2.3.3.dist-info installed 2026-02-13
+matplotlib-3.10.7.dist-info installed 2025-12-01
+joblib-1.5.2.dist-info installed 2025-12-01
+aespm-1.1.4.dist-info installed 2025-12-01
